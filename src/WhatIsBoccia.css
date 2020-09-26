@@ -35,9 +35,9 @@
 
 .navtabs {
 	display: inline-block;
-	margin-right: 0.5vw;
-	padding: 0.2vw  1vw 0.25vw 1vw;
-	font-size: 2vw;
+	margin-right: 0.5em;
+	padding: 0.1em  1em 0.25em 1em;
+	font-size: 40px;
 	transition:background-color 0.6s;
 	width: wrap;
 	text-align: center;
@@ -65,9 +65,9 @@ a .hometab{
 	color:lightgray;
 }
 .sidenavbar{
-	position: fixed;
+	position: absolute;
 	right: 0;
-	width: 13vw;
+	width: 250px;
 	background-color: rgb(190,190,190);
 	height: calc(100% - 80px);
 	top:80px;
@@ -114,7 +114,6 @@ a{
 	height: calc(100% - 80px);
 	position: absolute;
 	top:80px;
-	right:15vw;
 	display: flex;
 	direction: rtl;
 	flex-direction: column;
@@ -123,7 +122,7 @@ a{
 #WhatIsMainButtonDiv{
 	display: flex;
 	direction: rtl;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	margin:0 auto;
 	margin-top: 2vw;
 	height: 100px;
@@ -152,9 +151,9 @@ a{
 }
 
 #FrontBackButtonsDiv{
-	position:fixed;
-	bottom: 2vw;
-	left: 3vw;
+	position: absolute;
+	bottom: 7vw;
+	left: 7vw;
 	direction: rtl;
 	display: flex;
 }
@@ -189,7 +188,7 @@ a{
 #WhatIsContentDiv{
 
 	width: 70vw;
-	height: fit-content;
+	height: 24vw;
 	margin: 0 auto;
 	text-align: right;
 }
