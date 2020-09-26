@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import whiteball from './imgs/whiteball.png';
+import whiteball from '../imgs/whiteball.png';
 
 
 const WhiteCircle =({x,y})=>{

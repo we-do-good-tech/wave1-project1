@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import court from './imgs/court.png';
-import './Game.css';
+import court from '../imgs/court.png';
+import './styles/Game.css';
 import RedCircle from './RedCircle.js';
 import WhiteCircle from './WhiteCircle.js';
 

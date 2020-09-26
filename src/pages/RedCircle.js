@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
-import redball from './imgs/redball.png';
-import './RedCircle.css'
+import redball from '../imgs/redball.png';
+import './styles/RedCircle.css'
 
 const RedCircle =({x,y})=>{
 
