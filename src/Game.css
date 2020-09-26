@@ -1,0 +1,14 @@
+#gamediv{
+	display: block;
+	position: relative;
+}
+
+.ball{
+	width: 44px;
+}
+
+
+#court{
+	width: 329px;
+}
+

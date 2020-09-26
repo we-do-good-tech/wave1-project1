@@ -1,0 +1,198 @@
+@import url(//fonts.googleapis.com/css?family=Heebo);
+*{
+	font-family: Heebo;
+}
+.nav{
+	width: 100%;
+	top:0em;
+	position: fixed;
+	color:white;
+	z-index: 9999;
+}
+.navlist{
+	display: block;
+	margin:0;
+	background-color: rgb(180,180,180);
+	height: 80px;
+	overflow: hidden;
+}
+.nav a{
+	text-decoration: none;
+	color: white;
+}
+.navlist li{
+	margin-top: 5px;
+	border-radius: 10px;
+}
+
+
+.navtabs:hover{
+	background-color: lightgray;
+	cursor: pointer;
+	color:black;
+	transition:all 0.3s;
+}
+
+.navtabs {
+	display: inline-block;
+	margin-right: 0.5em;
+	padding: 0.1em  1em 0.25em 1em;
+	font-size: 40px;
+	transition:background-color 0.6s;
+	width: wrap;
+	text-align: center;
+	background-color: transparent;
+	color:black;
+}
+
+a .hometab{
+	float: right;
+	font-size: 90px;
+	display: inline;
+	padding: 0;
+	margin-right: 1.05em;
+	margin-top: -30px;
+	transition:background-color 0.3s;
+	width: wrap;
+	text-align: center;
+	color:black;
+	transition: 1s;
+}
+
+
+.hometab:hover{
+	transition: 0.2s;
+	color:lightgray;
+}
+.sidenavbar{
+	position: absolute;
+	right: 0;
+	width: 250px;
+	background-color: rgb(190,190,190);
+	height: calc(100% - 80px);
+	top:80px;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+a{
+	text-decoration: none;
+}
+.sidenavtabs a{
+	color:black;
+	font-size: 1.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+
+.sidenavtabs{
+	display: block;
+	height: calc(100% / 8);
+	border:1px solid black;
+	color:black;
+	background-color: transparent;
+	direction: rtl;
+	text-align: center;
+	margin: 0;
+}
+.sidenavtabs:hover{
+	background-color: rgb(170,170,170);
+}
+.activesidenavtabs{
+	background-color: gray;
+}
+.activesidenavtabs:hover{
+	background-color: gray;
+}
+#WhatIsMain{
+	width: calc(100% - 250px);
+	height: calc(100% - 80px);
+	position: absolute;
+	top:80px;
+	display: flex;
+	direction: rtl;
+	flex-direction: column;
+
+}
+#WhatIsMainButtonDiv{
+	display: flex;
+	direction: rtl;
+	justify-content: space-between;
+	margin:0 auto;
+	margin-top: 2vw;
+	height: 100px;
+	width: 70vw;
+}
+.WhatIsMainButton{
+	font-size: 2.5vw;
+	width: 15vw;
+	border-radius: 10px;
+	border:none;
+	background-color: rgb(220,220,220);
+	height: fit-content;
+	padding: 0.4em 0em 0.4em 0em;
+	transition: 0.4s;
+}
+.WhatIsMainButtonActive{
+	background-color: rgb(150,150,150);
+}
+.WhatIsMainButton:hover{
+	cursor: pointer;
+	background-color: rgb(210,210,210);
+	transition: 0.4s;
+}
+.WhatIsMainButtonActive:hover{
+	background-color: rgb(150,150,150);
+}
+
+#FrontBackButtonsDiv{
+	position: absolute;
+	bottom: 7vw;
+	left: 7vw;
+	direction: rtl;
+	display: flex;
+}
+
+.FronBackButtonSection{
+	align-items: center;
+	text-align: left;
+	margin-right: 2vw;
+}
+
+.FrontBackButtons{
+	background-color: rgb(40,40,40);
+	padding:0.3vw 0.6vw  0.4vw 0.6vw;
+	color:white;
+	font-size: 2vw;
+	border-radius: 20px;
+	border:none;
+	cursor: pointer;
+	margin-left: 1.1px;
+}
+
+.FronBackButtonSection p{
+	font-weight: 1000;
+	font-size: 1.5vw;
+	margin: 0;
+	cursor: default;
+}
+.FrontBackButtons:hover{
+	color:lightgray;
+}
+
+#WhatIsContentDiv{
+
+	width: 70vw;
+	height: 24vw;
+	margin: 0 auto;
+	text-align: right;
+}
+#WhatIsContentText{
+	font-weight: 1000;
+	font-size: 2em;
+}
