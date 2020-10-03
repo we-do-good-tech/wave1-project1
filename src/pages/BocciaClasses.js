@@ -186,6 +186,16 @@ class BocciaClasses extends Component {
 						</div>
 					)				
 				}	
+			if(this.state.active==7)
+				{
+					return(
+						<div id="BocciaClassesContentDiv">
+									<p id="BocciaClassesContentText">
+									תרגול
+									</p>						
+						</div>
+					)				
+				}	
 	}
 
 	let GetDivFrontBack=()=>{
