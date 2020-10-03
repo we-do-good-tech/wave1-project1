@@ -151,6 +151,7 @@ a{
 	border-top-right-radius: 6vw;
 	border-bottom-right-radius: 17vw;
 	padding-left: 1vw;
+	width: fit-content;
 }
 .leftcurved{
 	border-right: 20px solid transparent;
@@ -184,7 +185,7 @@ a{
 }
 #WhatIsContentText{
 	font-weight: 1000;
-	font-size: 2em;
+	font-size: 1.5vw;
 }
 #WhatIsContentDivFirstState p{
 	margin-right: 16vw;
@@ -198,7 +199,8 @@ a{
 	margin-top: 3vw;
 	display: flex;
 	flex-wrap: wrap;
-	width: 60vw;
+	width: 67vw;
+	padding: 1vw;
 	height: 30vw;
 	justify-content: space-evenly;
 }
@@ -206,6 +208,7 @@ a{
 	width: 15vw;
 	margin: 1vw;
 	font-size: 1.4vw;
+	font-weight: 1000;
 	height: 10vw;
 	border: none;
 	box-shadow: 0.3vw 0.3vw 0.5vw gray;

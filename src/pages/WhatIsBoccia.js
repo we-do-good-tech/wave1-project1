@@ -108,11 +108,11 @@ class WhatIsBoccia extends Component {
 						<p>הסבר ממש קצר של גג שתי שורות</p>
 						<p>הסבר ממש קצר של גג שתי שורות</p>
 						<div id="WhatIsContentDivFirstStatePage">
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="2">מה זה בוצ'ה</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="3">למי זה מיועד</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="4">איך משחקים</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="5">נבחרת ישראל</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="6">תרגול</button>		
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="2">01<br/>מה זה בוצ'ה</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="3">02<br/>למי זה מיועד</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="4">03<br/>איך משחקים</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="5">04<br/>נבחרת ישראל</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="6">05<br/>תרגול</button>		
 						</div>
 					</div>
 				)
@@ -195,13 +195,13 @@ class WhatIsBoccia extends Component {
 		        	<p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
 		         	<p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
 		          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
-		 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון לשחקנים</a></p> 
+		 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון </a></p>
+		 		 	<p className="sidenavtabs"> <a href="./#/"> צור קשר </a></p> 
 				</div>
 				<div id="WhatIsMain">	
 					{GetDivButton()}
 					{GetDivContent()}
 					{GetDivFrontBack()}					
-
 				</div>				
 			</div>
 

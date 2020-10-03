@@ -218,7 +218,8 @@ class BocciaClasses extends Component {
 		       	<p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
 	         	<p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
 	          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
-	 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון לשחקנים</a></p> 
+	 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון </a></p>
+		 		<p className="sidenavtabs"> <a href="./#/"> צור קשר </a></p> 
 			</div>
 			<div id="BocciaClassesMain">	
 				{GetDivButton()}
