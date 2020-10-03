@@ -190,7 +190,7 @@ class WhatIsBoccia extends Component {
 					<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">LOGO</a></p>
 		        	<p className="activesidenavtabs sidenavtabs"> <a href="./#/WhatIsBoccia">ארגון הבוצ'ה</a></p>
 		        	<p className="sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
-		         	<p className="sidenavtabs"> <a href="./#/">מגרש</a></p>
+		         	<p className="sidenavtabs"> <a href="./#/Court">מגרש</a></p>
 		         	<p className="sidenavtabs"> <a href="./#/">ציוד</a></p>
 		        	<p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
 		         	<p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
