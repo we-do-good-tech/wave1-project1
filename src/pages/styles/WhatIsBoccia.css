@@ -13,6 +13,7 @@
 	display: flex;
 	flex-direction: column;
 	align-content: stretch;
+	justify-content: space-evenly;
 	overflow-y: scroll;
 }
 
@@ -46,11 +47,12 @@ a{
 
 .sidenavtabs{
 	display: block;
-	height: calc(100% / 13);
+	height: 1.7vw;
 	color:black;
 	background-color: transparent;
 	direction: rtl;
 	margin-right:2vw;
+/*	margin-bottom: 1.8vw;*/
 }
 .sidenavtabs a{
 	color:white;
@@ -70,7 +72,9 @@ a{
 	transition: 0.2s;
 }
 
-
+.activesidenavtabs{
+	height: 4vw;
+}
 .activesidenavtabs a::before{
 	content:'';
 	width: 2vw;
