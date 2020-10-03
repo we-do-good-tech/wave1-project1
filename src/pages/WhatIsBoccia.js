@@ -17,14 +17,14 @@ class WhatIsBoccia extends Component {
 	handlearrow=(evt)=>{
 		if(evt.target.value==1){
 			if(this.state.active==1){
-				this.setState({active:4})
+				this.setState({active:6})
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)-1})
 			}
 		}
 		else if(evt.target.value==2){
-			if(this.state.active==4){
+			if(this.state.active==6){
 				this.setState({active:1})
 			}
 			else{
@@ -36,83 +36,108 @@ class WhatIsBoccia extends Component {
 	render(){
 
 	let GetDivButton=()=>{
-		if(this.state.active==1)
+		if(this.state.active==2)
 			{
 				return(
 					<div id="WhatIsMainButtonDiv">
-						<button onClick={this.handleclick} value='1' className="WhatIsMainButton WhatIsMainButtonActive"> מה זה בוצ'ה? </button>
-						<button onClick={this.handleclick}  value='2' className="WhatIsMainButton">איך משחקים?</button>
-						<button onClick={this.handleclick}  value='3' className="WhatIsMainButton">למי זה מיועד?</button>
-						<button onClick={this.handleclick}  value='4' className="WhatIsMainButton">נבחרת ישראל</button>	
+						<button className="WhatIsMainButton WhatIsMainButtonActive rightcurved"><p> מה זה בוצ'ה</p></button>
+						<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
+						<button className="WhatIsMainButton"><p>איך משחקים</p></button>
+						<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
+						<button className="WhatIsMainButton leftcurved"><p>תרגול</p></button>	
 					</div>
 				);
 			}
-			if(this.state.active==2)
+			if(this.state.active==3)
 			{
 				return(
 					<div id="WhatIsMainButtonDiv">
-						<button onClick={this.handleclick} value='1'  className="WhatIsMainButton"> מה זה בוצ'ה? </button>
-						<button onClick={this.handleclick} value='2'  className="WhatIsMainButton WhatIsMainButtonActive">איך משחקים?</button>
-						<button onClick={this.handleclick} value='3'  className="WhatIsMainButton">למי זה מיועד?</button>
-						<button onClick={this.handleclick} value='4'  className="WhatIsMainButton">נבחרת ישראל</button>	
+						<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה </p></button>
+						<button className="WhatIsMainButton WhatIsMainButtonActive"><p>למי זה מיועד</p></button>
+						<button className="WhatIsMainButton"><p>איך משחקים</p></button>
+						<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
+						<button className="WhatIsMainButton leftcurved"><p>תרגול </p></button>		
 					</div>
 				);
 			}
 
-			if(this.state.active==3)
-				{
-					return(
-						<div id="WhatIsMainButtonDiv">
-							<button onClick={this.handleclick} value='1' className="WhatIsMainButton"> מה זה בוצ'ה? </button>
-							<button onClick={this.handleclick} value='2'  className="WhatIsMainButton">איך משחקים?</button>
-							<button onClick={this.handleclick} value='3'  className="WhatIsMainButton WhatIsMainButtonActive">למי זה מיועד?</button>
-							<button onClick={this.handleclick} value='4'  className="WhatIsMainButton">נבחרת ישראל</button>	
-						</div>
-					);
-				}
 			if(this.state.active==4)
 				{
 					return(
 						<div id="WhatIsMainButtonDiv">
-							<button onClick={this.handleclick} value='1'  className="WhatIsMainButton"> מה זה בוצ'ה? </button>
-							<button onClick={this.handleclick} value='2'  className="WhatIsMainButton">איך משחקים?</button>
-							<button onClick={this.handleclick} value='3'  className="WhatIsMainButton">למי זה מיועד?</button>
-							<button onClick={this.handleclick} value='4'  className="WhatIsMainButton WhatIsMainButtonActive">נבחרת ישראל</button>	
+							<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה</p></button>
+							<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
+							<button className="WhatIsMainButton WhatIsMainButtonActive"><p>איך משחקים</p></button>
+							<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
+							<button className="WhatIsMainButton leftcurved"><p>תרגול </p></button>	
+						</div>
+					);
+				}
+			if(this.state.active==5)
+				{
+					return(
+						<div id="WhatIsMainButtonDiv">
+							<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה</p></button>
+							<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
+							<button className="WhatIsMainButton"><p>איך משחקים</p></button>
+							<button className="WhatIsMainButton WhatIsMainButtonActive "><p>נבחרת ישראל</p></button>
+							<button className="WhatIsMainButton leftcurved"><p>תרגול </p></button>	
 						</div>
 					);
 				}	
+			if(this.state.active==6)
+				{
+					return(
+						<div id="WhatIsMainButtonDiv">
+							<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה</p></button>
+							<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
+							<button className="WhatIsMainButton"><p>איך משחקים</p></button>
+							<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
+							<button className="WhatIsMainButton WhatIsMainButtonActive leftcurved"><p>תרגול </p></button>	
+						</div>
+					);
+				}
 	}
 
 	let GetDivContent=()=>{
-	
-
-
-
-		if(this.state.active==1)
+			
+			if(this.state.active==1)
 			{
 				return(
-					<div id="WhatIsContentDiv">
-								<p id="WhatIsContentText">בוצ'ה הינו משחק פראלימפי המשלב מיומנות ואסטרטגיה, כאשר המטרה היא לקרב כמה שיותר כדורים אל המטרה.</p>						
+					<div id="WhatIsContentDivFirstState">
+						<p>הסבר ממש קצר של גג שתי שורות</p>
+						<p>הסבר ממש קצר של גג שתי שורות</p>
+						<div id="WhatIsContentDivFirstStatePage">
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="2">מה זה בוצ'ה</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="3">למי זה מיועד</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="4">איך משחקים</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="5">נבחרת ישראל</button>
+								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="6">תרגול</button>		
+						</div>
 					</div>
 				)
 			}
+
 			if(this.state.active==2)
 			{
 				return(
 					<div id="WhatIsContentDiv">
+								<p id="WhatIsContentText">1</p>						
+					</div>
+				)
+			}
+			if(this.state.active==3)
+			{
+				return(
+					<div id="WhatIsContentDiv">
 								<p id="WhatIsContentText">
-								איך משחקים? <br/>
-								שני צדדים מתחרים אחד נגד השני, כיחידים, זוגות או קבוצות של שלושה שחקנים. <br/>
-								לצד אחד יש שישה כדורים אדומים, ולצד השני שישה כדורים כחולים.<br/>
-								הקבוצה האדומה מניעה את הכדור הלבן, "הג'ק", אל עבר המגרש ולאחר מכן זורקת את הכדור האדום הראשון שלה.<br/>
-								אחר כך זורקת הקבוצה הכחולה את הכדור הכחול הראשון שלה, במטרה להתקרב כמה שיותר לכדור הלבן. <br/>
-								הקבוצה צוברת נקודות בהתאם למידת הקרבה של כדורי השחקנים לכדור הלבן.
+								2
 								</p>						
 					</div>
 				)
 			}
 
-			if(this.state.active==3)
+			if(this.state.active==4)
 				{
 					return(
 						<div id="WhatIsContentDiv">
@@ -120,7 +145,7 @@ class WhatIsBoccia extends Component {
 						</div>
 					)
 				}
-			if(this.state.active==4)
+			if(this.state.active==5)
 				{
 					return(
 						<div id="WhatIsContentDiv">
@@ -128,50 +153,57 @@ class WhatIsBoccia extends Component {
 						</div>
 					)				
 				}	
-}
+			if(this.state.active==6)
+				{
+					return(
+						<div id="WhatIsContentDiv">
+									<p id="WhatIsContentText">5</p>						
+						</div>
+					)				
+				}		
+	}
 
+	let GetDivFrontBack=()=>{
+		if(this.state.active!=1){
+			return(
+				<div>
+					<div id="BackButton">
+						<button value="1" onClick={this.handlearrow} className="FrontBackButtons">
+							🡺  הקודם
+						</button>
+					</div>
+					<div id="FrontButton">
+						<button value="2" onClick={this.handlearrow} className="FrontBackButtons">
+							הבא 🢀
+						</button>
+					</div>		
+			</div>
+			);
+		}
+	}
 
 
 		return(
-			<body>
-				 <div className="nav">
-		          <ul className="navlist">
-		            <a href="./#/"><li className="navtabs">צרו קשר</li></a>
-		            <a href="./#/"><li className="navtabs">אודות הארגון</li></a>
-		            <a href="./#/WhatIsBoccia"><li className="hometab">⌂</li></a>
-		          </ul>
-		        </div>
-
+			<div>
+				
 				<div className="sidenavbar" >
-		           <p className="activesidenavtabs sidenavtabs"> <a href="./#/WhatIsBoccia">מה זה בוצ'ה</a></p>
-		           <p className="sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">מגרש</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">ציוד</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
-		 		   <p className="sidenavtabs"> <a href="./#/">אתגר אימון לשחקנים</a></p> 
+					<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">LOGO</a></p>
+		        	<p className="activesidenavtabs sidenavtabs"> <a href="./#/WhatIsBoccia">מה זה בוצ'ה</a></p>
+		        	<p className="sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
+		         	<p className="sidenavtabs"> <a href="./#/">מגרש</a></p>
+		         	<p className="sidenavtabs"> <a href="./#/">ציוד</a></p>
+		        	<p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
+		         	<p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
+		          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
+		 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון לשחקנים</a></p> 
 				</div>
 				<div id="WhatIsMain">	
 					{GetDivButton()}
 					{GetDivContent()}
-					<div id="FrontBackButtonsDiv">
-						<div className="FronBackButtonSection">
-							<button value="1" onClick={this.handlearrow} className="FrontBackButtons">
-								🡺
-							</button>
-							<p>אחורה</p>
-						</div>
-						<div className="FronBackButtonSection">
-							<button value="2" onClick={this.handlearrow} className="FrontBackButtons">
-								🢀
-							</button>
-							<p>קדימה</p>
-						</div>
-					</div>
-				</div>
-				
-			</body>
+					{GetDivFrontBack()}					
+
+				</div>				
+			</div>
 
 		)
 

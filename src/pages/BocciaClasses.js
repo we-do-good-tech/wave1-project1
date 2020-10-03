@@ -17,14 +17,14 @@ class BocciaClasses extends Component {
 	handlearrow=(evt)=>{
 		if(evt.target.value==1){
 			if(this.state.active==1){
-				this.setState({active:6})
+				this.setState({active:7})
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)-1})
 			}
 		}
 		else if(evt.target.value==2){
-			if(this.state.active==6){
+			if(this.state.active==7){
 				this.setState({active:1})
 			}
 			else{
@@ -36,25 +36,16 @@ class BocciaClasses extends Component {
 	render(){
 
 	let GetDivButton=()=>{
-		if(this.state.active==1)
-			{
-				return(
-					<div id="BocciaClassesMainButtonDiv">
-
-
-
-					</div>
-				);
-			}
 			if(this.state.active==2)
 			{
 				return(
 					<div id="BocciaClassesMainButtonDiv">
-						<button onClick={this.handleclick} value='2'  className="BocciaClassesMainButton BocciaClassesMainButtonActive">BC1</button>
-						<button onClick={this.handleclick} value='3'  className="BocciaClassesMainButton">BC2</button>
-						<button onClick={this.handleclick} value='4'  className="BocciaClassesMainButton">BC3</button>	
-						<button onClick={this.handleclick} value='5'  className="BocciaClassesMainButton">BC4</button>
-						<button onClick={this.handleclick} value='6'  className="BocciaClassesMainButton">BC5</button>
+						<button className="BocciaClassesMainButton BocciaClassesMainButtonActive rightcurved"><p>סיווג BC1</p></button>
+						<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
+						<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
+						<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
+						<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
+						<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
 					</div>
 				);
 			}
@@ -63,11 +54,12 @@ class BocciaClasses extends Component {
 				{
 					return(
 						<div id="BocciaClassesMainButtonDiv">
-							<button onClick={this.handleclick} value='2' className="BocciaClassesMainButton">BC1</button>
-							<button onClick={this.handleclick} value='3'  className="BocciaClassesMainButton BocciaClassesMainButtonActive">BC2</button>
-							<button onClick={this.handleclick} value='4'  className="BocciaClassesMainButton">BC3</button>	
-							<button onClick={this.handleclick} value='5'  className="BocciaClassesMainButton">BC4</button>
-							<button onClick={this.handleclick} value='6'  className="BocciaClassesMainButton">BC5</button>
+							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
+							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC2</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
+							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
+							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
 						</div>
 					);
 				}
@@ -75,11 +67,12 @@ class BocciaClasses extends Component {
 				{
 					return(
 						<div id="BocciaClassesMainButtonDiv">
-							<button onClick={this.handleclick} value='2'  className="BocciaClassesMainButton">BC1</button>
-							<button onClick={this.handleclick} value='3'  className="BocciaClassesMainButton">BC2</button>
-							<button onClick={this.handleclick} value='4'  className="BocciaClassesMainButton BocciaClassesMainButtonActive">BC3</button>	
-							<button onClick={this.handleclick} value='5'  className="BocciaClassesMainButton">BC4</button>
-							<button onClick={this.handleclick} value='6'  className="BocciaClassesMainButton">BC5</button>
+							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
+							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC3</p></button>	
+							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
+							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
 						</div>
 					);
 				}	
@@ -87,11 +80,12 @@ class BocciaClasses extends Component {
 				{
 					return(
 						<div id="BocciaClassesMainButtonDiv">
-							<button onClick={this.handleclick} value='2'  className="BocciaClassesMainButton">BC1</button>
-							<button onClick={this.handleclick} value='3'  className="BocciaClassesMainButton">BC2</button>
-							<button onClick={this.handleclick} value='4'  className="BocciaClassesMainButton">BC3</button>	
-							<button onClick={this.handleclick} value='5'  className="BocciaClassesMainButton BocciaClassesMainButtonActive">BC4</button>
-							<button onClick={this.handleclick} value='6'  className="BocciaClassesMainButton">BC5</button>
+							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
+							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC4</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
+							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
 						</div>
 					);
 				}	
@@ -99,31 +93,45 @@ class BocciaClasses extends Component {
 				{
 					return(
 						<div id="BocciaClassesMainButtonDiv">
-							<button onClick={this.handleclick} value='2'  className="BocciaClassesMainButton">BC1</button>
-							<button onClick={this.handleclick} value='3'  className="BocciaClassesMainButton">BC2</button>
-							<button onClick={this.handleclick} value='4'  className="BocciaClassesMainButton">BC3</button>	
-							<button onClick={this.handleclick} value='5'  className="BocciaClassesMainButton">BC4</button>
-							<button onClick={this.handleclick} value='6'  className="BocciaClassesMainButton BocciaClassesMainButtonActive">BC5</button>
+							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
+							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
+							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC5</p></button>
+							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
 						</div>
 					);
 				}	
+			if(this.state.active==7)
+				{
+					return(
+						<div id="BocciaClassesMainButtonDiv">
+							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
+							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
+							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
+							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive leftcurved"><p>תרגול</p></button>
+						</div>
+					);
+				}		
 	}
 
 	let GetDivContent=()=>{
 		if(this.state.active==1)
 			{
 				return(
-					<div id="BocciaClassesFirstContentDiv">
-								<h1> סיווגים   </h1>
-								<h2>הסיווג במשחק מחולק ל5 סיווגים: BC1, BC2, BC3, BC4, BC5 כאשר כל סיווג מתייחס לרמת מוגבלות שונה </h2>	
-								<h2> הסיווג משפיע על קטגוריית המשחק</h2>	
-								<div id="BocciaClasses_ClassesDiv">
-									<button onClick={this.handleclick} value='2'  className="BocciaClassesMainButton">BC1</button>
-									<button onClick={this.handleclick} value='3'  className="BocciaClassesMainButton">BC2</button>
-									<button onClick={this.handleclick} value='4'  className="BocciaClassesMainButton">BC3</button>	
-									<button onClick={this.handleclick} value='5'  className="BocciaClassesMainButton">BC4</button>
-									<button onClick={this.handleclick} value='6'  className="BocciaClassesMainButton">BC5</button>
-								</div>			
+					<div id="BocciaClassesContentDivFirstState">
+						<p>הסבר ממש קצר של גג שתי שורות</p>
+						<p>הסבר ממש קצר של גג שתי שורות</p>
+						<div id="BocciaClassesContentDivFirstStatePage">
+								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="2">01<br/>סיווג BC1</button>
+								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="3">02<br/>סיווג BC2</button>
+								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="4">03<br/>סיווג BC3</button>
+								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="5">04<br/>סיווג BC4</button>
+								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="6">05<br/>סיווג BC5</button>
+								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="7">06<br/>תרגול</button>			
+						</div>
 					</div>
 				)
 			}
@@ -178,50 +186,45 @@ class BocciaClasses extends Component {
 						</div>
 					)				
 				}	
+	}
 
+	let GetDivFrontBack=()=>{
+		if(this.state.active!=1){
+			return(
+				<div>
+					<div id="BackButton">
+						<button value="1" onClick={this.handlearrow} className="FrontBackButtons">
+							🡺  הקודם
+						</button>
+					</div>
+					<div id="FrontButton">
+						<button value="2" onClick={this.handlearrow} className="FrontBackButtons">
+							הבא 🢀
+						</button>
+					</div>		
+			</div>
+			);
+		}
 }
 
-
-
-		return(
-			<body>
-				 <div className="nav">
-		          <ul className="navlist">
-		            <a href="./#/"><li className="navtabs">צרו קשר</li></a>
-		            <a href="./#/"><li className="navtabs">אודות הארגון</li></a>
-		            <a href="./#/WhatIsBoccia"><li className="hometab">⌂</li></a>
-		          </ul>
-		        </div>
-
-				<div className="sidenavbar" >
-		           <p className="sidenavtabs"> <a href="./#/WhatIsBoccia">מה זה בוצ'ה</a></p>
-		           <p className="activesidenavtabs sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">מגרש</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">ציוד</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
-		           <p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
-		 		   <p className="sidenavtabs"> <a href="./#/">אתגר אימון לשחקנים</a></p> 
-				</div>
-
-				<div id="BocciaClassesMain">	
-					{GetDivButton()}
-					{GetDivContent()}
-					<div id="FrontBackButtonsDiv">
-						<div className="FronBackButtonSection">
-							<button value="1" onClick={this.handlearrow} className="FrontBackButtons">
-								🡺
-							</button>
-							<p>אחורה</p>
-						</div>
-						<div className="FronBackButtonSection">
-							<button value="2" onClick={this.handlearrow} className="FrontBackButtons">
-								🢀
-							</button>
-							<p>קדימה</p>
-						</div>
-					</div>
-				</div>
+	return(
+		<body>
+			<div className="sidenavbar" >
+				<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">LOGO</a></p>
+	        	<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">מה זה בוצ'ה</a></p>
+	        	<p className="activesidenavtabs sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
+	         	<p className="sidenavtabs"> <a href="./#/">מגרש</a></p>
+	         	<p className="sidenavtabs"> <a href="./#/">ציוד</a></p>
+		       	<p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
+	         	<p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
+	          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
+	 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון לשחקנים</a></p> 
+			</div>
+			<div id="BocciaClassesMain">	
+				{GetDivButton()}
+				{GetDivContent()}
+				{GetDivFrontBack()}
+			</div>
 				
 			</body>
 

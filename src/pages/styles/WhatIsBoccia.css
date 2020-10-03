@@ -2,118 +2,123 @@
 *{
 	font-family: Heebo;
 }
-.nav{
-	width: 100%;
-	top:0em;
-	position: fixed;
-	color:white;
-	z-index: 9999;
-}
-.navlist{
-	display: block;
-	margin:0;
-	background-color: rgb(180,180,180);
-	height: 80px;
-	overflow: hidden;
-}
-.nav a{
-	text-decoration: none;
-	color: white;
-}
-.navlist li{
-	margin-top: 5px;
-	border-radius: 10px;
-}
-
-
-.navtabs:hover{
-	background-color: lightgray;
-	cursor: pointer;
-	color:black;
-	transition:all 0.3s;
-}
-
-.navtabs {
-	display: inline-block;
-	margin-right: 0.5vw;
-	padding: 0.2vw  1vw 0.25vw 1vw;
-	font-size: 2vw;
-	transition:background-color 0.6s;
-	width: wrap;
-	text-align: center;
-	background-color: transparent;
-	color:black;
-}
-
-a .hometab{
-	float: right;
-	font-size: 90px;
-	display: inline;
-	padding: 0;
-	margin-right: 1.05em;
-	margin-top: -30px;
-	transition:background-color 0.3s;
-	width: wrap;
-	text-align: center;
-	color:black;
-	transition: 1s;
-}
-
-
-.hometab:hover{
-	transition: 0.2s;
-	color:lightgray;
-}
 .sidenavbar{
 	position: fixed;
 	right: 0;
-	width: 13vw;
-	background-color: rgb(190,190,190);
-	height: calc(100% - 80px);
-	top:80px;
+	width: 15vw;
+	background-color: rgb(15,18,89);
+	height: 100%;
+	top:0;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
 	align-content: stretch;
+	overflow-y: scroll;
 }
 
 a{
 	text-decoration: none;
-}
-.sidenavtabs a{
-	color:black;
-	font-size: 1.5vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+
 }
 
+/* width */
+.sidenavbar::-webkit-scrollbar {
+  width: 0.5vw;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10vw;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(40,40,40);
+}
 
 .sidenavtabs{
 	display: block;
-	height: calc(100% / 8);
-	border:1px solid black;
+	height: calc(100% / 13);
 	color:black;
 	background-color: transparent;
 	direction: rtl;
-	text-align: center;
-	margin: 0;
+	margin-right:2vw;
 }
-.sidenavtabs:hover{
-	background-color: rgb(170,170,170);
+.sidenavtabs a{
+	color:white;
+	font-size: 1.5vw;
+	display: flex;
+	justify-content: flex-start;
+	height: 100%;
+	align-items: center;
+	padding-right: 1vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	transition: 0.2s;
 }
-.activesidenavtabs{
-	background-color: gray;
+.sidenavtabs a:hover{
+	transform: scale(1.0);
+	margin-right: 1vw;
+	transition: 0.2s;
 }
-.activesidenavtabs:hover{
-	background-color: gray;
-}
-#WhatIsMain{
-	width: calc(100% - 250px);
-	height: calc(100% - 80px);
+
+
+.activesidenavtabs a::before{
+	content:'';
+	width: 2vw;
+	height: 2vw;
+	background-color:rgb(15,18,89);
+	border-bottom-left-radius: 1vw;
+	box-shadow: -10px 10px 0px 0px white;
 	position: absolute;
-	top:80px;
+	left:0;
+	top:-2vw;
+}
+
+.activesidenavtabs a::after{
+	content:'';
+	width: 2vw;
+	height: 2vw;
+	background-color:rgb(15,18,89);
+	border-top-left-radius: 1vw;
+	box-shadow: -10px -10px 0px 0px white;
+	position: absolute;
+	left:0;
+	bottom:-2vw;
+}
+
+
+
+.activesidenavtabs a{
+	color:black;
+	border-radius: 0px 20px 20px 0px;
+	background-color: white;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	position: relative;
+
+}
+
+
+.activesidenavtabs a:hover{
+	background-color: white;
+	transform: scale(1);
+	margin-right: 0;
+}
+
+
+#WhatIsMain{
+	width: calc(100% - 15vw);
+	position: absolute;
+	top:2vw;
 	right:15vw;
 	display: flex;
 	direction: rtl;
@@ -124,34 +129,106 @@ a{
 	display: flex;
 	direction: rtl;
 	justify-content: space-evenly;
-	margin:0 auto;
-	margin-top: 2vw;
+	margin-right:4vw;
+	margin-top: 0vw;
 	height: 100px;
-	width: 70vw;
+	width: 55vw;
+
 }
 .WhatIsMainButton{
-	font-size: 2.5vw;
-	width: 15vw;
-	border-radius: 10px;
+	font-size: 1.5vw;
+	width: 10vw;
 	border:none;
 	background-color: rgb(220,220,220);
 	height: fit-content;
 	padding: 0.4em 0em 0.4em 0em;
-	transition: 0.4s;
+	transition: 0.5s;
+	transform: skewX(20deg);
 }
+
+.rightcurved{
+	border-right: 20px solid transparent;
+	border-top-right-radius: 6vw;
+	border-bottom-right-radius: 17vw;
+	padding-left: 1vw;
+}
+.leftcurved{
+	border-right: 20px solid transparent;
+	border-top-left-radius: 17vw;
+	border-bottom-left-radius: 6vw;
+	padding-left: 1vw;
+	width: 12vw;
+}
+
+.WhatIsMainButton p{
+	transform: skewX(-20deg);
+	padding: 0;
+	margin: 0;
+}
+
 .WhatIsMainButtonActive{
 	background-color: rgb(150,150,150);
 }
-.WhatIsMainButton:hover{
-	cursor: pointer;
-	background-color: rgb(210,210,210);
-	transition: 0.4s;
+
+
+
+
+
+#WhatIsContentDiv{
+	width: 40vw;
+	height: fit-content;
+	margin-right: 4vw;
+	margin-top: 2vw;
+	text-align: right;
+	
 }
-.WhatIsMainButtonActive:hover{
-	background-color: rgb(150,150,150);
+#WhatIsContentText{
+	font-weight: 1000;
+	font-size: 2em;
+}
+#WhatIsContentDivFirstState p{
+	margin-right: 16vw;
+	width: fit-content;
+	font-size: 1vw;
 }
 
-#FrontBackButtonsDiv{
+#WhatIsContentDivFirstStatePage{
+	/*margin-right: 12vw;*/
+	margin: 0 auto;
+	margin-top: 3vw;
+	display: flex;
+	flex-wrap: wrap;
+	width: 60vw;
+	height: 30vw;
+	justify-content: space-evenly;
+}
+.WhatIsFirstStatePageButton{
+	width: 15vw;
+	margin: 1vw;
+	font-size: 1.4vw;
+	height: 10vw;
+	border: none;
+	box-shadow: 0.3vw 0.3vw 0.5vw gray;
+	border-radius: 1vw;
+	background-color: white;
+	transition: 0.4s;
+}
+.WhatIsFirstStatePageButton:hover{
+	transform: scale(1.1);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+
+
+#BackButton{
+	position:fixed;
+	bottom: 2vw;
+	right:18vw;
+	direction: rtl;
+	display: flex;
+}
+#FrontButton{
 	position:fixed;
 	bottom: 2vw;
 	left: 3vw;
@@ -159,11 +236,6 @@ a{
 	display: flex;
 }
 
-.FronBackButtonSection{
-	align-items: center;
-	text-align: left;
-	margin-right: 2vw;
-}
 
 .FrontBackButtons{
 	background-color: rgb(40,40,40);
@@ -176,24 +248,7 @@ a{
 	margin-left: 1.1px;
 }
 
-.FronBackButtonSection p{
-	font-weight: 1000;
-	font-size: 1.5vw;
-	margin: 0;
-	cursor: default;
-}
 .FrontBackButtons:hover{
 	color:lightgray;
 }
 
-#WhatIsContentDiv{
-
-	width: 70vw;
-	height: fit-content;
-	margin: 0 auto;
-	text-align: right;
-}
-#WhatIsContentText{
-	font-weight: 1000;
-	font-size: 2em;
-}
