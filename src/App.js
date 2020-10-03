@@ -6,7 +6,9 @@ import Home from './pages/Home.js';
 import WhatIsBoccia from './pages/WhatIsBoccia';
 import BocciaClasses from './pages/BocciaClasses';
 import Court from './pages/Court';
+import Gear from './pages/Gear';
 import Roles from './pages/Roles';
+import Rules from './pages/Rules';
 
 
 
@@ -21,6 +23,8 @@ class App extends Component {
         <Route path="/WhatIsBoccia" component ={WhatIsBoccia}/> 
         <Route path="/Court" component ={Court}/>        
         <Route path="/Roles" component ={Roles}/> 
+        <Route path="/Gear" component ={Gear}/>
+        <Route path="/Rules" component ={Rules}/>
         <Route exact path="/Example" component ={Home}/> 
        </HashRouter>
 

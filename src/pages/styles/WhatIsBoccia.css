@@ -30,13 +30,12 @@ a{
 
 /* Track */
 ::-webkit-scrollbar-track {
- 
-
+   background: transparent;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: transparent;
+   background: #244242;
   border-radius: 10vw;
 }
 
@@ -136,12 +135,12 @@ a{
 	margin-right:4vw;
 	margin-top: 0vw;
 	height: 100px;
-	width: 55vw;
+	width: 60vw;
 
 }
 .WhatIsMainButton{
 	font-size: 1.5vw;
-	width: 12vw;
+	width: 11vw;
 	border:none;
 	background-color: rgb(220,220,220);
 	height: fit-content;
@@ -151,19 +150,20 @@ a{
 }
 
 .rightcurved{
-	border-right: 20px solid transparent;
+	border-right: 1vw solid transparent;
 	border-top-right-radius: 6vw;
 	border-bottom-right-radius: 17vw;
 	padding-left: 1vw;
-	width: fit-content;
+	padding-right: 0;
+	width: 14vw;
 }
 .leftcurved{
-	border-right: 20px solid transparent;
+	border-right: 1vw solid transparent;
 	border-top-left-radius: 17vw;
 	border-bottom-left-radius: 6vw;
 	padding-left: 2vw;
-	padding-right: 0.5vw;
-	width: fit-content;
+	padding-right: 0;
+	width: 10vw;
 }
 
 .WhatIsMainButton p{
@@ -181,10 +181,9 @@ a{
 
 
 #WhatIsContentDiv{
-	width: 40vw;
+	width: 70vw;
 	height: fit-content;
-	margin-right: 4vw;
-	margin-top: 2vw;
+	margin: 0 auto;
 	text-align: right;
 	
 }
@@ -204,8 +203,7 @@ a{
 	margin-top: 3vw;
 	display: flex;
 	flex-wrap: wrap;
-	width: 67vw;
-	padding: 1vw;
+	width: 60vw;
 	height: 30vw;
 	justify-content: space-evenly;
 }
