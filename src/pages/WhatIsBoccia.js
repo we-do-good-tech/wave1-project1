@@ -193,7 +193,7 @@ class WhatIsBoccia extends Component {
 		         	<p className="sidenavtabs"> <a href="./#/Court">מגרש</a></p>
 		         	<p className="sidenavtabs"> <a href="./#/">ציוד</a></p>
 		        	<p className="sidenavtabs"> <a href="./#/">חוקה ושיפוט</a></p>
-		         	<p className="sidenavtabs"> <a href="./#/">תפקידים</a></p>
+		         	<p className="sidenavtabs"> <a href="./#/Roles">תפקידים</a></p>
 		          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
 		 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון </a></p>
 		 		 	<p className="sidenavtabs"> <a href="./#/"> צור קשר </a></p> 
