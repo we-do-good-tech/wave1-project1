@@ -10,7 +10,7 @@ class Gear extends Component {
 		super();
 		this.state = {  
 			active:0,
-			names:["כדורים" , "ציוד עזר" , "כלי השופט" , "טםסי המשחק" ,"שעון עצר"   ]
+			names:["כדורים" , "ציוד עזר" , "כלי השופט" , "טפסי המשחק" ,"שעון עצר"   ]
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
 	  	this.handleclick= this.handleclick.bind(this);

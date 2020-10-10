@@ -40,14 +40,12 @@ class Game extends Component {
 
 
 	render(){
-		let x = this.state.x;
-		let y = this.state.y;
 
 		return(
 			<div>
 				<div id="gamediv" >
 					<img id="court" src={court}/>
-					<RedCircle x={x} y={y}/>
+					<RedCircle x={this.state.x} y={this.state.y}/>
 					<WhiteCircle  x={122} y={502}/>
 					<p><button onClick={()=>this.move(130,450,18)}>Click Me</button></p>
 					<p><button onClick={()=>{this.setState({x:117,y:140})}}>Reset</button></p>
