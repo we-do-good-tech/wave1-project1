@@ -1,0 +1,34 @@
+
+#BackButton{
+	position:fixed;
+	bottom: 2vw;
+	right:40%;
+	direction: rtl;
+	display: flex;
+}
+#FrontButton{
+	position:fixed;
+	bottom: 2vw;
+	left: 33%;
+	direction: rtl;
+	display: flex;
+}
+
+
+.FrontBackButtons{
+	background-color: #FAA159;
+	padding:0.3vw 0vw  0.4vw 0vw;
+	color:#0F1259;
+	font-size: 2vw;
+	border-radius: 30vw;
+	border:none;
+	cursor: pointer;
+	margin-left: 1.1px;
+	width: 10vw;
+	transition: 0.3s;
+}
+
+.FrontBackButtons:hover{
+	background-color:#F6841F;
+	transition: 0.2s;
+}

@@ -1,31 +1,39 @@
-import React, {Component} from 'react';
+import React, {Component,componentDidUpdate} from 'react';
 import './styles/WhatIsBoccia.css';
+import SideBar from '../Components/SideBar.js';
+import ProgressBar from '../Components/ProgressBar.js';
+import FirstPageTabs from '../Components/FirstPageTabs.js';
+import FrontBack from '../Components/FrontBack.js';
 
 class WhatIsBoccia extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:1
+			active:0,
+			names:["מה זה בוצ'ה", "למי זה מיועד" , "איך משחקים" , "נבחרת ישראל", ]
 	  	}
+	  	this.handlearrow= this.handlearrow.bind(this);
+	  	this.handleclick= this.handleclick.bind(this);
 
 	}
 
 	handleclick=(evt)=>{
-		this.setState({active:evt.target.value});
-			console.log(this.state.active)
+		this.setState({active:parseInt(evt.target.value)});
 	}
+
 	handlearrow=(evt)=>{
-		if(evt.target.value==1){
-			if(this.state.active==1){
-				this.setState({active:6})
+		if(evt==1){
+			if(this.state.active==0){
+				this.setState({active:this.state.names.length})
 			}
 			else{
-				this.setState({active:parseInt(this.state.active)-1})
+				this.setState({active:parseInt(this.state.active)-1});
 			}
 		}
-		else if(evt.target.value==2){
-			if(this.state.active==6){
-				this.setState({active:1})
+
+		else if(evt==2){ 
+			if(this.state.active==this.state.names.length){
+				this.setState({active:0})
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)+1})
@@ -33,173 +41,76 @@ class WhatIsBoccia extends Component {
 		}		
 	}
 
-	render(){
-
-	let GetDivButton=()=>{
-		if(this.state.active==2)
-			{
-				return(
-					<div id="WhatIsMainButtonDiv">
-						<button className="WhatIsMainButton WhatIsMainButtonActive rightcurved"><p> מה זה בוצ'ה</p></button>
-						<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
-						<button className="WhatIsMainButton"><p>איך משחקים</p></button>
-						<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
-						<button className="WhatIsMainButton leftcurved"><p>תרגול</p></button>	
-					</div>
-				);
-			}
-			if(this.state.active==3)
-			{
-				return(
-					<div id="WhatIsMainButtonDiv">
-						<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה </p></button>
-						<button className="WhatIsMainButton WhatIsMainButtonActive"><p>למי זה מיועד</p></button>
-						<button className="WhatIsMainButton"><p>איך משחקים</p></button>
-						<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
-						<button className="WhatIsMainButton leftcurved"><p>תרגול </p></button>		
-					</div>
-				);
-			}
-
-			if(this.state.active==4)
-				{
-					return(
-						<div id="WhatIsMainButtonDiv">
-							<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה</p></button>
-							<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
-							<button className="WhatIsMainButton WhatIsMainButtonActive"><p>איך משחקים</p></button>
-							<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
-							<button className="WhatIsMainButton leftcurved"><p>תרגול </p></button>	
-						</div>
-					);
-				}
-			if(this.state.active==5)
-				{
-					return(
-						<div id="WhatIsMainButtonDiv">
-							<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה</p></button>
-							<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
-							<button className="WhatIsMainButton"><p>איך משחקים</p></button>
-							<button className="WhatIsMainButton WhatIsMainButtonActive "><p>נבחרת ישראל</p></button>
-							<button className="WhatIsMainButton leftcurved"><p>תרגול </p></button>	
-						</div>
-					);
-				}	
-			if(this.state.active==6)
-				{
-					return(
-						<div id="WhatIsMainButtonDiv">
-							<button className="WhatIsMainButton rightcurved"><p> מה זה בוצ'ה</p></button>
-							<button className="WhatIsMainButton"><p>למי זה מיועד</p></button>
-							<button className="WhatIsMainButton"><p>איך משחקים</p></button>
-							<button className="WhatIsMainButton"><p>נבחרת ישראל</p></button>
-							<button className="WhatIsMainButton WhatIsMainButtonActive leftcurved"><p>תרגול </p></button>	
-						</div>
-					);
-				}
+	handlebarclick=(val)=>{
+		console.log(val);
+		this.setState({active:parseInt(val)});
 	}
 
-	let GetDivContent=()=>{
-			
+
+	render(){
+
+
+
+		let GetDivContent= () => {			
+			if(this.state.active==0)
+			{
+				return(
+					<div className="ContentDiv">
+						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+					</div>
+				)
+			}
+
 			if(this.state.active==1)
 			{
 				return(
-					<div id="WhatIsContentDivFirstState">
-						<p>הסבר ממש קצר של גג שתי שורות</p>
-						<p>הסבר ממש קצר של גג שתי שורות</p>
-						<div id="WhatIsContentDivFirstStatePage">
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="2">01<br/>מה זה בוצ'ה</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="3">02<br/>למי זה מיועד</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="4">03<br/>איך משחקים</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="5">04<br/>נבחרת ישראל</button>
-								<button className="WhatIsFirstStatePageButton" onClick={this.handleclick} value="6">05<br/>תרגול</button>		
-						</div>
+					<div className="ContentDiv">
+								<p className="ContentText">1</p>						
 					</div>
 				)
 			}
-
 			if(this.state.active==2)
 			{
 				return(
-					<div id="WhatIsContentDiv">
-								<p id="WhatIsContentText">1</p>						
-					</div>
-				)
-			}
-			if(this.state.active==3)
-			{
-				return(
-					<div id="WhatIsContentDiv">
-								<p id="WhatIsContentText">
-								2
-								</p>						
+					<div className="ContentDiv">
+								<p className="ContentText">2</p>						
 					</div>
 				)
 			}
 
-			if(this.state.active==4)
+			if(this.state.active==3)
 				{
 					return(
-						<div id="WhatIsContentDiv">
-									<p id="WhatIsContentText">3</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">3</p>						
 						</div>
 					)
 				}
-			if(this.state.active==5)
+			if(this.state.active==4)
 				{
 					return(
-						<div id="WhatIsContentDiv">
-									<p id="WhatIsContentText">4</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">4</p>						
 						</div>
 					)				
 				}	
-			if(this.state.active==6)
-				{
-					return(
-						<div id="WhatIsContentDiv">
-									<p id="WhatIsContentText">5</p>						
-						</div>
-					)				
-				}		
+		
 	}
 
-	let GetDivFrontBack=()=>{
-		if(this.state.active!=1){
-			return(
-				<div>
-					<div id="BackButton">
-						<button value="1" onClick={this.handlearrow} className="FrontBackButtons">
-							🡺  הקודם
-						</button>
-					</div>
-					<div id="FrontButton">
-						<button value="2" onClick={this.handlearrow} className="FrontBackButtons">
-							הבא 🢀
-						</button>
-					</div>		
-			</div>
-			);
-		}
+		let GetDivFrontBack= () => {
+			if(this.state.active!=0){
+				return(
+					<FrontBack onClick={this.handlearrow}/>
+				);
+			}
 	}
-
+	
 
 		return(
-			<div>
-				
-				<div className="sidenavbar" >
-					<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">LOGO</a></p>
-		        	<p className="activesidenavtabs sidenavtabs"> <a href="./#/WhatIsBoccia">ארגון הבוצ'ה</a></p>
-		        	<p className="sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
-		         	<p className="sidenavtabs"> <a href="./#/Court">מגרש</a></p>
-		         	<p className="sidenavtabs"> <a href="./#/Gear">ציוד</a></p>
-		        	<p className="sidenavtabs"> <a href="./#/Rules">חוקה ושיפוט</a></p>
-		         	<p className="sidenavtabs"> <a href="./#/Roles">תפקידים</a></p>
-		          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
-		 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון </a></p>
-		 		 	<p className="sidenavtabs"> <a href="./#/"> צור קשר </a></p> 
-				</div>
+			<div>				
+				<SideBar active='1'/>
 				<div id="WhatIsMain">	
-					{GetDivButton()}
+					<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				

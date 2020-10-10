@@ -1,31 +1,39 @@
-import React, {Component} from 'react';
-import './styles/BocciaClasses.css';
+import React, {Component,componentDidUpdate} from 'react';
+import './styles/WhatIsBoccia.css';
+import SideBar from '../Components/SideBar.js';
+import ProgressBar from '../Components/ProgressBar.js';
+import FirstPageTabs from '../Components/FirstPageTabs.js';
+import FrontBack from '../Components/FrontBack.js';
 
 class BocciaClasses extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:1
+			active:0,
+			names:["סיווג BC1" ,"סיווג BC2" ,"סיווג BC3" ,"סיווג BC4" ,"סיווג BC5" ]
 	  	}
+	  	this.handlearrow= this.handlearrow.bind(this);
+	  	this.handleclick= this.handleclick.bind(this);
 
 	}
 
 	handleclick=(evt)=>{
-		this.setState({active:evt.target.value});
-			console.log(this.state.active)
+		this.setState({active:parseInt(evt.target.value)});
 	}
+
 	handlearrow=(evt)=>{
-		if(evt.target.value==1){
-			if(this.state.active==1){
-				this.setState({active:7})
+		if(evt==1){
+			if(this.state.active==0){
+				this.setState({active:this.state.names.length})
 			}
 			else{
-				this.setState({active:parseInt(this.state.active)-1})
+				this.setState({active:parseInt(this.state.active)-1});
 			}
 		}
-		else if(evt.target.value==2){
-			if(this.state.active==7){
-				this.setState({active:1})
+
+		else if(evt==2){ 
+			if(this.state.active==this.state.names.length){
+				this.setState({active:0})
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)+1})
@@ -33,115 +41,39 @@ class BocciaClasses extends Component {
 		}		
 	}
 
-	render(){
-
-	let GetDivButton=()=>{
-			if(this.state.active==2)
-			{
-				return(
-					<div id="BocciaClassesMainButtonDiv">
-						<button className="BocciaClassesMainButton BocciaClassesMainButtonActive rightcurved"><p>סיווג BC1</p></button>
-						<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
-						<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
-						<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
-						<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
-						<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
-					</div>
-				);
-			}
-
-			if(this.state.active==3)
-				{
-					return(
-						<div id="BocciaClassesMainButtonDiv">
-							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
-							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC2</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
-							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
-							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}
-			if(this.state.active==4)
-				{
-					return(
-						<div id="BocciaClassesMainButtonDiv">
-							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
-							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC3</p></button>	
-							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
-							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}	
-			if(this.state.active==5)
-				{
-					return(
-						<div id="BocciaClassesMainButtonDiv">
-							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
-							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC4</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
-							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}	
-			if(this.state.active==6)
-				{
-					return(
-						<div id="BocciaClassesMainButtonDiv">
-							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
-							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
-							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive"><p>סיווג BC5</p></button>
-							<button className="BocciaClassesMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}	
-			if(this.state.active==7)
-				{
-					return(
-						<div id="BocciaClassesMainButtonDiv">
-							<button className="BocciaClassesMainButton rightcurved"><p>סיווג BC1</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC2</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC3</p></button>	
-							<button className="BocciaClassesMainButton"><p>סיווג BC4</p></button>
-							<button className="BocciaClassesMainButton"><p>סיווג BC5</p></button>
-							<button className="BocciaClassesMainButton BocciaClassesMainButtonActive leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}		
+	handlebarclick=(val)=>{
+		console.log(val);
+		this.setState({active:parseInt(val)});
 	}
 
-	let GetDivContent=()=>{
-		if(this.state.active==1)
+
+	render(){
+
+
+
+		let GetDivContent= () => {			
+			if(this.state.active==0)
 			{
 				return(
-					<div id="BocciaClassesContentDivFirstState">
-						<p>הסבר ממש קצר של גג שתי שורות</p>
-						<p>הסבר ממש קצר של גג שתי שורות</p>
-						<div id="BocciaClassesContentDivFirstStatePage">
-								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="2">01<br/>סיווג BC1</button>
-								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="3">02<br/>סיווג BC2</button>
-								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="4">03<br/>סיווג BC3</button>
-								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="5">04<br/>סיווג BC4</button>
-								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="6">05<br/>סיווג BC5</button>
-								<button className="BocciaClassesFirstStatePageButton" onClick={this.handleclick} value="7">06<br/>תרגול</button>			
-						</div>
+					<div className="ContentDiv">
+						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+					</div>
+				)
+			}
+
+			if(this.state.active==1)
+			{
+				return(
+					<div className="ContentDiv">
+								<p className="ContentText">1</p>						
 					</div>
 				)
 			}
 			if(this.state.active==2)
 			{
 				return(
-					<div id="BocciaClassesContentDiv">
-								<p id="BocciaClassesContentText">
-								BC1
-								</p>						
+					<div className="ContentDiv">
+								<p className="ContentText">2</p>						
 					</div>
 				)
 			}
@@ -149,94 +81,58 @@ class BocciaClasses extends Component {
 			if(this.state.active==3)
 				{
 					return(
-						<div id="BocciaClassesContentDiv">
-									<p id="BocciaClassesContentText">
-									BC2
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">3</p>						
 						</div>
 					)
 				}
 			if(this.state.active==4)
 				{
 					return(
-						<div id="BocciaClassesContentDiv">
-									<p id="BocciaClassesContentText">
-									BC3
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">4</p>						
 						</div>
 					)				
 				}	
+
 			if(this.state.active==5)
 				{
 					return(
-						<div id="BocciaClassesContentDiv">
-									<p id="BocciaClassesContentText">
-									BC4
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">5</p>						
 						</div>
 					)				
 				}	
 			if(this.state.active==6)
 				{
 					return(
-						<div id="BocciaClassesContentDiv">
-									<p id="BocciaClassesContentText">
-									BC5
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">6</p>						
 						</div>
 					)				
 				}	
-			if(this.state.active==7)
-				{
-					return(
-						<div id="BocciaClassesContentDiv">
-									<p id="BocciaClassesContentText">
-									תרגול
-									</p>						
-						</div>
-					)				
-				}	
+		
 	}
 
-	let GetDivFrontBack=()=>{
-		if(this.state.active!=1){
-			return(
-				<div>
-					<div id="BackButton">
-						<button value="1" onClick={this.handlearrow} className="FrontBackButtons">
-							🡺  הקודם
-						</button>
-					</div>
-					<div id="FrontButton">
-						<button value="2" onClick={this.handlearrow} className="FrontBackButtons">
-							הבא 🢀
-						</button>
-					</div>		
-			</div>
-			);
-		}
-}
+		let GetDivFrontBack= () => {
+			if(this.state.active!=0){
+				return(
+					<FrontBack onClick={this.handlearrow}/>
+				);
+			}
+	}
+	
 
-	return(
-		<div>
-			<div className="sidenavbar" >
-				<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">LOGO</a></p>
-	        	<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">ארגון הבוצ'ה</a></p>
-	        	<p className="activesidenavtabs sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
-	         	<p className="sidenavtabs"> <a href="./#/Court">מגרש</a></p>
-	         	<p className="sidenavtabs"> <a href="./#/Gear">ציוד</a></p>
-		       	<p className="sidenavtabs"> <a href="./#/Rules">חוקה ושיפוט</a></p>
-	         	<p className="sidenavtabs"> <a href="./#/Roles">תפקידים</a></p>
-	          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
-	 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון </a></p>
-		 		<p className="sidenavtabs"> <a href="./#/"> צור קשר </a></p> 
+		return(
+			<div>				
+				<SideBar active='2'/>
+				<div id="WhatIsMain">	
+					<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
+					{GetDivContent()}
+					{GetDivFrontBack()}					
+				</div>				
 			</div>
-			<div id="BocciaClassesMain">	
-				{GetDivButton()}
-				{GetDivContent()}
-				{GetDivFrontBack()}
-			</div>
-		</div>
+
 		)
 
 	}

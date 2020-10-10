@@ -1,0 +1,112 @@
+.sidenavbar{
+	position: fixed;
+	right: 0;
+	width: 15vw;
+	background-color: rgb(15,18,89);
+	height: 100%;
+	top:0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	justify-content: space-evenly;
+	overflow-y: scroll;
+}
+
+a{
+	text-decoration: none;
+
+}
+
+/* width */
+.sidenavbar::-webkit-scrollbar {
+  width: 0.5vw;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #244242;
+  border-radius: 10vw;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(40,40,40);
+}
+
+.sidenavtabs{
+	display: block;
+	height: 1.7vw;
+	color:black;
+	background-color: transparent;
+	direction: rtl;
+	margin-right:2vw;
+/*	margin-bottom: 1.8vw;*/
+}
+.sidenavtabs a{
+	color:white;
+	font-size: 1.5vw;
+	display: flex;
+	justify-content: flex-start;
+	height: 100%;
+	align-items: center;
+	padding-right: 1vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	transition: 0.2s;
+}
+.sidenavtabs a:hover{
+	transform: scale(1.0);
+	margin-right: 1vw;
+	transition: 0.2s;
+}
+
+.activesidenavtabs{
+	height: 4vw;
+}
+.activesidenavtabs a::before{
+	content:'';
+	width: 2vw;
+	height: 2vw;
+	background-color:rgb(15,18,89);
+	border-bottom-left-radius: 1vw;
+	box-shadow: -10px 10px 0px 0px white;
+	position: absolute;
+	left:0;
+	top:-2vw;
+}
+
+.activesidenavtabs a::after{
+	content:'';
+	width: 2vw;
+	height: 2vw;
+	background-color:rgb(15,18,89);
+	border-top-left-radius: 1vw;
+	box-shadow: -10px -10px 0px 0px white;
+	position: absolute;
+	left:0;
+	bottom:-2vw;
+}
+
+
+
+.activesidenavtabs a{
+	color:black;
+	border-radius: 0px 20px 20px 0px;
+	background-color: white;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	position: relative;
+
+}
+.activesidenavtabs a:hover{
+	background-color: white;
+	transform: scale(1);
+	margin-right: 0;
+}

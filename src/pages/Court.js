@@ -1,31 +1,39 @@
-import React, {Component} from 'react';
-import './styles/Court.css';
+import React, {Component,componentDidUpdate} from 'react';
+import './styles/WhatIsBoccia.css';
+import SideBar from '../Components/SideBar.js';
+import ProgressBar from '../Components/ProgressBar.js';
+import FirstPageTabs from '../Components/FirstPageTabs.js';
+import FrontBack from '../Components/FrontBack.js';
 
 class Court extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:1
+			active:0,
+			names:["תיבת שחקן" , "קו הזריקה" , "קו ה-V" , "אזור המשחק" , "נקודת הפלוס" , "ריבוע המטרה" ]
 	  	}
+	  	this.handlearrow= this.handlearrow.bind(this);
+	  	this.handleclick= this.handleclick.bind(this);
 
 	}
 
 	handleclick=(evt)=>{
-		this.setState({active:evt.target.value});
-			console.log(this.state.active)
+		this.setState({active:parseInt(evt.target.value)});
 	}
+
 	handlearrow=(evt)=>{
-		if(evt.target.value==1){
-			if(this.state.active==1){
-				this.setState({active:8})
+		if(evt==1){
+			if(this.state.active==0){
+				this.setState({active:this.state.names.length})
 			}
 			else{
-				this.setState({active:parseInt(this.state.active)-1})
+				this.setState({active:parseInt(this.state.active)-1});
 			}
 		}
-		else if(evt.target.value==2){
-			if(this.state.active==8){
-				this.setState({active:1})
+
+		else if(evt==2){ 
+			if(this.state.active==this.state.names.length){
+				this.setState({active:0})
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)+1})
@@ -33,242 +41,98 @@ class Court extends Component {
 		}		
 	}
 
-	render(){
-
-	let GetDivButton=()=>{
-			if(this.state.active==2)
-			{
-				return(
-					<div id="CourtMainButtonDiv">
-						<button className="CourtMainButton CourtMainButtonActive rightcurved"><p>קופסאות שחקן</p></button>
-						<button className="CourtMainButton"><p>קו הזריקה</p></button>
-						<button className="CourtMainButton"><p>קו ה-V</p></button>	
-						<button className="CourtMainButton"><p>אזור המשחק</p></button>
-						<button className="CourtMainButton"><p>נקודת הפלוס</p></button>
-						<button className="CourtMainButton"><p>ריבוע המטרה</p></button>
-						<button className="CourtMainButton leftcurved"><p>תרגול</p></button>
-					</div>
-				);
-			}
-
-			if(this.state.active==3)
-				{
-					return(
-						<div id="CourtMainButtonDiv">
-							<button className="CourtMainButton rightcurved"><p>קופסאות שחקן</p></button>
-							<button className="CourtMainButton CourtMainButtonActive"><p>קו הזריקה</p></button>
-							<button className="CourtMainButton"><p>קו ה-V</p></button>	
-							<button className="CourtMainButton"><p>אזור המשחק</p></button>
-							<button className="CourtMainButton"><p>נקודת הפלוס</p></button>
-							<button className="CourtMainButton"><p>ריבוע המטרה</p></button>
-							<button className="CourtMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}
-			if(this.state.active==4)
-				{
-					return(
-						<div id="CourtMainButtonDiv">
-							<button className="CourtMainButton rightcurved"><p>קופסאות שחקן</p></button>
-							<button className="CourtMainButton"><p>קו הזריקה</p></button>
-							<button className="CourtMainButton CourtMainButtonActive"><p>קו ה-V</p></button>	
-							<button className="CourtMainButton"><p>אזור המשחק</p></button>
-							<button className="CourtMainButton"><p>נקודת הפלוס</p></button>
-							<button className="CourtMainButton"><p>ריבוע המטרה</p></button>
-							<button className="CourtMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}	
-			if(this.state.active==5)
-				{
-					return(
-						<div id="CourtMainButtonDiv">
-							<button className="CourtMainButton rightcurved"><p>קופסאות שחקן</p></button>
-							<button className="CourtMainButton"><p>קו הזריקה</p></button>
-							<button className="CourtMainButton"><p>קו ה-V</p></button>	
-							<button className="CourtMainButton CourtMainButtonActive "><p>אזור המשחק</p></button>
-							<button className="CourtMainButton"><p>נקודת הפלוס</p></button>
-							<button className="CourtMainButton"><p>ריבוע המטרה</p></button>
-							<button className="CourtMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}	
-			if(this.state.active==6)
-				{
-					return(
-						<div id="CourtMainButtonDiv">
-							<button className="CourtMainButton rightcurved"><p>קופסאות שחקן</p></button>
-							<button className="CourtMainButton"><p>קו הזריקה</p></button>
-							<button className="CourtMainButton"><p>קו ה-V</p></button>	
-							<button className="CourtMainButton"><p>אזור המשחק</p></button>
-							<button className="CourtMainButton CourtMainButtonActive"><p>נקודת הפלוס</p></button>
-							<button className="CourtMainButton"><p>ריבוע המטרה</p></button>
-							<button className="CourtMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}	
-			if(this.state.active==7)
-				{
-					return(
-						<div id="CourtMainButtonDiv">
-							<button className="CourtMainButton rightcurved"><p>קופסאות שחקן</p></button>
-							<button className="CourtMainButton"><p>קו הזריקה</p></button>
-							<button className="CourtMainButton"><p>קו ה-V</p></button>	
-							<button className="CourtMainButton"><p>אזור המשחק</p></button>
-							<button className="CourtMainButton"><p>נקודת הפלוס</p></button>
-							<button className="CourtMainButton CourtMainButtonActive"><p>ריבוע המטרה</p></button>
-							<button className="CourtMainButton leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}		
-
-			if(this.state.active==8)
-				{
-					return(
-						<div id="CourtMainButtonDiv">
-							<button className="CourtMainButton rightcurved"><p>קופסאות שחקן</p></button>
-							<button className="CourtMainButton"><p>קו הזריקה</p></button>
-							<button className="CourtMainButton"><p>קו ה-V</p></button>	
-							<button className="CourtMainButton"><p>אזור המשחק</p></button>
-							<button className="CourtMainButton"><p>נקודת הפלוס</p></button>
-							<button className="CourtMainButton"><p>ריבוע המטרה</p></button>
-							<button className="CourtMainButton CourtMainButtonActive leftcurved"><p>תרגול</p></button>
-						</div>
-					);
-				}			
+	handlebarclick=(val)=>{
+		console.log(val);
+		this.setState({active:parseInt(val)});
 	}
 
-	let GetDivContent=()=>{
-		if(this.state.active==1)
+
+	render(){
+
+
+
+		let GetDivContent= () => {			
+			if(this.state.active==0)
 			{
 				return(
-					<div id="CourtContentDivFirstState">
-						<p>הסבר ממש קצר של גג שתי שורות</p>
-						<p>הסבר ממש קצר של גג שתי שורות</p>
-						<div id="CourtContentDivFirstStatePage">
-								<button className="CourtFirstStatePageButton" onClick={this.handleclick} value="2">01<br/>קופסאות שחקן</button>
-								<button className="CourtFirstStatePageButton" onClick={this.handleclick} value="3">02<br/>קו הזריקה</button>
-								<button className="CourtFirstStatePageButton" onClick={this.handleclick} value="4">03<br/>קו ה-V</button>
-								<button className="CourtFirstStatePageButton" onClick={this.handleclick} value="5">04<br/>אזור המשחק</button>
-								<button className="CourtFirstStatePageButton" onClick={this.handleclick} value="6">05<br/>נקודת הפלוס</button>
-								<button className="CourtFirstStatePageButton" onClick={this.handleclick} value="7">06<br/>ריבוע המטרה</button>	
-								<button className="CourtFirstStatePageButton" onClick={this.handleclick} value="8">07<br/>תרגול</button>			
-						</div>
+					<div className="ContentDiv">
+						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+					</div>
+				)
+			}
+
+			if(this.state.active==1)
+			{
+				return(
+					<div className="ContentDiv">
+								<p className="ContentText">1</p>						
 					</div>
 				)
 			}
 			if(this.state.active==2)
-				{
-					return(
-						<div id="BocciaClassesContentDiv">
-									<p id="BocciaClassesContentText">
-									1
-									</p>						
-						</div>
-					)
-				}
+			{
+				return(
+					<div className="ContentDiv">
+								<p className="ContentText">2</p>						
+					</div>
+				)
+			}
+
 			if(this.state.active==3)
 				{
 					return(
-						<div id="CourtContentDiv">
-									<p id="CourtContentText">
-									2
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">3</p>						
 						</div>
 					)
 				}
 			if(this.state.active==4)
 				{
 					return(
-						<div id="CourtContentDiv">
-									<p id="CourtContentText">
-									3
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">4</p>						
 						</div>
 					)				
 				}	
+
 			if(this.state.active==5)
 				{
 					return(
-						<div id="CourtContentDiv">
-									<p id="CourtContentText">
-									4
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">5</p>						
 						</div>
 					)				
 				}	
 			if(this.state.active==6)
 				{
 					return(
-						<div id="CourtContentDiv">
-									<p id="CourtContentText">
-									5
-									</p>						
+						<div className="ContentDiv">
+									<p className="ContentText">6</p>						
 						</div>
 					)				
 				}	
-			if(this.state.active==7)
-				{
-					return(
-						<div id="CourtContentDiv">
-									<p id="CourtContentText">
-									6
-									</p>						
-						</div>
-					)				
-				}
-
-			if(this.state.active==8)
-				{
-					return(
-						<div id="CourtContentDiv">
-									<p id="CourtContentText">
-									7
-									</p>						
-						</div>
-					)				
-				}		
+		
 	}
 
-	let GetDivFrontBack=()=>{
-		if(this.state.active!=1){
-			return(
-				<div>
-					<div id="BackButton">
-						<button value="1" onClick={this.handlearrow} className="FrontBackButtons">
-							🡺  הקודם
-						</button>
-					</div>
-					<div id="FrontButton">
-						<button value="2" onClick={this.handlearrow} className="FrontBackButtons">
-							הבא 🢀
-						</button>
-					</div>		
-			</div>
-			);
-		}
-}
+		let GetDivFrontBack= () => {
+			if(this.state.active!=0){
+				return(
+					<FrontBack onClick={this.handlearrow}/>
+				);
+			}
+	}
+	
 
-	return(
-		<div>
-			<div className="sidenavbar" >
-				<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">LOGO</a></p>
-	        	<p className="sidenavtabs"> <a href="./#/WhatIsBoccia">ארגון הבוצ'ה</a></p>
-	        	<p className="sidenavtabs"> <a href="./#/BocciaClasses">סיווגים</a></p>
-	         	<p className="activesidenavtabs sidenavtabs"> <a href="./#/Court">מגרש</a></p>
-	         	<p className="sidenavtabs"> <a href="./#/Gear">ציוד</a></p>
-		       	<p className="sidenavtabs"> <a href="./#/Rules">חוקה ושיפוט</a></p>
-	         	<p className="sidenavtabs"> <a href="./#/Roles">תפקידים</a></p>
-	          	<p className="sidenavtabs"> <a href="./#/">אסטרטגיה</a></p> 
-	 		 	<p className="sidenavtabs"> <a href="./#/">אתגר אימון </a></p>
-		 		<p className="sidenavtabs"> <a href="./#/"> צור קשר </a></p> 
+		return(
+			<div>				
+				<SideBar active='3'/>
+				<div id="WhatIsMain">	
+					<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
+					{GetDivContent()}
+					{GetDivFrontBack()}					
+				</div>				
 			</div>
-			<div id="CourtMain">	
-				{GetDivButton()}
-				{GetDivContent()}
-				{GetDivFrontBack()}
-			</div>
-		</div>
+
 		)
 
 	}

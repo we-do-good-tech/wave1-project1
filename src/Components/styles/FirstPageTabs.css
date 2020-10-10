@@ -1,0 +1,28 @@
+.ContentDivFirstStatePage{
+	margin: 0 auto;
+	margin-top: 3vw;
+	display: flex;
+	flex-wrap: wrap;
+	width: 60vw;
+	height: 30vw;
+	justify-content: space-evenly;
+	direction: rtl;
+}
+.FirstStatePageButton{
+	width: 15vw;
+	margin: 1vw;
+	font-size: 1.4vw;
+	font-weight: 1000;
+	height: 10vw;
+	border: none;
+	box-shadow: 0.3vw 0.3vw 0.5vw rgb(200,200,200);
+	border-radius: 1vw;
+	background-color: #FAA159;
+	transition: 0.4s;
+	color: #0F1259;
+}
+.FirstStatePageButton:hover{
+	transform: scale(1.1);
+	transition: 0.2s;
+	cursor: pointer;
+}
