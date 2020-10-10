@@ -4,6 +4,7 @@ import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
+import WhatIsOne from '../imgs/WhatIsOne.png'
 
 class WhatIsBoccia extends Component {
 	constructor(){
@@ -65,7 +66,17 @@ class WhatIsBoccia extends Component {
 			{
 				return(
 					<div className="ContentDiv">
-								<p className="ContentText">1</p>						
+								<p className="ContentTopic">מה זה בוצ'ה</p>
+								<p className="ContentText">
+								בוצ׳ה (הגייה - BO-CHA) הינו משחק פראלימפי המשלב מיומנות
+								כאשר המטרה היא לקרב כמה שיותר כדורים אל כדור המטרה.
+								השם ”בוצ'ה“ נגזר מהמילה הלטינית ”כדור“. 
+								</p>	<p className="ContentText">
+								המשחק יועד בתחילה לבעלי שיתוק מוחין (Cerebral Palsy),
+								ועם השנים התרחב גם לנכויות אחרות שאינן CP, <br/>
+								כגון ניוון שרירים, פוליו, פגיעות ראש ועוד.
+								</p>
+								<img className="ContentPic" src={WhatIsOne}/>						
 					</div>
 				)
 			}

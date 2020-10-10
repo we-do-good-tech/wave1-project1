@@ -15,9 +15,9 @@ class ProgressBar extends Component {
     	this.props.onClick(val);
     }
 
-	componentWillUpdate(prevProps, prevState) {
-      if(prevProps.active!==this.state.active)
-       this.setState({active:prevProps.active});
+	componentWillUpdate(newProps, newState) {
+      if(newProps.active!==this.state.active)
+       this.setState({active:newProps.active});
     }
 
 

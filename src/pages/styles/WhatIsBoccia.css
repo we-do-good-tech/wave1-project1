@@ -13,26 +13,34 @@
 	display: flex;
 	direction: rtl;
 	flex-direction: column;
-
 }
 
 
 
 
 .ContentDiv{
-	width: 70vw;
+	width: 40vw;
 	height: fit-content;
-	margin: 0 auto;
+	margin-right: 5vw;
 	text-align: right;
 	margin-top: 0vw;
-	direction: ltr;
-
+	direction: rtl;
+}
+.ContentPic{
+	width: 23vw;
+	position: absolute;
+	left: 10%;
+	top: 40%;
 }
 .ContentText{
-	font-weight: 1000;
-	font-size: 1.5vw;
+	font-weight: 400;
+	font-size: 1.4vw;
 }
-
+.ContentTopic{
+	font-weight: 1000;
+	font-size: 1.6vw;
+	letter-spacing: 0.1vw;
+}
 
 
 

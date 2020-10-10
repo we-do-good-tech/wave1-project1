@@ -17,7 +17,7 @@
 	background-color: #FDDCC0;
 	height: fit-content;
 	padding: 0.5vw 1vw 0.5vw 1vw;
-	transition: 0.4s;
+	transition:background-color 0.4s;
 	transform: skewX(20deg);
 	margin-left: 0.3vw;
 	cursor: pointer;
