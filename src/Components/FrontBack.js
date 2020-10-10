@@ -14,17 +14,15 @@ class FrontBack extends Component {
 
 	render(){
 		return(
-			<div>
-				<div id="BackButton">
-					<button value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
-						🡺  הקודם
+			<div>				
+					<button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
+						<span className="rightarrowfont">➜</span> הקודם
 					</button>
-				</div>
-				<div id="FrontButton">
-					<button value="2" onClick={()=>this.handleclick(2)} className="FrontBackButtons">
-							הבא 🢀
-					</button>
-				</div>		
+				
+				 
+					<button id="FrontButton" value="2" onClick={()=>this.handleclick(2)} className="FrontBackButtons">
+							הבא  <span className="leftarrowfont">➜</span>
+					</button>	
 			</div>
 		)
 	}

@@ -47,6 +47,7 @@
 	transform: skewX(-20deg);
 	padding: 0;
 	margin: 0;
+	font-weight: 400;
 }
 
 .MainButtonActive{
@@ -54,4 +55,8 @@
 }
 .MainButtonActive:hover{
 	background-color: #FAA159;
+}
+
+.MainButtonActive p{
+	font-weight: 900;
 }

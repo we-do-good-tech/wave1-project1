@@ -5,6 +5,7 @@
 	right:40%;
 	direction: rtl;
 	display: flex;
+	padding-right: 0.9vw;
 }
 #FrontButton{
 	position:fixed;
@@ -12,23 +13,40 @@
 	left: 33%;
 	direction: rtl;
 	display: flex;
+	padding-right: 1.2vw;
 }
 
 
 .FrontBackButtons{
 	background-color: #FAA159;
-	padding:0.3vw 0vw  0.4vw 0vw;
 	color:#0F1259;
 	font-size: 2vw;
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
-	margin-left: 1.1px;
-	width: 10vw;
+	width: 11vw;
+	height: 4.5vw;
 	transition: 0.3s;
+	align-items: center;
+	font-weight: 600;
 }
 
 .FrontBackButtons:hover{
 	background-color:#F6841F;
 	transition: 0.2s;
+}
+.leftarrowfont{
+	transform: scaleY(1.2) scaleX(0.8) rotate(180deg);
+	display: inline-block;
+	padding-bottom: 0.3vw;
+	margin-right: 1.5vw;
+	font-size: 3vw;
+}
+
+.rightarrowfont{
+	display: inline-block;
+	padding-bottom: 0.3vw;
+	margin-left: 0.4vw;
+	transform: scaleY(1.2) scaleX(0.8);
+	font-size: 3vw; 
 }

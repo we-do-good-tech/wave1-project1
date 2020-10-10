@@ -5,7 +5,7 @@
 	flex-wrap: wrap;
 	width: 60vw;
 	height: 30vw;
-	justify-content: space-evenly;
+	justify-content: center;
 	direction: rtl;
 }
 .FirstStatePageButton{
@@ -20,6 +20,7 @@
 	background-color: #FAA159;
 	transition: 0.4s;
 	color: #0F1259;
+	margin: 1vw 1vw 2vw 4vw;
 }
 .FirstStatePageButton:hover{
 	transform: scale(1.1);
