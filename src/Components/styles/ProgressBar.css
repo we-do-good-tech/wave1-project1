@@ -1,9 +1,10 @@
 .MainButtonDiv{
 	display: flex;
 	direction: rtl;
+	position: absolute;
+	top: 2vw;
+	right: 19vw;
 	justify-content: space-between;
-	margin-right:4vw;
-	margin-top: 0vw;
 	height: 100px;
 	width: fit-content;
 }

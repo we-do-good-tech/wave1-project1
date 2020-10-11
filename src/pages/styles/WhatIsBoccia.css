@@ -9,7 +9,7 @@
 #WhatIsMain{
 	width: calc(100% - 15vw);
 	position: absolute;
-	top:2vw;
+	top:8vw;
 	right:15vw;
 	display: flex;
 	direction: rtl;
@@ -30,8 +30,8 @@
 .ContentPic{
 	width: 23vw;
 	position: absolute;
-	left: 10%;
-	top: 40%;
+	left: 8.5vw;
+	top: 2vw;
 }
 .ContentText{
 	font-weight: 400;

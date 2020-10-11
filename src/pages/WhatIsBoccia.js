@@ -132,8 +132,8 @@ class WhatIsBoccia extends Component {
 		return(
 			<div>				
 				<SideBar active='1'/>
+				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 				<div id="WhatIsMain">	
-					<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>
