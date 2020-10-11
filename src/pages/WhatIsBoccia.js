@@ -4,14 +4,16 @@ import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
-import WhatIsOne from '../imgs/WhatIsOne.png'
+import WhatIsOne from '../imgs/WhatIsOne.png';
+import PopUp from '../Components/PopUp.js';
 
 class WhatIsBoccia extends Component {
 	constructor(){
 		super();
 		this.state = {  
 			active:0,
-			names:["מה זה בוצ'ה", "למי זה מיועד" , "איך משחקים" , "נבחרת ישראל", ]
+			names:["מה זה בוצ'ה", "למי זה מיועד" , "איך משחקים" , "נבחרת ישראל", ],
+			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
 	  	this.handleclick= this.handleclick.bind(this);
@@ -47,6 +49,16 @@ class WhatIsBoccia extends Component {
 		this.setState({active:parseInt(val)});
 	}
 
+	HandlePopUp=()=>{
+		if(this.state.PopUpDisplay==="none")
+			this.setState({PopUpDisplay:"block"});
+		else if(this.state.PopUpDisplay==="block"){
+			this.setState({PopUpDisplay:"none"});
+			}
+		else{
+			this.setState({PopUpDisplay:"none"});
+		}	
+	}
 
 	render(){
 
@@ -114,7 +126,7 @@ class WhatIsBoccia extends Component {
 					<FrontBack onClick={this.handlearrow}/>
 				);
 			}
-	}
+		}
 	
 
 		return(
@@ -124,7 +136,8 @@ class WhatIsBoccia extends Component {
 					<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 					{GetDivContent()}
 					{GetDivFrontBack()}					
-				</div>				
+				</div>
+				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp}/>
 			</div>
 
 		)

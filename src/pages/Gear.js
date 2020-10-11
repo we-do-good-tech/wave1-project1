@@ -4,13 +4,15 @@ import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
+import PopUp from '../Components/PopUp.js';
 
 class Gear extends Component {
 	constructor(){
 		super();
 		this.state = {  
 			active:0,
-			names:["כדורים" , "ציוד עזר" , "כלי השופט" , "טפסי המשחק" ,"שעון עצר"   ]
+			names:["כדורים" , "ציוד עזר" , "כלי השופט" , "טפסי המשחק" ,"שעון עצר"   ],
+			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
 	  	this.handleclick= this.handleclick.bind(this);
@@ -44,6 +46,17 @@ class Gear extends Component {
 	handlebarclick=(val)=>{
 		console.log(val);
 		this.setState({active:parseInt(val)});
+	}
+
+	HandlePopUp=()=>{
+		if(this.state.PopUpDisplay==="none")
+			this.setState({PopUpDisplay:"block"});
+		else if(this.state.PopUpDisplay==="block"){
+			this.setState({PopUpDisplay:"none"});
+			}
+		else{
+			this.setState({PopUpDisplay:"none"});
+		}	
 	}
 
 
@@ -123,6 +136,7 @@ class Gear extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				
+				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp}/>
 			</div>
 
 		)

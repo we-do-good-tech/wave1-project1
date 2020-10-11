@@ -4,13 +4,15 @@ import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
+import PopUp from '../Components/PopUp.js';
 
 class Roles extends Component {
 	constructor(){
 		super();
 		this.state = {  
 			active:0,
-			names:["ספורטאי" , "קפטן" , "שופט" , "עוזר ספורט" , "מאמן" ]
+			names:["ספורטאי" , "קפטן" , "שופט" , "עוזר ספורט" , "מאמן" ],
+			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
 	  	this.handleclick= this.handleclick.bind(this);
@@ -46,6 +48,16 @@ class Roles extends Component {
 		this.setState({active:parseInt(val)});
 	}
 
+	HandlePopUp=()=>{
+		if(this.state.PopUpDisplay==="none")
+			this.setState({PopUpDisplay:"block"});
+		else if(this.state.PopUpDisplay==="block"){
+			this.setState({PopUpDisplay:"none"});
+			}
+		else{
+			this.setState({PopUpDisplay:"none"});
+		}	
+	}
 
 	render(){
 
@@ -131,6 +143,7 @@ class Roles extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				
+				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp}/>
 			</div>
 
 		)
