@@ -131,8 +131,8 @@ class Gear extends Component {
 		return(
 			<div>				
 				<SideBar active='4'/>
+				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 				<div id="WhatIsMain">	
-					<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				
