@@ -56,9 +56,9 @@ class WhatIsBoccia extends Component {
 			if(this.state.active==0)
 			{
 				return(
-					<div className="ContentDiv">
+					
 						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
-					</div>
+					
 				)
 			}
 
