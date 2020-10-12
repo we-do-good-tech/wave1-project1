@@ -32,7 +32,11 @@ class PopUpGame extends Component {
 		if(this.state.active!=this.state.level.length)
 		return <p className="question">{this.state.level[this.state.active].Question}</p>;
 		else{
-			return <p className="question" style={{left:'40%'}}>ענית נכון על: {this.state.right} שאלות</p>
+			return(
+			 <div>
+			 	<p className="question" style={{left:'40%'}}>ענית נכון על: {this.state.right} שאלות</p>
+			 	<p className="reset" onClick={()=>this.setState({active:0,answered:[],right:0})}>↺</p>
+			</div>)
 		}
 	}
 

@@ -5,7 +5,21 @@
 	font-size: 1.5em;
 	font-weight: 900;
 }
+.reset{
+	position: absolute;
+	left:1vw;
+	bottom: -5vh;
+	font-size: 4em;
+	font-weight: 900;
+	cursor: pointer;
+	transform: rotate(290deg);
+	transition: 0.5s;
+}
+.reset:hover{
+	transform: scale(1.1) rotate(91deg);
+	transition: 0.5s;
 
+}
 .AnswersDiv *{
 	direction: rtl;
 }
