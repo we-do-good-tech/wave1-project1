@@ -1,15 +1,15 @@
 .Follower{
 	position: absolute;
 	left:1vw;
-	bottom: 0;
-	font-size: 1.5em;
+	bottom: -2vh;
+	font-size: 2vw;
 	font-weight: 900;
 }
 .reset{
 	position: absolute;
 	left:1vw;
-	bottom: -5vh;
-	font-size: 4em;
+	bottom: -7vh;
+	font-size: 4vw;
 	font-weight: 900;
 	cursor: pointer;
 	transform: rotate(290deg);
@@ -35,11 +35,11 @@
 	margin-top: 10vh;
 }
 .AnswerP{
-	font-size: 2em;
+	font-size: 4vh;
 	cursor: pointer;
 }
 .AnswerPCsn {
-	font-size: 2em;
+	font-size: 4vh;
 	cursor: pointer;
 }
 .AnswerPCsn span{
@@ -57,12 +57,12 @@
 .AnswerBtn{
 	background-color:#0F1259;
 	color:#FAA159;
-	font-size: 2vw;
+	font-size: 3vh;
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
-	width: 5em;
-	height: 4.5vw;
+	width: 20vh;
+	height: 8.5vh;
 	transition: 0.1s;
 	align-items: center;
 	font-weight: 600;
@@ -100,12 +100,12 @@
 .PopUpGameButton{
 	background-color:#0F1259;
 	color:#FAA159;
-	font-size: 2vw;
+	font-size: 4.2vh;
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
-	width: 5.4em;
-	height: 4.5vw;
+	width: 25vh;
+	height: 8.5vh;
 	transition: 0.3s;
 	align-items: center;
 	font-weight: 600;
@@ -117,7 +117,7 @@
 .PopUpGameButtonShut{
 	background-color:#0F1119;
 	color:gray;
-	font-size: 2vw;
+	font-size: 4.2vh;
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
@@ -130,8 +130,8 @@
 	direction: rtl;
 }
 .PopUpGameButtonShut span{
-	font-size: 2vw;
+	font-size: 4.2vh;
 }
 .PopUpGameButton span{
-	font-size: 2vw;
+	font-size: 4.2vh;
 }
