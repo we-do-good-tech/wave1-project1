@@ -119,6 +119,10 @@ class PopUpGame extends Component {
 			)
 		}
 	}
+	getFollower=()=>{
+		if(this.state.active<this.state.level.length)
+			return <p className="Follower">{this.state.active+1}/{this.state.level.length}</p>
+	}
 
 
 	render(){
@@ -126,12 +130,9 @@ class PopUpGame extends Component {
 		return(
 			<div className="PopUpGameDiv">
 				{this.getQuestion()}
-				<br/>
-				
 				{this.getAnswers()}
-				
-				<br/>
 				{this.getButtons()}
+				{this.getFollower()}
 			</div>
 
 		)
