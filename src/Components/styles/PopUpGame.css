@@ -57,7 +57,7 @@
 .AnswerBtn{
 	background-color:#0F1259;
 	color:#FAA159;
-	font-size: 3vh;
+	font-size: 4vh;
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
@@ -71,11 +71,11 @@
 .AnswerBtnCsn{
 	background-color:#FAA159;
 	color:#0F1259;
-	font-size: 2vw;
+	font-size: 5vh;
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
-	width: 5em;
+	width: 21vh;
 	height: 4.5vw;
 	transition: 0.1s;
 	align-items: center;
