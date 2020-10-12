@@ -60,7 +60,7 @@ class PopUpGame extends Component {
 			if(this.state.level[this.state.active].Kind==2){
 				this.state.level[this.state.active].Answers.forEach((element,i)=>{
 					if(i===this.state.answered[this.state.active])
-					AnswersArray.push(<button className="AnswerBtnCsn" onClick={()=>this.pushToAnswer(i)}>{element}</button>)
+					AnswersArray.push(<button className="AnswerBtnCsn AnswerBtn" onClick={()=>this.pushToAnswer(i)}>{element}</button>)
 					else
 					AnswersArray.push(<button className="AnswerBtn" onClick={()=>this.pushToAnswer(i)}>{element}</button>)
 				})
@@ -99,15 +99,13 @@ class PopUpGame extends Component {
 			return(
 				<div className="PopUpGameButtonDiv">
 					<button className="PopUpGameButton" onClick={()=>this.handlearrow(2)}>הבא  <span className="leftarrowfont">➜</span></button>
-					<button className="PopUpGameButton" onClick={this.checkAnswers}>בדוק</button>
-					<button className="PopUpGameButtonShut"><span className="rightarrowfont">➜</span> הקודם</button>
+					<button className="PopUpGameButton PopUpGameButtonShut"><span className="rightarrowfont">➜</span> הקודם</button>
 				</div>
 			)	
 		}
 		if(this.state.active===this.state.level.length){
 			return(
 				<div className="PopUpGameButtonDiv">
-					<button className="PopUpGameButtonShut">הבא  <span className="leftarrowfont">➜</span></button>
 					<button className="PopUpGameButton" onClick={this.checkAnswers}>בדוק</button>
 					<button className="PopUpGameButton" onClick={()=>this.handlearrow(1)}><span className="rightarrowfont">➜</span> הקודם</button>
 				</div>
@@ -117,7 +115,6 @@ class PopUpGame extends Component {
 			return(
 				<div className="PopUpGameButtonDiv">
 					<button className="PopUpGameButton" onClick={()=>this.handlearrow(2)}>הבא  <span className="leftarrowfont">➜</span></button>
-					<button className="PopUpGameButton" onClick={this.checkAnswers}>בדוק</button>
 					<button className="PopUpGameButton" onClick={()=>this.handlearrow(1)}><span className="rightarrowfont">➜</span> הקודם</button>
 				</div>
 			)

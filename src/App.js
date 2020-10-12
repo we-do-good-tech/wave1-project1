@@ -5,9 +5,9 @@ import {HashRouter as Router,HashRouter,Route,Switch,Link,Redirect} from 'react-
 import Home from './pages/Home.js';
 import WhatIsBoccia from './pages/WhatIsBoccia';
 import BocciaClasses from './pages/BocciaClasses';
-import Court from './pages/Court';
+import MeetThePlayers from './pages/MeetThePlayers';
 import Gear from './pages/Gear';
-import Roles from './pages/Roles';
+import HowToPlay from './pages/HowToPlay';
 import Rules from './pages/Rules';
 
 
@@ -21,8 +21,8 @@ class App extends Component {
         <Route exact path="/" component ={WhatIsBoccia}/> 
         <Route path ="/BocciaClasses" component={BocciaClasses}/>
         <Route path="/WhatIsBoccia" component ={WhatIsBoccia}/> 
-        <Route path="/Court" component ={Court}/>        
-        <Route path="/Roles" component ={Roles}/> 
+        <Route path="/MeetThePlayers" component ={MeetThePlayers}/>        
+        <Route path="/HowToPlay" component ={HowToPlay}/> 
         <Route path="/Gear" component ={Gear}/>
         <Route path="/Rules" component ={Rules}/>
         <Route exact path="/Example" component ={Home}/> 

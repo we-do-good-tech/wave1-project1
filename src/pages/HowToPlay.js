@@ -1,12 +1,12 @@
 import React, {Component,componentDidUpdate} from 'react';
-import './styles/WhatIsBoccia.css';
+import './styles/HowToPlay.css';
 import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
 import PopUp from '../Components/PopUp.js';
 
-class Roles extends Component {
+class HowToPlay extends Component {
 	constructor(){
 		super();
 		this.state = {  
@@ -137,7 +137,7 @@ class Roles extends Component {
 
 		return(
 			<div>				
-				<SideBar active='6'/>
+				<SideBar active='2'/>
 				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 				<div id="WhatIsMain">	
 					{GetDivContent()}
@@ -151,4 +151,4 @@ class Roles extends Component {
 	}
 }
 
-export default Roles;
+export default HowToPlay;
