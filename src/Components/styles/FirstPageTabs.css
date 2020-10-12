@@ -1,12 +1,14 @@
 .ContentDivFirstStatePage{
 	margin: 0 auto;
-	margin-top: 3vw;
+	margin-top: 2vw;
 	display: flex;
 	flex-wrap: wrap;
 	width: 60vw;
 	height: 30vw;
 	justify-content: center;
+	flex-direction: row;
 	direction: rtl;
+
 }
 .FirstStatePageButton{
 	width: 15vw;

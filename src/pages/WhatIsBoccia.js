@@ -4,15 +4,16 @@ import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
-import WhatIsOne from '../imgs/WhatIsOne.png';
 import PopUp from '../Components/PopUp.js';
+import WhatIsOne from '../imgs/WhatIsOne.png';
+import WhatIsSecond from '../imgs/WhatIsSecond.png';
 
 class WhatIsBoccia extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:0,
-			names:["מה זה בוצ'ה", "למי זה מיועד" , "איך משחקים" , "נבחרת ישראל", ],
+			active:3,
+			names:["נעים להכיר", "למי זה מיועד?" , "נבחרת ישראל", ],
 			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
@@ -78,14 +79,14 @@ class WhatIsBoccia extends Component {
 			{
 				return(
 					<div className="ContentDiv">
-								<p className="ContentTopic">מה זה בוצ'ה</p>
+								<p className="ContentTopic">נעים להכיר</p>
 								<p className="ContentText">
-								בוצ׳ה (הגייה - BO-CHA) הינו משחק פראלימפי המשלב מיומנות
-								כאשר המטרה היא לקרב כמה שיותר כדורים אל כדור המטרה.
+								בוצ׳ה (הגייה - BO-CHA) הינו ענף פראלימפי  <br/>המשלב מיומנות שונות,
+								כאשר המטרה היא לקרב <br/>כמה שיותר כדורים אל כדור המטרה.  <br/>
 								השם ”בוצ'ה“ נגזר מהמילה הלטינית ”כדור“. 
 								</p>	<p className="ContentText">
-								המשחק יועד בתחילה לבעלי שיתוק מוחין (Cerebral Palsy),
-								ועם השנים התרחב גם לנכויות אחרות שאינן CP, <br/>
+								המשחק יועד בתחילה לספורטאים  <br/>עם שיתוק מוחין (Cerebral Palsy),<br/>
+								ועם השנים התרחב גם לספורטאים <br/>עם ליקויים נוספים שאינן CP, <br/>
 								כגון ניוון שרירים, פוליו, פגיעות ראש ועוד.
 								</p>
 								<img className="ContentPic" src={WhatIsOne}/>						
@@ -96,7 +97,19 @@ class WhatIsBoccia extends Component {
 			{
 				return(
 					<div className="ContentDiv">
-								<p className="ContentText">2</p>						
+								<p className="ContentTopic">למי זה מיועד?</p>
+								<p className="ContentText">
+									בוצ'ה הוא ענף ספורט המיועד לנשים וגברים בכל הגילאים.<br/>
+									המשחק תוכנן במקור עבור ספורטאים עם שיתוק מוחין, וכיום<br/>
+									כולל גם שחקנים עם מוגבלויות מוטוריות אחרות.
+								</p>
+								<p className="ContentText">
+									השחקנים במשחק משתייכים ל 4 קבוצות <br/>
+									על פי סיווג שלהם (קלאסים):<br/>
+									BC1, BC2, BC3, BC4<br/>
+									כל סיווג מתייחס לרמת מוגבלות שונה.
+								</p>
+								<img className="ContentPic" src={WhatIsSecond} style={{top:'10vh'}}/>						
 					</div>
 				)
 			}
@@ -105,18 +118,24 @@ class WhatIsBoccia extends Component {
 				{
 					return(
 						<div className="ContentDiv">
-									<p className="ContentText">3</p>						
+								<p className="ContentTopic">נבחרת ישראל</p>
+								<p className="ContentText">
+									הנבחרת הלאומית פעילה משנת 2012.
+								</p><br/>
+								<p className="ContentText">
+									<strong style={{'font-size':'1.4vw'}}>הישגים בולטים :</strong><br/>
+									-מקום 8 באליפות אירופה 2015.<br/>
+									-מקום 4 באליפות 2017.<br/>
+									- נדב לוי זכה במדליית כסף באליפויות עולם פתוחות<br/>
+									בשנים 2015 ו-2017. <br/>
+									-השתתף במשחקים הפאראולימפיים בריו 2016 וישתתף בטוקיו.
+
+
+								</p>						
 						</div>
 					)
 				}
-			if(this.state.active==4)
-				{
-					return(
-						<div className="ContentDiv">
-									<p className="ContentText">4</p>						
-						</div>
-					)				
-				}	
+
 		
 	}
 
