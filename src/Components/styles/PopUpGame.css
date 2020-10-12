@@ -31,7 +31,7 @@
 	right: 2vw;
 	display: block;
 	text-align: right;
-	width: 35vw;
+	width: 50vw;
 	margin-top: 10vh;
 }
 .AnswerP{
@@ -121,8 +121,8 @@
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
-	width: 5.4em;
-	height: 4.5vw;
+	width: 25vh;
+	height: 8.5vh;
 	transition: 0.3s;
 	align-items: center;
 	font-weight: 600;
@@ -130,8 +130,8 @@
 	direction: rtl;
 }
 .PopUpGameButtonShut span{
-	font-size: 4.2vh;
+	font-size: 5vh;
 }
 .PopUpGameButton span{
-	font-size: 4.2vh;
+	font-size: 5vh;
 }
