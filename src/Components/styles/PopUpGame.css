@@ -1,0 +1,115 @@
+.AnswersDiv *{
+	direction: rtl;
+}
+
+
+.AnswersDiv{
+	position: absolute;
+	top:0.8vh;
+	right: 2vw;
+	display: block;
+	text-align: right;
+	width: 35vw;
+	margin-top: 10vh;
+}
+.AnswerP{
+	font-size: 2em;
+	cursor: pointer;
+}
+.AnswerPCsn {
+	font-size: 2em;
+	cursor: pointer;
+}
+.AnswerPCsn span{
+	background-color: yellow;
+}
+
+.AnswersBtnDiv{
+	position: absolute;
+	top: 30vh;
+	left: 24vw;
+	width: 35vw;
+	display: flex;
+	justify-content: space-around;
+}
+.AnswerBtn{
+	background-color:#0F1259;
+	color:#FAA159;
+	font-size: 2vw;
+	border-radius: 30vw;
+	border:none;
+	cursor: pointer;
+	width: 5em;
+	height: 4.5vw;
+	transition: 0.1s;
+	align-items: center;
+	font-weight: 600;
+	direction: rtl;
+}
+.AnswerBtnCsn{
+	background-color:#FAA159;
+	color:#0F1259;
+	font-size: 2vw;
+	border-radius: 30vw;
+	border:none;
+	cursor: pointer;
+	width: 5em;
+	height: 4.5vw;
+	transition: 0.1s;
+	align-items: center;
+	font-weight: 600;
+	direction: rtl;
+}
+.question{
+	position: absolute;
+	left:45%;
+	font-size: 2vw;
+	font-weight: 900;
+}
+
+.PopUpGameButtonDiv{
+	position: absolute;
+	bottom: 1vh;
+	left: 22vw;
+	width: 40vw;
+	display: flex;
+	justify-content: space-between;
+}
+.PopUpGameButton{
+	background-color:#0F1259;
+	color:#FAA159;
+	font-size: 2vw;
+	border-radius: 30vw;
+	border:none;
+	cursor: pointer;
+	width: 5.4em;
+	height: 4.5vw;
+	transition: 0.3s;
+	align-items: center;
+	font-weight: 600;
+	direction: rtl;
+}
+.PopUpGameButton:hover{
+	transform: scale(1.1);
+}
+.PopUpGameButtonShut{
+	background-color:#0F1119;
+	color:gray;
+	font-size: 2vw;
+	border-radius: 30vw;
+	border:none;
+	cursor: pointer;
+	width: 5.4em;
+	height: 4.5vw;
+	transition: 0.3s;
+	align-items: center;
+	font-weight: 600;
+	cursor: default;
+	direction: rtl;
+}
+.PopUpGameButtonShut span{
+	font-size: 2vw;
+}
+.PopUpGameButton span{
+	font-size: 2vw;
+}
