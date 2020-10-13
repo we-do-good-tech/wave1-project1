@@ -48,10 +48,8 @@ class PopUpGame extends Component {
 		tempArr.push(
 			<p className="WrongAt">לחצו על מספר השאלה כדי לשוב ולתקן אותה</p>
 			)
-		if(tempArr.length==1){
-			tempArr=[];
-			tempArr.push(
-				<p className="WellDone">כל הכבוד!</p>)
+		if(this.state.answerdwrong.length==0){
+			tempArr=[<p className="WellDone">כל הכבוד! ענית על כל השאלות  בהצלחה</p>];
 		}
 		return tempArr;
 	}
