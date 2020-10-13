@@ -2,11 +2,24 @@
 	color:red;
 	font-size: calc(1.5vw + 1.5vh);
 	font-weight: 900;
+	letter-spacing: 0.5vw;
+	text-decoration: underline;
+	transition: 0.4s;
 }
 .WrongAt{
 	font-size: calc(1.5vw + 1.5vh);
 	font-weight: 900;
 	margin-left: 0.5em;
+}
+.Coma{
+	color:red;
+	font-size: calc(1.5vw + 1.5vh);
+	font-weight: 900;
+	letter-spacing: 0.5vw;
+}
+.WrongAnswer:hover{
+	background-color: black;
+	transition: 0.3s;
 }
 .WrongAnswerDiv{
 	width: fit-content;
@@ -16,6 +29,7 @@
 	cursor: pointer;
 	text-align: right;
 }
+
 .WellDone{
 	direction: rtl;
 	font-size: calc(2.5vw + 2.5vh);

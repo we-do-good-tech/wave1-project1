@@ -36,8 +36,9 @@ class PopUpGame extends Component {
 				if(i!=this.state.answerdwrong.length-1)
 				{
 					tempArr.push(
-						<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1},</span>
+						<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1}</span>
 					)
+					tempArr.push(<span className="Coma">,</span>);
 				}
 				else
 					tempArr.push(
