@@ -12,7 +12,7 @@ class WhatIsBoccia extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:3,
+			active:0,
 			names:["נעים להכיר", "למי זה מיועד?" , "נבחרת ישראל", ],
 			PopUpDisplay:'none'
 	  	}

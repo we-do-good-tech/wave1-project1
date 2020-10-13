@@ -8,24 +8,57 @@ class PopUpGame extends Component {
 			active:0,
 			level:props.level,
 			answered:[],
+			answerdwrong:[],
 			right:0
 	  	}
 	}
 
 	checkAnswers=()=>{
 		let counter=0;
+		let tempArr=[];
 		this.state.answered.forEach((answer,i)=>{
 			if(answer===this.state.level[i].right)
 				counter++;
 		})
-		this.setState({right:counter,active:this.state.level.length});
+
+		this.state.level.forEach((element,i)=>{
+			console.log(element,i);
+			if(this.state.answered[i]!==element.right)
+				tempArr.push(i);
+		})
+		this.setState({right:counter,active:this.state.level.length,answerdwrong:tempArr});
+		console.log(this.state.answerdwrong);
+	}
+
+	getWrongs=()=>{
+		let tempArr=[<span className="WrongAt">טעית בשאלות:</span>];
+		this.state.answerdwrong.forEach((element,i)=>{
+				if(i!=this.state.answerdwrong.length-1)
+				{
+					tempArr.push(
+						<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1},</span>
+					)
+				}
+				else
+					tempArr.push(
+						<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1}   </span>
+					)
+				})
+		tempArr.push(
+			<p className="WrongAt">לחצו על מספר השאלה כדי לשוב ולתקן אותה</p>
+			)
+		if(tempArr.length==1){
+			tempArr=[];
+			tempArr.push(
+				<p className="WellDone">כל הכבוד!</p>)
+		}
+		return tempArr;
 	}
 
 	pushToAnswer =(i)=>{
 		let tempArr= this.state.answered.concat();
 		tempArr[this.state.active]=i;
 		this.setState({answered:tempArr});
-		console.log(this.state.answered);
 	}
 
 	getQuestion =()=>{
@@ -36,6 +69,7 @@ class PopUpGame extends Component {
 			 <div>
 			 	<p className="question" style={{left:'40%'}}>ענית נכון על: {this.state.right} שאלות</p>
 			 	<p className="reset" onClick={()=>this.setState({active:0,answered:[],right:0})}>↺</p>
+			 	<div className="WrongAnswerDiv">{this.getWrongs()}</div>
 			</div>)
 		}
 	}
@@ -57,6 +91,7 @@ class PopUpGame extends Component {
 					);
 			}
 
+
 			if(this.state.level[this.state.active].Kind==2){
 				this.state.level[this.state.active].Answers.forEach((element,i)=>{
 					if(i===this.state.answered[this.state.active])
@@ -74,6 +109,8 @@ class PopUpGame extends Component {
 		return AnswersArray;
 	}
 
+
+
 	handlearrow=(evt)=>{
 		if(evt==1){
 			if(this.state.active===0){
@@ -85,7 +122,7 @@ class PopUpGame extends Component {
 		}
 
 		else if(evt==2){ 
-			if(this.state.active===this.state.level.length){
+			if(this.state.active===this.state.level.length-1){
 				this.setState({active:0})
 			}
 			else{
@@ -103,13 +140,20 @@ class PopUpGame extends Component {
 				</div>
 			)	
 		}
-		if(this.state.active===this.state.level.length){
+		if(this.state.active===this.state.level.length-1){
 			return(
 				<div className="PopUpGameButtonDiv">
 					<button className="PopUpGameButton" onClick={this.checkAnswers}>בדוק</button>
 					<button className="PopUpGameButton" onClick={()=>this.handlearrow(1)}><span className="rightarrowfont">➜</span> הקודם</button>
 				</div>
 			)	
+		}
+		if(this.state.active===this.state.level.length){
+			return(
+				<div className="PopUpGameButtonDiv">
+					<button className="PopUpGameButton" onClick={()=>this.setState({active:0,answered:[],right:0})}>התחל שוב</button>
+				</div>
+				)
 		}
 		else{
 			return(
