@@ -7,6 +7,8 @@ import FrontBack from '../Components/FrontBack.js';
 import PopUp from '../Components/PopUp.js';
 import WhatIsOne from '../imgs/WhatIsOne.png';
 import WhatIsSecond from '../imgs/WhatIsSecond.png';
+import WhatIsThird from '../imgs/WhatIsThird.png';
+import WhatIsFourth from '../imgs/WhatIsFourth.png';
 
 class WhatIsBoccia extends Component {
 	constructor(){
@@ -14,7 +16,7 @@ class WhatIsBoccia extends Component {
 		this.state = {  
 			active:0,
 			names:["נעים להכיר", "למי זה מיועד?" , "נבחרת ישראל", ],
-			PopUpDisplay:'none'
+			PopUpDisplay:'block'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
 	  	this.handleclick= this.handleclick.bind(this);
@@ -130,7 +132,8 @@ class WhatIsBoccia extends Component {
 									בשנים 2015 ו-2017. <br/>
 									-השתתף במשחקים הפאראולימפיים בריו 2016 וישתתף בטוקיו.
 
-
+									<img className="ContentPic" src={WhatIsThird} style={{top:'3vh'}}/>
+									<img className="ContentPic" src={WhatIsFourth} style={{width:'9vw',top:'8em',left:'18vw'}}/>
 								</p>						
 						</div>
 					)

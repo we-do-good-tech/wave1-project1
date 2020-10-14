@@ -66,7 +66,7 @@
 .AnswersDiv{
 	position: absolute;
 	top:0.8vh;
-	right: 2vw;
+	right: 3vw;
 	display: block;
 	text-align: right;
 	width: 50vw;
@@ -86,8 +86,8 @@
 
 .AnswersBtnDiv{
 	position: absolute;
-	top: 30vh;
-	left: 24vw;
+	top: 32vh;
+	left: 18.1vw;
 	width: 35vw;
 	display: flex;
 	justify-content: space-around;
@@ -116,7 +116,7 @@
 }
 .question{
 	position: absolute;
-	left:45%;
+	left:43.2%;
 	font-size: calc(1.5vw + 1.5vh);
 	font-weight: 900;
 }
@@ -124,7 +124,7 @@
 .PopUpGameButtonDiv{
 	position: absolute;
 	bottom: 1vh;
-	left: 26.5vw;
+	left: 21vw;
 	width: 30vw;
 	display: flex;
 	justify-content: space-around;
@@ -132,11 +132,11 @@
 .PopUpGameButton{
 	background-color:#0F1259;
 	color:white;
-	font-size: 4.2vh;
+	font-size: 3.2vh;
 	border-radius: 30vw;
 	border:none;
 	cursor: pointer;
-	width: 25vh;
+	width: 20vh;
 	height: 8.5vh;
 	transition: 0.3s;
 	align-items: center;

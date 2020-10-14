@@ -3,7 +3,7 @@
 	padding:0;
 	width:6vw;
 	position:absolute;
-	bottom: 1vw;
+	bottom: 3vw;
 	left:3.5vw;
 	cursor: pointer;
 	transition: 0.05s;
@@ -38,12 +38,12 @@
 
 .PopUpContent{
 	position: fixed; 
-	width: 79vw;
-	height: calc(100% - 12vw);
+	width: 70vw;
+	height: calc(100% - 12vh);
 	background-color:white;
 	display: block;
-	bottom: 8.5vw;
-	left:3vw;
+	bottom: 2.5vw;
+	left:13vw;
 	border: solid 0.5vw #0F1259;
 	border-radius: 1vw;
 }
@@ -51,25 +51,27 @@
 .PopUpContent::after{
 	content: "";
 	position: absolute;
-	left: 2vw;
-	bottom: 0;
+	left: -3.2vw;
+	bottom: 11vh;
 	margin-bottom:-3vw;
 	margin-left: -0.46vw;
 	width: 0;
     height: 0;
-    border-left: 3.5vw solid transparent;
-    border-right: 3.5vw solid transparent;
-    border-top: 2.5vw solid #0F1259;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border-top: 3vw solid #0F1259;
+    transform: rotate(90deg);
 }
 .PopUpContent::before{
 	content: "";
 	position: absolute;
-	left: 2vw;
-	bottom: 0.6vw;
+	left: -2.5vw;
+	bottom: 11vh;
 	margin-bottom:-3vw;
 	margin-left: -0.46vw;
-    border-left: 3.5vw solid transparent;
-    border-right: 3.5vw solid transparent;
-    border-top: 2.5vw solid white;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border-top: 3vw solid white;
     z-index: 10000;
+    transform: rotate(90deg);
 }
