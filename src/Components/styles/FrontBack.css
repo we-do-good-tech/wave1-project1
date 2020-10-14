@@ -50,3 +50,11 @@
 	transform: scaleY(1.2) scaleX(0.8);
 	font-size: 2.1vw; 
 }
+.FrontBackButtonsDisabled{
+	opacity: 0.3;
+}
+
+.FrontBackButtonsDisabled:hover{
+	background-color: #FAA159;
+	cursor: default;
+}

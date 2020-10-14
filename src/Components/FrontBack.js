@@ -20,7 +20,10 @@ class FrontBack extends Component {
 					<button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
 						<span className="rightarrowfont">➜</span> הקודם
 					</button>
-				
+
+					<button id="FrontButton" value="2"  className="FrontBackButtons FrontBackButtonsDisabled " >
+							הבא  <span className="leftarrowfont">➜</span>
+					</button>	
 					
 			</div>
 		)
