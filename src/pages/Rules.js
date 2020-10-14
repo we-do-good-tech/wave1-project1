@@ -11,7 +11,7 @@ class Rules extends Component {
 		super();
 		this.state = {  
 			active:0,
-			names:["קטגוריות" , "זמנים" , "ניקוד" , "עונשין" , "בלה בלה" , "תרגול" ],
+			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);

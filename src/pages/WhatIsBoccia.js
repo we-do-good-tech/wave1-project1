@@ -16,7 +16,7 @@ class WhatIsBoccia extends Component {
 		this.state = {  
 			active:0,
 			names:["נעים להכיר", "למי זה מיועד?" , "נבחרת ישראל", ],
-			PopUpDisplay:'block'
+			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
 	  	this.handleclick= this.handleclick.bind(this);
@@ -143,6 +143,11 @@ class WhatIsBoccia extends Component {
 	}
 
 		let GetDivFrontBack= () => {
+			if(this.state.active===this.state.names.length){
+				return(
+					<FrontBack last={true} onClick={this.handlearrow}/>
+				);
+			}
 			if(this.state.active!=0){
 				return(
 					<FrontBack onClick={this.handlearrow}/>

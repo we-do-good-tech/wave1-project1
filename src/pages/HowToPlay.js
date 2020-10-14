@@ -11,7 +11,7 @@ class HowToPlay extends Component {
 		super();
 		this.state = {  
 			active:0,
-			names:["ספורטאי" , "קפטן" , "שופט" , "עוזר ספורט" , "מאמן" ],
+			names:["מטרת המשחק", "מהלך המשחק" , "ניקוד" , "המגרש" ],
 			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);

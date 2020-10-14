@@ -74,6 +74,8 @@ a{
 	padding-top: 0.5vw;
 	padding-bottom: 0.5vw;
 	transition: 0.2s;
+	font-weight: 800;
+	letter-spacing: 1px;
 }
 .sidenavtabs a:hover{
 	transform: scale(1.0);
