@@ -126,6 +126,11 @@ class BocciaClasses extends Component {
 	}
 
 		let GetDivFrontBack= () => {
+			if(this.state.active===this.state.names.length){
+				return(
+					<FrontBack last={true} onClick={this.handlearrow}/>
+				);
+			}
 			if(this.state.active!=0){
 				return(
 					<FrontBack onClick={this.handlearrow}/>
