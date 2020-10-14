@@ -18,7 +18,7 @@ class FirstPageTabs extends Component {
 	  		let FinalTabs = [];
 	  		this.state.names.forEach((element,i)=>{
 	  			FinalTabs.push(
-	  			<button className="FirstStatePageButton" onClick={()=>this.handleclick(i+1)} value={i+1}> 0{i+1}<br/>{this.state.names[i]}</button>
+	  			<button className="FirstStatePageButton" onClick={()=>this.handleclick(i+1)} value={i+1}><p style={{'margin-bottom':'2vh','margin-top':0}}> 0{i+1}</p>{this.state.names[i]}</button>
 	  			)
 	  		})
 
