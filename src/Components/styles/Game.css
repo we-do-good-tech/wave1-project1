@@ -105,12 +105,12 @@
     background-size: contain;
     content:'';
     position: absolute;
-    bottom:-23%;
+    top:9.5vh;
     transform: rotate(0deg);
     left: 100.2%;
     z-index: 9999;
-    height: 80%;
-    width: 80%;
+    height: 18.5vh;
+    width: 18.5vw;
 }
 
 
