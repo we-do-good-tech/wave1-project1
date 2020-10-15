@@ -5,7 +5,7 @@ import './styles/RedCircle.css'
 const RedCircle =({x,y})=>{
 
 		return(
-				<img className="ball" src={redball} style={{position: 'absolute',bottom:y,left:x}}/>
+				<img className="ball" src={redball}  style={{position: 'absolute',bottom:`${y}%`,left:`${x}%`,width:'1.2vw'}}/>
 			);
 
 

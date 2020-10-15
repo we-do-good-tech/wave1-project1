@@ -5,12 +5,13 @@ import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
 import PopUp from '../Components/PopUp.js';
+import Game from '../Components/Game.js';
 
 class HowToPlay extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:0,
+			active:3,
 			names:["מטרת המשחק", "מהלך המשחק" , "ניקוד" , "המגרש" ],
 			PopUpDisplay:'none'
 	  	}
@@ -85,7 +86,7 @@ class HowToPlay extends Component {
 			{
 				return(
 					<div className="ContentDiv">
-								<p className="ContentText">2</p>						
+						<Game/>						
 					</div>
 				)
 			}
@@ -94,7 +95,7 @@ class HowToPlay extends Component {
 				{
 					return(
 						<div className="ContentDiv">
-									<p className="ContentText">3</p>						
+							<p className="ContentText">3</p>			
 						</div>
 					)
 				}
