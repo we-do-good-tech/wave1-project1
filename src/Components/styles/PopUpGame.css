@@ -11,12 +11,14 @@
 	font-weight: 900;
 	margin-left: 0.5em;
 }
+
 .Coma{
 	color:red;
 	font-size: calc(1.5vw + 1.5vh);
 	font-weight: 900;
 	letter-spacing: 0.5vw;
 }
+
 .WrongAnswer:hover{
 	background-color: black;
 	transition: 0.3s;
@@ -46,12 +48,13 @@
 .reset{
 	position: absolute;
 	left:1vw;
-	bottom: -7vh;
+	bottom: 1vh;
 	font-size: 4vw;
 	font-weight: 900;
 	cursor: pointer;
 	transform: rotate(0deg);
 	transition: 0.7s;
+	margin:0;
 }
 .reset:hover{
 	transform: scale(1) rotate(-179deg);

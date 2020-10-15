@@ -52,8 +52,7 @@
 	content: "";
 	position: absolute;
 	left: -3.2vw;
-	bottom: 11vh;
-	margin-bottom:-3vw;
+	bottom: 3vh;
 	margin-left: -0.46vw;
 	width: 0;
     height: 0;
@@ -66,8 +65,7 @@
 	content: "";
 	position: absolute;
 	left: -2.5vw;
-	bottom: 11vh;
-	margin-bottom:-3vw;
+	bottom: 3vh;
 	margin-left: -0.46vw;
     border-left: 2vw solid transparent;
     border-right: 2vw solid transparent;
