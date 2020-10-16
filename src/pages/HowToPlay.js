@@ -13,7 +13,7 @@ class HowToPlay extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:1,
+			active:0,
 			names:["מטרת המשחק", "מהלך המשחק" , "ניקוד" , "המגרש" ],
 			PopUpDisplay:'none'
 	  	}

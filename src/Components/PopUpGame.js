@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import './styles/PopUpGame.css';
+import AlmostWin from '../imgs/AlmostWin.png';
+import DidWin from '../imgs/DidWin.png';
+import RightMedal from '../imgs/RightMedal.png';
+import WrongMedal from '../imgs/WrongMedal.png';
 
 class PopUpGame extends Component {
 	constructor(props){
@@ -27,29 +31,48 @@ class PopUpGame extends Component {
 				tempArr.push(i);
 		})
 		this.setState({right:counter,active:this.state.level.length,answerdwrong:tempArr});
-		console.log(this.state.answerdwrong);
 	}
 
 	getWrongs=()=>{
-		let tempArr=[<span className="WrongAt">טעית בשאלות:</span>];
-		this.state.answerdwrong.forEach((element,i)=>{
-				if(i!=this.state.answerdwrong.length-1)
-				{
-					tempArr.push(
-						<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1}</span>
-					)
-					tempArr.push(<span className="Coma">,</span>);
-				}
-				else
-					tempArr.push(
-						<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1}   </span>
-					)
-				})
-		tempArr.push(
-			<p className="WrongAt">לחצו על מספר השאלה כדי לשוב ולתקן אותה</p>
+		// let tempArr=[<span className="WrongAt">טעית בשאלות:</span>];
+		// this.state.answerdwrong.forEach((element,i)=>{
+		// 		if(i!=this.state.answerdwrong.length-1)
+		// 		{
+		// 			tempArr.push(
+		// 				<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1}</span>
+		// 			)
+		// 			tempArr.push(<span className="Coma">,</span>);
+		// 		}
+		// 		else
+		// 			tempArr.push(
+		// 				<span className="WrongAnswer" onClick={()=>this.setState({active:element})}>{element+1}   </span>
+		// 			)
+		// 		})
+		// tempArr.push(
+		// 	<p className="WrongAt">לחצו על מספר השאלה כדי לשוב ולתקן אותה</p>
+		// 	)
+		// if(this.state.answerdwrong.length==0){
+		// 	tempArr=[<p className="WellDone">כל הכבוד! ענית על כל השאלות  בהצלחה</p>];
+		// }
+		let tempArr = [];
+		if(this.state.answerdwrong.length > ( this.state.level.length * 0.4)){
+			tempArr.push(
+			<div className="FinalResultDiv">
+				<p className="WrongAt"> ניסיון טוב</p> 
+				<p className="WrongAt">ענית  נכון על  {this.state.level.length - this.state.answerdwrong.length} מתוך {this.state.level.length}</p> 
+				<img className="FinalResultPic" src={AlmostWin}/>
+			</div>
 			)
-		if(this.state.answerdwrong.length==0){
-			tempArr=[<p className="WellDone">כל הכבוד! ענית על כל השאלות  בהצלחה</p>];
+		}
+		else{
+			tempArr.push(
+			<div className="FinalResultDiv">
+				<p className="WrongAt">כל הכבוד!</p> 
+				<p className="WrongAt">ענית  נכון על  {this.state.level.length - this.state.answerdwrong.length} מתוך {this.state.level.length}</p> 
+				<img className="FinalResultPic" src={DidWin}/>
+			</div>
+			)
+
 		}
 		return tempArr;
 	}
@@ -66,7 +89,6 @@ class PopUpGame extends Component {
 		else{
 			return(
 			 <div>
-			 	<p className="question" style={{left:'40%'}}>ענית נכון על: {this.state.right} שאלות</p>
 			 	<p className="reset" onClick={()=>this.setState({active:0,answered:[],right:0})}>↺</p>
 			 	<div className="WrongAnswerDiv">{this.getWrongs()}</div>
 			</div>)
@@ -78,10 +100,26 @@ class PopUpGame extends Component {
 		if(this.state.active!=this.state.level.length){
 			if(this.state.level[this.state.active].Kind==1){
 				this.state.level[this.state.active].Answers.forEach((element,i)=>{
-					if(i===this.state.answered[this.state.active])
-					AnswersArray.push(<p className="AnswerPCsn" onClick={()=>this.pushToAnswer(i)}>{i+1}.<span>{element}</span></p>)
+					if(i===this.state.answered[this.state.active]&&i===this.state.level[this.state.active].right)
+						{
+							AnswersArray.push(<p className="AnswerP AnswerPCsn" onClick={()=>this.pushToAnswer(i)}><span>{i+1}. {element}</span></p>)
+							AnswersArray.push(
+								<div className="AnswerCsnRightDiv">
+									<img className="AnswerCsnRightImg" src={RightMedal}/>
+									<p>כל הכבוד! תשובה נכונה</p>
+								</div>)
+						}
+					else if(i===this.state.answered[this.state.active]&&i!==this.state.level[this.state.active].right)
+						{
+							AnswersArray.push(<p className="AnswerP AnswerPCsnWrong" onClick={()=>this.pushToAnswer(i)}><span>{i+1}. {element}</span></p>)
+							AnswersArray.push(
+								<div className="AnswerCsnWrongDiv">
+									<img className="AnswerCsnWrongImg" src={WrongMedal}/>
+									<p>נסו שוב</p>
+								</div>)
+						}
 					else
-					AnswersArray.push(<p className="AnswerP" onClick={()=>this.pushToAnswer(i)}>{i+1}.<span>{element}</span></p>)
+					AnswersArray.push(<p className="AnswerP" onClick={()=>this.pushToAnswer(i)}><span>{i+1}. {element}</span></p>)
 				})
 				return (
 					<div className="AnswersDiv">
@@ -142,7 +180,7 @@ class PopUpGame extends Component {
 		if(this.state.active===this.state.level.length-1){
 			return(
 				<div className="PopUpGameButtonDiv">
-					<button className="PopUpGameButton" onClick={this.checkAnswers}>בדוק</button>
+					<button className="PopUpGameButton" onClick={this.checkAnswers}>הבא  <span className="leftarrowfont">➜</span></button>
 					<button className="PopUpGameButton" onClick={()=>this.handlearrow(1)}><span className="rightarrowfont">➜</span> הקודם</button>
 				</div>
 			)	
