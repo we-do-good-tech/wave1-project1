@@ -17,8 +17,6 @@
 }
 
 
-
-
 .ContentDiv{
 	width: 40vw;
 	height: fit-content;
@@ -27,24 +25,65 @@
 	margin-top: 0vw;
 	direction: rtl;
 }
+
+
+
+.ContentDivClasses{
+	width: 40vw;
+	height: 58vh;
+	overflow-y: scroll;
+	margin-right: 5vw;
+	text-align: right;
+	margin-top: 0vw;
+	direction: ltr;
+	padding-right: 1vw;
+}
+
+.ContentDivClasses::-webkit-scrollbar {
+  width: 0.5vw;
+
+}
+.ContentDivClasses::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10vw;
+}
+ 
+/* Handle */
+.ContentDivClasses::-webkit-scrollbar-thumb {
+   background: rgba(100,100,100,0.3);
+   border-radius: 10vw;
+}
+
+/* Handle on hover */
+.ContentDivClasses::-webkit-scrollbar-thumb:hover {
+  background: rgba(100,100,100,0.6);
+  cursor: pointer;
+}
+
+/* Handle on active */
+.ContentDivClasses::-webkit-scrollbar-thumb:active {
+  background: rgba(100,100,100,0.7);
+  cursor: pointer;
+}
+
 .ContentPic{
 	width: 28vw;
 	position: absolute;
 	left: 8.5vw;
 	top: -1vw;
+
 }
 .ContentText{
 	font-weight: 400;
 	font-size: 1.4vw;
 	line-height: 1.5em;
+	direction: rtl;
 }
 .ContentTopic{
 	font-weight: 1000;
 	font-size: 1.6vw;
 	letter-spacing: 0.1vw;
+	direction: rtl;
 }
-
-
-
 
 

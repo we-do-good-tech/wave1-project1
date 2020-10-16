@@ -114,7 +114,7 @@ class HowToPlay extends Component {
 							<p className="ContentText">
 								לזרוק את הכדור שלי הכי קרוב לכדור הלבן.
 							</p>
-							<img className="ContentPic" src={HowToGainPoints} style={{top:'10vh'}}/>			
+							<img className="ContentPic" src={HowToGainPoints} style={{top:'8vh'}}/>			
 						</div>
 					)
 				}
