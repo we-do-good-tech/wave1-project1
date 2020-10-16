@@ -6,12 +6,14 @@ import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
 import PopUp from '../Components/PopUp.js';
 import Game from '../Components/Game.js';
+import HowToTarget from '../imgs/HowToTarget.png';
+import HowToGainPoints from '../imgs/HowToGainPoints.png';
 
 class HowToPlay extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:0,
+			active:1,
 			names:["מטרת המשחק", "מהלך המשחק" , "ניקוד" , "המגרש" ],
 			PopUpDisplay:'none'
 	  	}
@@ -78,7 +80,20 @@ class HowToPlay extends Component {
 			{
 				return(
 					<div className="ContentDiv">
-								<p className="ContentText">1</p>						
+								<p className="ContentTopic">מטרת המשחק</p>
+								<p className="ContentText">
+								לזרוק את הכדור שלי הכי קרוב לכדור הלבן.
+								</p>
+								<p className="ContentTopic">כמות משתתפים</p>
+								<p className="ContentText">
+								1-3 שחקנים (יחידים, זוגות או קבוצתי).
+								</p>
+								<p className="ContentTopic">ציוד</p>
+								<p className="ContentText">
+								6 כדורים אדומים, 6 כדורים כחולים, 1 כדור לבן.
+								</p>
+								<img className="ContentPic" src={HowToTarget} style={{top:'10vh'}}/>
+														
 					</div>
 				)
 			}
@@ -95,7 +110,11 @@ class HowToPlay extends Component {
 				{
 					return(
 						<div className="ContentDiv">
-							<p className="ContentText">3</p>			
+							<p className="ContentTopic">מטרת המשחק</p>
+							<p className="ContentText">
+								לזרוק את הכדור שלי הכי קרוב לכדור הלבן.
+							</p>
+							<img className="ContentPic" src={HowToGainPoints} style={{top:'10vh'}}/>			
 						</div>
 					)
 				}

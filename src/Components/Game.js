@@ -111,10 +111,15 @@ class Game extends Component {
 		if(this.state.active==1)
 			{
 				this.movewhite(57,35,15);
-				
+				setTimeout(() => {
+				  this.ActivePlusOne();
+				},800);
 			}
 		if(this.state.active==2)
 			{	
+				setTimeout(() => {
+				  this.ActivePlusOne();
+				},800);
 				this.setState({
 					whiteball:[57,61]
 				})
@@ -122,6 +127,9 @@ class Game extends Component {
 			}
 		if(this.state.active==3)
 			{	
+				setTimeout(() => {
+				  this.ActivePlusOne();
+				},800);
 				this.setState({
 					redballs:[[38.5,26],[38.5,20.5],[38.5,15],[52,52],[44,20.5],[44,15]],
 				})
@@ -129,6 +137,9 @@ class Game extends Component {
 			}
 		if(this.state.active==4)
 			{	
+				setTimeout(() => {
+				  this.ActivePlusOne();
+				},800);
 				this.setState({
 					blueballs:[[50.5,26],[50.5,20.5],[50.5,15],[63.5,57],[56,20.5],[56,15]]
 				})
@@ -136,18 +147,18 @@ class Game extends Component {
 			}
 		if(this.state.active==5)
 			{
+				setTimeout(() => {
+				  this.ActivePlusOne();
+				},800);
 				this.setState({
 					redballs:[[58,50],[38.5,20.5],[38.5,15],[52,52],[44,20.5],[44,15]],
 				})
 				this.movered(70,40,10,1);
 			}
-		if(this.state.active!=0)
-			{	
-				setTimeout(() => {
-				  this.ActivePlusOne();
-				},800);
-			}
-		else
+		
+				
+			
+		if(this.state.active==0)
 			this.ActivePlusOne();
 		
 		if(this.state.active==6)
