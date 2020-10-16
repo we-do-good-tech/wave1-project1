@@ -109,20 +109,53 @@ class Game extends Component {
 	}
 	getMove = () =>{
 		if(this.state.active==1)
-			this.movewhite(57,35,15);
+			{
+				this.movewhite(57,35,15);
+				
+			}
 		if(this.state.active==2)
-			this.movered(52,39,27,3);
+			{	
+				this.setState({
+					whiteball:[57,61]
+				})
+				this.movered(52,39,27,3);
+			}
 		if(this.state.active==3)
-			this.moveblue(63.5,41.5,22,3);
+			{	
+				this.setState({
+					redballs:[[38.5,26],[38.5,20.5],[38.5,15],[52,52],[44,20.5],[44,15]],
+				})
+				this.moveblue(63.5,41.5,22,3);
+			}
 		if(this.state.active==4)
-			this.movered(58,38,11,0);
+			{	
+				this.setState({
+					blueballs:[[50.5,26],[50.5,20.5],[50.5,15],[63.5,57],[56,20.5],[56,15]]
+				})
+				this.movered(58,38,11,0);
+			}
 		if(this.state.active==5)
-			this.movered(70,40,10,1);
-		this.ActivePlusOne();
+			{
+				this.setState({
+					redballs:[[58,50],[38.5,20.5],[38.5,15],[52,52],[44,20.5],[44,15]],
+				})
+				this.movered(70,40,10,1);
+			}
+		if(this.state.active!=0)
+			{	
+				setTimeout(() => {
+				  this.ActivePlusOne();
+				},800);
+			}
+		else
+			this.ActivePlusOne();
+		
 		if(this.state.active==6)
 			this.reset();
 
 		
+		  
+				
 
 	}
 	getMalePlayerDiv = () =>{
