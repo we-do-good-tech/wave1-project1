@@ -45,15 +45,15 @@ class Court extends Component {
 			if(this.state.active==0)
 			{
 				return(
-					<div className="CourtMainDiv">
+					<div className="CourtMainDiv" >
 						<div className="CourtText">
-							<p className="ContentText BolderText">המגרש</p>
+							<p className="ContentTopic">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 
 						<div className="CourtWrapper">
 							<div className="CourtBaseDiv">
-								<img className="CourtBaseImg" src={CourtBase}/>
+								<img className="CourtBaseImg" src={CourtBase} />
 								<img className="PlusButtonActive" id="PlusButtonOne" onClick={()=>this.HandleClick(1)} src={PlusButton}/>
 								<img className="PlusButtonActive" id="PlusButtonTwo" onClick={()=>this.HandleClick(2)} src={PlusButton}/>
 								<img className="PlusButtonActive" id="PlusButtonThree" onClick={()=>this.HandleClick(3)} src={PlusButton}/>
@@ -70,9 +70,9 @@ class Court extends Component {
 			if(this.state.active==1)
 			{
 				return(
-					<div className="CourtMainDiv">
+					<div className="CourtMainDiv"  onClick={()=>this.setState({active:0})}>
 						<div className="CourtText">
-							<p className="ContentText BolderText">המגרש</p>
+							<p className="ContentTopic">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -87,7 +87,7 @@ class Court extends Component {
 
 						<div className="CourtWrapper">
 							<div className="CourtBaseDiv">
-								<img className="CourtBaseImg" src={CourtOne}/>
+								<img className="CourtBaseImg" src={CourtOne} />
 								<img className="PlusButtonActive" onClick={()=>this.HandleClick(1)} id="PlusButtonOne" src={PlusButton}/>
 								<img className="PlusButton" id="PlusButtonTwo" src={PlusButton}/>
 								<img className="PlusButton" id="PlusButtonThree"  src={PlusButton}/>
@@ -102,9 +102,9 @@ class Court extends Component {
 			if(this.state.active==2)
 			{
 				return(
-					<div className="CourtMainDiv">
+					<div className="CourtMainDiv" onClick={()=>this.setState({active:0})}>
 						<div className="CourtText">
-							<p className="ContentText BolderText">המגרש</p>
+							<p className="ContentTopic">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -119,7 +119,7 @@ class Court extends Component {
 
 						<div className="CourtWrapper">
 							<div className="CourtBaseDiv">
-								<img className="CourtBaseImg" src={CourtTwo}/>
+								<img className="CourtBaseImg" src={CourtTwo}  style={{height:"30vw"}}/>
 								<img className="PlusButton"id="PlusButtonOne" src={PlusButton}/>
 								<img className="PlusButtonActive" onClick={()=>this.HandleClick(2)}  id="PlusButtonTwo" src={PlusButton}/>
 								<img className="PlusButton" id="PlusButtonThree"  src={PlusButton}/>
@@ -135,9 +135,9 @@ class Court extends Component {
 			if(this.state.active==3)
 			{
 				return(
-					<div className="CourtMainDiv">
+					<div className="CourtMainDiv" onClick={()=>this.setState({active:0})}>
 						<div className="CourtText">
-							<p className="ContentText BolderText">המגרש</p>
+							<p className="ContentTopic">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -170,9 +170,9 @@ class Court extends Component {
 			if(this.state.active==4)
 			{
 				return(
-					<div className="CourtMainDiv">
+					<div className="CourtMainDiv" onClick={()=>this.setState({active:0})}>
 						<div className="CourtText">
-							<p className="ContentText BolderText">המגרש</p>
+							<p className="ContentTopic">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -202,9 +202,9 @@ class Court extends Component {
 			if(this.state.active==5)
 			{
 				return(
-					<div className="CourtMainDiv">
+					<div className="CourtMainDiv" onClick={()=>this.setState({active:0})}>
 						<div className="CourtText">
-							<p className="ContentText BolderText">המגרש</p>
+							<p className="ContentTopic">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -225,7 +225,7 @@ class Court extends Component {
 
 						<div className="CourtWrapper">
 							<div className="CourtBaseDiv">
-								<img className="CourtBaseImg" src={CourtFive}/>
+								<img className="CourtBaseImg" src={CourtFive}  style={{height:"30vw"}}/>
 								<img className="PlusButton"id="PlusButtonOne" src={PlusButton}/>
 								<img className="PlusButton"id="PlusButtonTwo" src={PlusButton}/>
 								<img className="PlusButton" id="PlusButtonThree"  src={PlusButton}/>
@@ -242,9 +242,9 @@ class Court extends Component {
 			if(this.state.active==6)
 			{
 				return(
-					<div className="CourtMainDiv">
+					<div className="CourtMainDiv" onClick={()=>this.setState({active:0})}>
 						<div className="CourtText">
-							<p className="ContentText BolderText">המגרש</p>
+							<p className="ContentTopic">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -261,7 +261,7 @@ class Court extends Component {
 
 						<div className="CourtWrapper">
 							<div className="CourtBaseDiv">
-								<img className="CourtBaseImg" src={CourtSix}/>
+								<img className="CourtBaseImg" src={CourtSix}  style={{height:"30vw"}}/>
 								<img className="PlusButton"id="PlusButtonOne" src={PlusButton}/>
 								<img className="PlusButton"id="PlusButtonTwo" src={PlusButton}/>
 								<img className="PlusButton" id="PlusButtonThree"  src={PlusButton}/>

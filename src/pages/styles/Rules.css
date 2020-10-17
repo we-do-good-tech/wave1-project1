@@ -92,7 +92,7 @@
 }
 
 #SignalContentDiv{
-	width:88vw;
+	width:80vw;
 	margin-right: -2vw;
 	text-align: right;
 	display: flex;
@@ -103,12 +103,12 @@
 }
 
 #SignalContentDiv div{
-	width: fit-content;
+	width: 19vw;
 	text-align: center;
-	margin-right: 3vw;
-	margin-left: 3vw;
-	margin-bottom: 6vh;
+	margin:0;
 	display: block;
+	margin-bottom: 2vh;
+	border-left: 1px solid black;
 
 
 }
@@ -134,14 +134,20 @@
 
 .TimesPic{
 	width: 10vw;
-	padding-right: 6vw;
-	padding-bottom: 2vh;
+	padding: 0;
+	padding-bottom: 2vh;	
 }
+
+#TimesContentDiv div{
+	border-left:1px solid black;
+	width: 17vw;
+	text-align: center;
+	margin-bottom: 2vh;
+}
+
 .SpecialTimesPic{
 	width: 13vw;
 	height: 15vw;
-	padding-right: 4vw;
-	padding-top: 0.2vw;
 }
 
 #RulesFirstContentDiv{

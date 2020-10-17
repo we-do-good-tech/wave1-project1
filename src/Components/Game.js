@@ -253,7 +253,7 @@ class Game extends Component {
 		if(this.state.active==0){
 			return(
 				<p className="Situation">
-				<h1>מהלך המשחק</h1>
+				<h1 className="ContentText">מהלך המשחק</h1>
 				<h2>לחצו בכל מקום על גבי המגרש על מנת <br/> להתחיל את מהלך המשחק.</h2>
 				</p>
 			)
@@ -261,7 +261,7 @@ class Game extends Component {
 		if(this.state.active==6){
 			return(
 				<p className="Situation">
-				<h1>מהלך המשחק</h1>
+				<h1 className="ContentText">מהלך המשחק</h1>
 				<h2>לחצו בכל מקום על גבי המגרש על מנת <br/> להתחיל את מהלך המשחק מההתחלה.</h2>
 				</p>
 			)
@@ -269,7 +269,7 @@ class Game extends Component {
 		else{
 			return(
 				<p className="Situation">
-				<h1>מהלך המשחק</h1>
+				<h1 className="ContentText">מהלך המשחק</h1>
 				<h2></h2>
 				</p>
 			)

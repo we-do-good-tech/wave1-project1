@@ -28,7 +28,7 @@ class Rules extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:0,
+			active:1,
 			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}
@@ -96,13 +96,27 @@ class Rules extends Component {
 			{
 				return(
 					<div id="TimesContentDiv">
-						<img className="TimesPic" src={TimesBC1Single}/>
-						<img className="TimesPic" src={TimesBC2Single}/>
-						<img className="TimesPic" src={TimesBC3Single}/>
-						<img className="TimesPic" src={TimesBC4Single}/>						
-						<img className="TimesPic" src={TimesBC3Double}/>
-						<img className="TimesPic" src={TimesBC4Double}/>
-						<img className="TimesPic SpecialTimesPic" src={TimesGroup} />				
+						<div>
+							<img className="TimesPic" src={TimesBC1Single}/>
+						</div>
+						<div>
+							<img className="TimesPic" src={TimesBC2Single}/>
+						</div>
+						<div>
+							<img className="TimesPic" src={TimesBC3Single}/>
+						</div>
+						<div>
+							<img className="TimesPic" src={TimesBC4Single}/>	
+						</div>
+						<div>					
+							<img className="TimesPic" src={TimesBC3Double}/>
+						</div>
+						<div>
+							<img className="TimesPic" src={TimesBC4Double}/>
+						</div>
+						<div>
+							<img className="TimesPic SpecialTimesPic" src={TimesGroup} />
+						</div>				
 					</div>
 				)
 			}
