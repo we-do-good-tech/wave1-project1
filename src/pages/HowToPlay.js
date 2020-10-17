@@ -1,6 +1,7 @@
 import React, {Component,componentDidUpdate} from 'react';
 import './styles/HowToPlay.css';
 import SideBar from '../Components/SideBar.js';
+import Court from '../Components/Court.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
@@ -121,6 +122,14 @@ class HowToPlay extends Component {
 							<p className="ContentText"><strong>3. </strong>אם שני כדורים (או יותר) בצבעים שונים, נמצאים במרחק שווה מהכדור הלבן, כל צד יקבל נקודה על כל כדור.</p>
 							<p className="ContentText"><strong>4. </strong>בסיום כל המשחקונים, הנקודות שנצברו יחוברו יחדיו, והצד בעל סכום הניקוד הגבוה ביותר, יוכרז כמנצח.</p>
 							<img className="ContentPic" src={HowToGainPoints} style={{top:'calc(1vh + 1vw)'}}/>			
+						</div>
+					)
+				}
+			if(this.state.active==4)
+				{
+					return(
+						<div className="ContentDiv" >
+							<Court/>
 						</div>
 					)
 				}
