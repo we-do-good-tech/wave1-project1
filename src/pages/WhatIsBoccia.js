@@ -128,12 +128,12 @@ class WhatIsBoccia extends Component {
 								</p><br/>
 								<p className="ContentText">
 									<strong style={{'font-size':'1.4vw'}}>הישגים בולטים :</strong><br/>
-									הישגים בולטים: <br/>
-									- מקום 8 באליפות אירופה 2015.<br/>
-									- מקום 4 באליפות אירופה 2017.<br/>
-									- נדב לוי זכה במדליית כסף באליפויות עולם פתוחות בשנים 2015 ו-2017 <br/>
-									- נדב השתתף במשחקים הפראלימפיים בריו 2016 וישתתף בטוקיו.<br/>
-
+									<ul>
+									<li> מקום 8 באליפות אירופה 2015.</li>
+									<li> מקום 4 באליפות אירופה 2017.</li>
+									<li> נדב לוי זכה במדליית כסף באליפויות עולם פתוחות בשנים  <br/> 2015 ו-2017 </li>
+									<li> נדב השתתף במשחקים הפראלימפיים בריו 2016 וישתתף בטוקיו.</li>
+									</ul>
 									<img className="ContentPic" src={WhatIsThird} style={{top:'3vh'}}/>
 									<img className="ContentPic" src={WhatIsFourth} style={{width:'9vw',top:'8em',left:'18vw'}}/>
 								</p>						

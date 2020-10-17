@@ -47,7 +47,7 @@ class Court extends Component {
 				return(
 					<div className="CourtMainDiv">
 						<div className="CourtText">
-							<p className="ContentText">המגרש</p>
+							<p className="ContentText BolderText">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 
@@ -72,15 +72,15 @@ class Court extends Component {
 				return(
 					<div className="CourtMainDiv">
 						<div className="CourtText">
-							<p className="ContentText">המגרש</p>
+							<p className="ContentText BolderText">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
 							<div className="CourtBubble">
 								<img src={OrangeX} onClick={()=>this.setState({active:0})}/>
 								<p style={topicstyle}> תיבת השחקן  </p>
-								<p style={contentstyle}>תיבת השחקן היא אחת משישה אזורים
-								מסומנים וממסופרים, מהם זורק השחקן.
+								<p style={contentstyle}>תיבת השחקן היא אחת משישה אזורים 
+								מסומנים וממסופרים, <br/>מהם זורק השחקן.
 								</p>
 							</div>
 						</div>
@@ -104,7 +104,7 @@ class Court extends Component {
 				return(
 					<div className="CourtMainDiv">
 						<div className="CourtText">
-							<p className="ContentText">המגרש</p>
+							<p className="ContentText BolderText">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -137,7 +137,7 @@ class Court extends Component {
 				return(
 					<div className="CourtMainDiv">
 						<div className="CourtText">
-							<p className="ContentText">המגרש</p>
+							<p className="ContentText BolderText">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -172,7 +172,7 @@ class Court extends Component {
 				return(
 					<div className="CourtMainDiv">
 						<div className="CourtText">
-							<p className="ContentText">המגרש</p>
+							<p className="ContentText BolderText">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -204,7 +204,7 @@ class Court extends Component {
 				return(
 					<div className="CourtMainDiv">
 						<div className="CourtText">
-							<p className="ContentText">המגרש</p>
+							<p className="ContentText BolderText">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
@@ -244,7 +244,7 @@ class Court extends Component {
 				return(
 					<div className="CourtMainDiv">
 						<div className="CourtText">
-							<p className="ContentText">המגרש</p>
+							<p className="ContentText BolderText">המגרש</p>
 							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">

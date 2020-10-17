@@ -46,19 +46,21 @@
 	position: absolute;
 	left: 8.5vw;
 	top: -1vw;
-
+	
 }
 .ContentText{
 	font-weight: 400;
 	font-size: 1.4vw;
 	line-height: 1.5em;
 	direction: rtl;
+	margin-bottom:0;
 }
 .ContentTopic{
 	font-weight: 1000;
 	font-size: 1.6vw;
 	letter-spacing: 0.1vw;
 	direction: rtl;
+	margin-bottom:0;
 }
 
 
