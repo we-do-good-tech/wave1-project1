@@ -39,16 +39,111 @@
 	background-color: rgb(150,150,150);
 }
 
+#Times{
+	border: 1px solid black;
+	display: flex;
 
-
-
-
-#RulesContentDiv{
-	width: 70vw;
-	height: fit-content;
-	margin: 0 auto;
-	text-align: right;
 }
+
+.Penalty{
+	overflow-y: scroll;
+	height: 70vh;
+	direction: ltr;
+	padding-right: 2vw;
+	margin-right: 3vw;
+}
+.Penalty::-webkit-scrollbar {
+  width: 0.5vw;
+
+}
+.Penalty::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10vw;
+}
+ 
+/* Handle */
+.Penalty::-webkit-scrollbar-thumb {
+   background: rgba(100,100,100,0.3);
+   border-radius: 10vw;
+}
+
+/* Handle on hover */
+.Penalty::-webkit-scrollbar-thumb:hover {
+  background: rgba(100,100,100,0.6);
+  cursor: pointer;
+}
+
+/* Handle on active */
+.Penalty::-webkit-scrollbar-thumb:active {
+  background: rgba(100,100,100,0.7);
+  cursor: pointer;
+}
+
+
+#TimesContentDiv{
+	width: 70vw;
+	margin-right: 3vw;
+	text-align: right;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-top:-2vh;
+}
+
+#SignalContentDiv{
+	width:88vw;
+	margin-right: -2vw;
+	text-align: right;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top:3vh;
+}
+
+#SignalContentDiv div{
+	width: fit-content;
+	text-align: center;
+	margin-right: 3vw;
+	margin-left: 3vw;
+	margin-bottom: 6vh;
+	display: block;
+
+
+}
+#SignalContentDiv div p{
+	font-size: calc(0.7vw + 1vh);
+	color:#0F1359;
+	font-weight: 900;
+	padding: 0;
+	margin:0;
+}
+#SignalContentTopic{
+	position: absolute;
+	font-size: calc(1vw + 1.2vh);
+	color:#0F1359;
+	font-weight: 900;
+	top: -3vw;
+	right: 4vw;
+}
+.SignalPic{
+	height: 12vw;
+	margin: 0 auto;
+}
+
+.TimesPic{
+	width: 10vw;
+	padding-right: 6vw;
+	padding-bottom: 2vh;
+}
+.SpecialTimesPic{
+	width: 13vw;
+	height: 15vw;
+	padding-right: 4vw;
+	padding-top: 0.2vw;
+}
+
 #RulesFirstContentDiv{
 	width: 80vw;
 	height: fit-content;

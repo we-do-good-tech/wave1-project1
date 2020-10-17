@@ -123,7 +123,7 @@ class Game extends Component {
 				this.setState({
 					whiteball:[57,61]
 				})
-				this.movered(52,39,27,3);
+				this.movered(52,39,14,3);
 			}
 		if(this.state.active==3)
 			{	

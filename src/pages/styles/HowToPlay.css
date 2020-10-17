@@ -38,6 +38,40 @@
 .RolesMainButtonActive{
 	background-color: rgb(150,150,150);
 }
+.HowToGainPointsDiv{
+	margin-top: 0;
+	overflow-y: scroll;
+	direction: ltr;
+	padding-right: 1vw;
+	margin-right: 3vw;
+	height:65vh;
+}
+.HowToGainPointsDiv::-webkit-scrollbar {
+  width: 0.5vw;
+
+}
+.HowToGainPointsDiv::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10vw;
+}
+ 
+/* Handle */
+.HowToGainPointsDiv::-webkit-scrollbar-thumb {
+   background: rgba(100,100,100,0.3);
+   border-radius: 10vw;
+}
+
+/* Handle on hover */
+.HowToGainPointsDiv::-webkit-scrollbar-thumb:hover {
+  background: rgba(100,100,100,0.6);
+  cursor: pointer;
+}
+
+/* Handle on active */
+.HowToGainPointsDiv::-webkit-scrollbar-thumb:active {
+  background: rgba(100,100,100,0.7);
+  cursor: pointer;
+}
 
 
 

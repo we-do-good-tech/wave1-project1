@@ -1,5 +1,5 @@
 import React, {Component,componentDidUpdate} from 'react';
-import './styles/WhatIsBoccia.css';
+import './styles/BocciaClasses.css';
 import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
@@ -152,7 +152,7 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong> ישנה יכולת אחיזה בכדור</p>
 							<p className="ContentText"><strong>	ניידות |</strong> מתניידים עצמאית , על פי רוב מסוגלים ללכת ללא אמצעי עזר או בתמיכה קלה</p>
 							<p className="ContentText"><strong>סיוע | </strong> אינם רשאים לליווי עוזר במגרש להגשת והנגשת הכדורים</p>
-							<img className="ContentPic" style={{width:'calc(15vw + 20vh)', top:'18vh'}}src={BC5}/>						
+							<img className="ContentPic" style={{width:'calc(15vw + 20vh)', top:'12vh'}}src={BC5}/>						
 					</div>
 					)				
 				}	
