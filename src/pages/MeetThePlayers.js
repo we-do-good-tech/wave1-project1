@@ -1,17 +1,17 @@
 import React, {Component,componentDidUpdate} from 'react';
-import './styles/WhatIsBoccia.css';
+import './styles/MeetThePlayers.css';
 import SideBar from '../Components/SideBar.js';
 import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
 import PopUp from '../Components/PopUp.js';
 
-class Court extends Component {
+class MeetThePlayers extends Component {
 	constructor(){
 		super();
 		this.state = {  
 			active:0,
-			names:["תיבת שחקן" , "קו הזריקה" , "קו ה-V" , "אזור המשחק" , "נקודת הפלוס" , "ריבוע המטרה" ],
+			names:["נדב לוי " , "יוני"],
 			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
@@ -20,7 +20,7 @@ class Court extends Component {
 	}
 
 	handleclick=(evt)=>{
-		this.setState({active:parseInt(evt.target.value)});
+		this.setState({active:parseInt(evt)});
 	}
 
 	handlearrow=(evt)=>{
@@ -69,7 +69,9 @@ class Court extends Component {
 			{
 				return(
 					
-						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+						<div className="ContentDivFirstStatePage">
+							<button className="FirstStatePageButton MeetThePlayersButton" onClick={()=>this.handleclick(1)} value="1"><p className="MeetThePlayersPlayer"> נדב לוי  </p><p className="PlayBtn"><span className="PlayBtnSpan">►</span></p> </button>
+						</div>
 					
 				)
 			}
@@ -78,7 +80,11 @@ class Court extends Component {
 			{
 				return(
 					<div className="ContentDiv">
-								<p className="ContentText">1</p>						
+							<div className="youtube">
+								<iframe
+								src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+								</iframe>		
+							</div>				
 					</div>
 				)
 			}
@@ -157,4 +163,4 @@ class Court extends Component {
 	}
 }
 
-export default Court;
+export default MeetThePlayers;

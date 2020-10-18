@@ -29,7 +29,7 @@ class SideBar extends Component {
 		    <p className={getClass(3)}> <a href="./#/BocciaClasses">סיווג</a></p>,
 		    <p className={getClass(4)}> <a href="./#/Rules">חוקים</a></p>,
 		    <p className={getClass(5)}> <a href="./#/MeetThePlayers">פגשו את השחקנים</a></p>,
-		 	<p className={getClass(9)}> <a href="./#/"> צור קשר </a></p> 
+		 	<p className={getClass(6)}> <a href="./#/Contact"> צור קשר </a></p> 
 		]
 		
 

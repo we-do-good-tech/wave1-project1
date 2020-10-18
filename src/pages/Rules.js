@@ -28,7 +28,7 @@ class Rules extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:1,
+			active:0,
 			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}

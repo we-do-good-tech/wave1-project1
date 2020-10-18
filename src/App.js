@@ -9,6 +9,7 @@ import MeetThePlayers from './pages/MeetThePlayers';
 import Gear from './pages/Gear';
 import HowToPlay from './pages/HowToPlay';
 import Rules from './pages/Rules';
+import Contact from './pages/Contact';
 
 
 
@@ -23,8 +24,8 @@ class App extends Component {
         <Route path="/WhatIsBoccia" component ={WhatIsBoccia}/> 
         <Route path="/MeetThePlayers" component ={MeetThePlayers}/>        
         <Route path="/HowToPlay" component ={HowToPlay}/> 
-        <Route path="/Gear" component ={Gear}/>
         <Route path="/Rules" component ={Rules}/>
+        <Route path="/Contact" component ={Contact}/>
         <Route exact path="/Example" component ={Home}/> 
        </HashRouter>
 

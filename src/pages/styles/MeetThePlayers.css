@@ -39,6 +39,43 @@
 	background-color: rgb(150,150,150);
 }
 
+.PlayBtn{
+	color:#FAA159;
+	background-color:white;
+	width: 6vw;
+	height: 6vw;
+	border-radius: 50%;
+	margin:0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.PlayBtnSpan{
+	text-align: center;
+	height: fit-content;
+	font-size: 5vw;
+	margin-left: 1vw;
+}
+.MeetThePlayersButton{
+	position: relative;
+}
+.MeetThePlayersPlayer{
+	position: absolute;
+	top: -4vw;
+	right: 36%;
+}
+.youtube{
+	position: absolute;
+	top:0vh;
+	right: 18%;
+}
+.youtube iframe{
+	width:47vw;
+	height: 30vw;
+	border-radius: 1vw;
+	border:none;
+	box-shadow: 4px 4px 10px 2px gray;
+}
 
 
 
