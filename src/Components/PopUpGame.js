@@ -9,7 +9,7 @@ class PopUpGame extends Component {
 	constructor(props){
 		super();
 		this.state = {  
-			active:6,
+			active:0,
 			level:props.level,
 			answered:'',
 			right:0,
