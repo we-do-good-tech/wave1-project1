@@ -44,6 +44,7 @@
 	position: relative;
 	width: 33%;
 	margin-right: 4%;
+    background-color: white;
 }
 .MalePlayerBubbleFirstAlt{
 	border:calc(0.1vw + 0.2vh) solid #FAA159;
@@ -123,6 +124,7 @@
 	padding: 1vh 1vw 1vh 1vw;
 	text-align: center;
 	position: relative;
+    background-color: white;
 }
 .FemalePlayerBubble::after{
 	display: block;
