@@ -149,7 +149,7 @@ class MeetThePlayers extends Component {
 
 		return(
 			<div>				
-				<SideBar active='5'/>
+				<SideBar active='6'/>
 				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 				<div id="WhatIsMain">	
 					{GetDivContent()}

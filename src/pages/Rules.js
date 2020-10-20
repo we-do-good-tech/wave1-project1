@@ -244,7 +244,7 @@ class Rules extends Component {
 
 		return(
 			<div>				
-				<SideBar active='4'/>
+				<SideBar active='5'/>
 				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 				<div id="WhatIsMain">	
 					{GetDivContent()}

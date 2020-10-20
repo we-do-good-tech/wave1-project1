@@ -22,7 +22,7 @@ class Contact extends Component {
 
 		return(
 			<div>				
-				<SideBar active='6'/>
+				<SideBar active='7'/>
 				<div className="ContactDiv">
 					<h1>צרו קשר </h1>
 					<p>
