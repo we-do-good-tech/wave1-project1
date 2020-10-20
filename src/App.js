@@ -26,7 +26,7 @@ class App extends Component {
         <Route path="/HowToPlay" component ={HowToPlay}/> 
         <Route path="/Rules" component ={Rules}/>
         <Route path="/Contact" component ={Contact}/>
-        <Route exact path="/Example" component ={Home}/> 
+        <Route exact path="/Home" component ={Home}/> 
        </HashRouter>
 
       );
