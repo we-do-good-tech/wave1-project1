@@ -31,7 +31,7 @@
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	text-align: center;
+	text-align: right;
 }
 
 #explanationPopUp{
@@ -112,7 +112,7 @@
 .BtnAnswersDiv{
 	position: absolute;
 	right:30%;
-	top:30%;
+	top:25%;
 	width: 26vw;
 	display: flex;
 	justify-content: space-between;
@@ -122,7 +122,7 @@
 	font-size: 2vw;
 	background-color:#1E8DC7;
 	border-radius: 1vw;
-	width: 10vw;
+	width: 11vw;
 	padding-bottom: 1vw;
 	padding-top: 1vw;
 	text-align: center;
@@ -136,7 +136,7 @@
 	border-radius: 1vw;
 	font-size: 2vw;
 	text-align: center;
-	width: 10vw;
+	width: 11vw;
 	padding-bottom: 1vw;
 	padding-top: 1vw;
 	box-shadow: 4px 4px 10px 4px lightgray;
@@ -199,7 +199,7 @@
 	position:absolute;
 	bottom: 12%;
 	left: 35.5%;
-	border-radius:2vw;
+
 }
 
 .PictureAnswer{
@@ -214,9 +214,9 @@
 	bottom: 0;
 }
 .QuestionImage{
-		width:calc(15vw + 18vh);
+		height: 25vw;
+		max-width: 20vw;
 		position: absolute;
-		left:10%;
-		top:34.5%;
-		border-radius: 1vw;
+		left:8%;
+		top:30.5%;
 }

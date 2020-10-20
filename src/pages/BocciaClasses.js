@@ -182,7 +182,6 @@ class BocciaClasses extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>			
-				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={0}/>	
 			</div>
 
 		)

@@ -66,6 +66,24 @@ class PopUpGame extends Component {
 				</div>
 			)
 		}
+		else if(level[active].Kind===4){
+			level[active].Answers.forEach((Answer,i)=>{
+				if(i===this.state.answered)
+				{
+					tempArr.push(<p className="Answer CsnAnswer" onClick={()=>this.handleClick(i)}>{i+1}. {Answer}</p>)
+				}
+				else
+				{
+				tempArr.push(<p className="Answer" onClick={()=>this.handleClick(i)}>{i+1}. {Answer}</p>)
+				}
+			})
+
+			return(
+			<div className="AnswersDiv">
+				{tempArr}
+			</div>
+			)
+		}
 
 		return(
 			<div className="AnswersDiv">
@@ -95,7 +113,11 @@ class PopUpGame extends Component {
 		let right = this.state.right;
 		if(this.state.clickable){
 			this.setState({answered:myanswer});
-			if(this.checkAnswer(myanswer)){
+			if(level[active].Kind===4){
+				right+=1;
+				this.setState({clickable:false,display:'block',buttontype:1,tries:0,right:right})
+			}
+			else if(this.checkAnswer(myanswer)){
 				right+=1;
 				this.setState({clickable:false,display:'block',buttontype:1,tries:0,right:right})
 			}
