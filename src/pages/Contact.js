@@ -7,6 +7,7 @@ import MailTo from '../imgs/MailTo.png';
 import BlueButton from '../imgs/BlueButton.png';
 
 
+
 class Contact extends Component {
 	constructor(){
 		super();

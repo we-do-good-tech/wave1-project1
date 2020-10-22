@@ -137,17 +137,24 @@ class HowToPlay extends Component {
 		
 	}
 
-		let GetDivFrontBack= () => {
-			if(this.state.active===this.state.names.length){
-				return(
-					<FrontBack last={true} onClick={this.handlearrow}/>
-				);
-			}
-			if(this.state.active!=0){
-				return(
-					<FrontBack onClick={this.handlearrow}/>
-				);
-			}
+	let GetDivFrontBack= () => {
+		if(this.state.active===this.state.names.length){
+			return(
+				<FrontBack last={true} onClick={this.handlearrow}/>
+			);
+		}
+		if(this.state.active===1){
+			return(
+				<FrontBack first={true} onClick={this.handlearrow}/>
+			)
+		}
+
+		if(this.state.active!=0){
+			return(
+				<FrontBack onClick={this.handlearrow}/>
+			);
+		}
+			
 	}
 	
 
@@ -159,7 +166,7 @@ class HowToPlay extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				
-				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={0}/>
+				<PopUp HeadLine=" איך משחקים?"display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={0}/>
 			</div>
 
 		)

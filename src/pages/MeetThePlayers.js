@@ -5,6 +5,7 @@ import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
 import PopUp from '../Components/PopUp.js';
+import TemporaryContact from '../imgs/TemporaryContact.png';
 
 class MeetThePlayers extends Component {
 	constructor(){
@@ -64,8 +65,21 @@ class MeetThePlayers extends Component {
 
 
 
-		let GetDivContent= () => {			
+		let GetDivContent= () => {	
+
 			if(this.state.active==0)
+			{
+				return(
+					
+						<div className="ContentDivFirstStatePage">
+							<img src={TemporaryContact} style={{position:'absolute','bottom':'-5%',width:'62vw'}}/>
+						</div>
+					
+				)
+			}
+
+
+			if(this.state.active==1)
 			{
 				return(
 					

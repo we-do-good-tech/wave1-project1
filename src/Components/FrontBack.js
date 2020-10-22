@@ -13,6 +13,20 @@ class FrontBack extends Component {
 	}
 
 	render(){
+		if(this.props.first){
+			return(
+			<div>				
+					<button id="BackButton" value="1"  className="FrontBackButtons FrontBackButtonsDisabled ">
+						<span className="rightarrowfont">➜</span> הקודם
+					</button>
+
+					<button id="FrontButton" value="2" onClick={()=>this.handleclick(2)}  className="FrontBackButtons " >
+							הבא  <span className="leftarrowfont">➜</span>
+					</button>	
+					
+			</div>
+		)
+		}
 
 		if(this.props.last){
 			return(
@@ -27,8 +41,8 @@ class FrontBack extends Component {
 					
 			</div>
 		)
-
 		}
+
 		return(
 			<div>				
 					<button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">

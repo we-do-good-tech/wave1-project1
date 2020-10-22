@@ -144,18 +144,25 @@ class WhatIsBoccia extends Component {
 		
 	}
 
-		let GetDivFrontBack= () => {
+			let GetDivFrontBack= () => {
 			if(this.state.active===this.state.names.length){
 				return(
 					<FrontBack last={true} onClick={this.handlearrow}/>
 				);
 			}
+			if(this.state.active===1){
+				return(
+					<FrontBack first={true} onClick={this.handlearrow}/>
+				)
+			}
+			
 			if(this.state.active!=0){
 				return(
 					<FrontBack onClick={this.handlearrow}/>
 				);
 			}
-		}
+			
+	}
 	
 
 		return(
@@ -166,7 +173,7 @@ class WhatIsBoccia extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>
-				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp} level={2}/>
+				<PopUp HeadLine="מה זה בוצ'ה?" display={this.state.PopUpDisplay} onClick={this.HandlePopUp} level={2}/>
 				
 			</div>
 

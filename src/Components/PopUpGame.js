@@ -17,7 +17,8 @@ class PopUpGame extends Component {
 			display:'none',
 			content:'',
 			buttontype:1,
-			clickable:true
+			clickable:true,
+			HeadLine:props.HeadLine
 	  	}
 	}
 
@@ -39,7 +40,7 @@ class PopUpGame extends Component {
 			})
 
 			return(
-			<div className="AnswersDiv">
+			<div className="AnswersDiv"  style={{opacity:this.getOpacity()}}>
 				{tempArr}
 			</div>
 			)
@@ -48,7 +49,7 @@ class PopUpGame extends Component {
 				tempArr.push(<p className="BtnAnswerWrong" onClick={()=>this.handleClick(0)}>{level[active].Answers[0]}</p>)
 				tempArr.push(<p className="BtnAnswerRight" onClick={()=>this.handleClick(1)}>{level[active].Answers[1]}</p>)
 			return(
-				<div className="BtnAnswersDiv">
+				<div className="BtnAnswersDiv" style={{opacity:this.getOpacity()}}>
 					{tempArr}
 				</div>
 			)
@@ -58,7 +59,7 @@ class PopUpGame extends Component {
 				tempArr.push(<img className="PictureAnswer" onClick={()=>this.handleClick(0)} src={level[active].Answers[0]}/>)
 				tempArr.push(<img className="PictureAnswer" onClick={()=>this.handleClick(1)} src={level[active].Answers[1]}/>)
 			return(
-				<div className="PicutreAnswersDiv">
+				<div className="PicutreAnswersDiv"  style={{opacity:this.getOpacity()}}>
 					<img className="PictureQuestion" src={level[active].PictureQuestion}/>
 					<div className="PicutreAnswersDivBtns">
 					{tempArr}
@@ -79,14 +80,14 @@ class PopUpGame extends Component {
 			})
 
 			return(
-			<div className="AnswersDiv">
+			<div style={{opacity:this.getOpacity()}} className="AnswersDiv">
 				{tempArr}
 			</div>
 			)
 		}
 
 		return(
-			<div className="AnswersDiv">
+			<div  style={{opacity:this.getOpacity()}} className="AnswersDiv">
 				{tempArr}
 			</div>
 		)
@@ -95,7 +96,7 @@ class PopUpGame extends Component {
 	getQuestion = ()=>{
 		let level = this.state.level[this.state.active];
 		return(
-			<p id="Question">{this.state.active+1}. {level.Question} </p>
+			<p id="Question" style={{opacity:this.getOpacity()}}>{this.state.active+1}. {level.Question} </p>
 		)
 	}
 
@@ -156,6 +157,7 @@ class PopUpGame extends Component {
 			return(
 				<div style={{display:this.state.display}} id="explanationPopUp">
 					<button className="NextButton" onClick={()=>this.setState({clickable:true,display:"none",answered:''})}>נסו שוב</button>
+					<p id="V" style={{'background-color':'#DC5B59'}}>✖</p>
 					<p id="nocongrats">תשובה לא נכונה</p>
 					<p id="explanation">{this.state.level[this.state.active].Explanation}</p>
 				</div>
@@ -165,6 +167,7 @@ class PopUpGame extends Component {
 			return(
 				<div style={{display:this.state.display}} id="explanationPopUp">
 					<button className="NextButton" onClick={()=>this.handleNextButton()}>לשאלה הבאה</button>
+					<p id="V" style={{'background-color':'#DC5B59'}}>✖</p>
 					<p id="nocongrats">ענית פעמיים תשובה לא נכונה  </p>
 					<p id="explanation">{this.state.level[this.state.active].Explanation}</p>
 				</div>
@@ -173,9 +176,6 @@ class PopUpGame extends Component {
 	}
 
 
-	getImage=()=>{
-
-	}
 
 	getScore=()=>{
 		if(this.state.right> this.state.level.length*0.5)
@@ -185,7 +185,10 @@ class PopUpGame extends Component {
 					<p> כל הכבוד !</p>
 					<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
 					<img src={DidWin}/>
-					<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+					<div id="ScoreBtnsDiv">
+						<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+						<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+					</div>
 				</div>
 			)
 		}
@@ -195,7 +198,10 @@ class PopUpGame extends Component {
 					<p>נסיון טוב</p>
 					<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
 					<img src={AlmostWin}/>
-					<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+					<div id="ScoreBtnsDiv">
+						<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+						<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+					</div>
 				</div>
 			)
 		}
@@ -204,24 +210,33 @@ class PopUpGame extends Component {
 	getImage = ()=>{
 		if(this.state.level[this.state.active].Kind===1){
 			return(
-				<img className="QuestionImage" src={this.state.level[this.state.active].img}/>
+				<img className="QuestionImage" src={this.state.level[this.state.active].img} style={{opacity:this.getOpacity()}}/>
 			)
 		}
 		if(this.state.level[this.state.active].Kind===2){
 			return(
-				<img className="YesNoQuestionImage" src={this.state.level[this.state.active].img}/>
+				<img className="YesNoQuestionImage" src={this.state.level[this.state.active].img} style={{opacity:this.getOpacity()}}/>
 			)
 		}
+	}
+	getOpacity=()=>{
+		if(this.state.clickable)
+			return 1;
+		else
+			return 0.2;
 	}
 
 	render(){
 		if(this.state.active!=this.state.level.length){
 			return(
-				<div className="PopUpGameDiv">
+				<div className="PopUpGameDiv" >
+					<p className="PopUpGameHeadLine" style={{opacity:this.getOpacity()}}> בחן את עצמך בנושא: {this.state.HeadLine}</p>
+					<p className="PopUpGameHeadLine" style={{"margin-top":'-1.2vw', 'font-size':'1.6vw',opacity:this.getOpacity()}}> שאלה  {this.state.active+1} מתוך {this.state.level.length}</p>
 					{this.getQuestion()}
 					{this.getAnsweres()}
 					{this.explanationPopUp()}
 					{this.getImage()}
+					<button id="Skip" onClick={()=>{this.setState({active:parseInt(this.state.active)+1})}}>דלג</button>
 				</div>
 
 			)

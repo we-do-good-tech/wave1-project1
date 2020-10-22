@@ -234,11 +234,18 @@ class Rules extends Component {
 					<FrontBack last={true} onClick={this.handlearrow}/>
 				);
 			}
+			if(this.state.active===1){
+				return(
+					<FrontBack first={true} onClick={this.handlearrow}/>
+				)
+			}
+			
 			if(this.state.active!=0){
 				return(
 					<FrontBack onClick={this.handlearrow}/>
 				);
 			}
+			
 	}
 	
 
@@ -250,7 +257,7 @@ class Rules extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				
-				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={1}/>
+				<PopUp HeadLine="חוקי המשחק" display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={1}/>
 				
 			</div>
 

@@ -166,11 +166,18 @@ class BocciaClasses extends Component {
 					<FrontBack last={true} onClick={this.handlearrow}/>
 				);
 			}
+			if(this.state.active===1){
+				return(
+					<FrontBack first={true} onClick={this.handlearrow}/>
+				)
+			}
+			
 			if(this.state.active!=0){
 				return(
 					<FrontBack onClick={this.handlearrow}/>
 				);
 			}
+			
 	}
 	
 

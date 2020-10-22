@@ -19,7 +19,7 @@ class App extends Component {
 
       return( 
        <HashRouter basename='/'>
-        <Route exact path="/" component ={WhatIsBoccia}/> 
+        <Route exact path="/" component ={Home}/> 
         <Route path ="/BocciaClasses" component={BocciaClasses}/>
         <Route path="/WhatIsBoccia" component ={WhatIsBoccia}/> 
         <Route path="/MeetThePlayers" component ={MeetThePlayers}/>        

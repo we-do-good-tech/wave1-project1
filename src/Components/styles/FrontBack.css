@@ -29,6 +29,8 @@
 	transition: 0.3s;
 	align-items: center;
 	font-weight: 600;
+	display: flex;
+	justify-content: center;
 }
 
 .FrontBackButtons:hover{
@@ -37,15 +39,15 @@
 }
 .leftarrowfont{
 	transform: scaleY(1.2) scaleX(0.8) rotate(180deg);
-	display: inline-block;
+	/*display: inline-block;*/
 	margin-top: 0.7vh;
 	margin-right: 1.5vw;
 	font-size: 2.1vw;
 }
 
 .rightarrowfont{
-	display: inline-block;
-	padding-bottom: 0.4vh;
+	/*display: inline-block;
+*/	padding-bottom: 0.4vh;
 	margin-left: 0.4vw;
 	transform: scaleY(1.2) scaleX(0.8);
 	font-size: 2.1vw; 

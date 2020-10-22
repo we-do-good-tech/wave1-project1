@@ -10,7 +10,8 @@ class PopUp extends Component {
 		super();
 		this.state = {  
 			display:props.display,
-			level:props.level
+			level:props.level,
+			HeadLine:props.HeadLine
 	  	}
 
 	}
@@ -30,7 +31,7 @@ componentWillUpdate(newProps, newState) {
 				<div className="PopUpBackground" style={{display:this.state.display}} >
 					<div className="PopUpContent" >
 					 <img className="XButton" src={XButton} onClick={this.props.onClick}/>
-					 <PopUpGame level={Levels[this.state.level]}/>  
+					 <PopUpGame onClick={this.props.onClick} HeadLine={this.state.HeadLine} level={Levels[this.state.level]}/>  
 					</div>
 						
 				</div>

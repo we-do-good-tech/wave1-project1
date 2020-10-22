@@ -23,13 +23,13 @@ class SideBar extends Component {
 
 
 		let pages = [
-			<a href="./#/WhatIsBoccia" ><img className="Logo" src={WhiteLogo}/></a>,
-			<p className={getClass(1)}> <a href="./#/Home">בית</a></p>,
-		    <p className={getClass(2)}> <a href="./#/WhatIsBoccia">מה זה בוצ'ה?</a></p>,
-		    <p className={getClass(3)}> <a href="./#/HowToPlay">איך משחקים?</a></p>,
+			<div id="LogoDiv"><a href="./#/Home"><img className="Logo" src={WhiteLogo}/></a></div>,
+			<p className={getClass(1)}> <a href="./#/Home">דף הבית</a></p>,
+		    <p className={getClass(2)}> <a href="./#/WhatIsBoccia">מה זה  <br/>בוצ'ה?</a></p>,
+		    <p className={getClass(3)}> <a href="./#/HowToPlay">איך  <br/>משחקים?</a></p>,
 		    <p className={getClass(4)}> <a href="./#/BocciaClasses">סיווג</a></p>,
 		    <p className={getClass(5)}> <a href="./#/Rules"> חוקי המשחק </a></p>,
-		    <p className={getClass(6)}> <a href="./#/MeetThePlayers">פגשו את השחקנים</a></p>,
+		    <p className={getClass(6)}> <a href="./#/MeetThePlayers"> בוצ'ה בתקשורת </a></p>,
 		 	<p className={getClass(7)}> <a href="./#/Contact"> צור קשר </a></p> 
 		]
 		
