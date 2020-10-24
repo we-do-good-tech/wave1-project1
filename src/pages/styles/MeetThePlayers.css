@@ -80,13 +80,21 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-top: 6vw;
+	margin-top: 2vw;
+	padding-bottom: 4vw;
 }
 
 #InTheMedia .Achievment{
 	margin:2vw 1.5vw 2vw 1.5vw ;
 	cursor: pointer;
 	background-color: rgba(100,100,100,0.2);
+	transition: 0.3s;
+	box-shadow: 0.2vw 0.2vw 0.6vw 0.4vw rgb(180,180,180);
+}
+#InTheMedia .Achievment:hover{
+	transform: scale(1.1);
+	transition: 0.3s;
+	box-shadow: 0.1vw 0.1vw 1.5vw 0.2vw rgb(180,180,180);
 }
 
 #InTheMedia .Achievment p{
