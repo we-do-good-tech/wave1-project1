@@ -76,10 +76,10 @@ class MeetThePlayers extends Component {
 	getPopUp=()=>{
 		let PopUpContent = 
 		[
-		<iframe src='https://www.youtube.com/watch?v=wecMqoFdRrk&ab_channel=isadisrael'>
+		<iframe src="https://www.youtube.com/embed/wecMqoFdRrk" >
 		</iframe>
 		,
-		<iframe src='https://www.youtube.com/watch?v=qtXye1fzX3U'>
+		<iframe src='https://www.youtube.com/embed/qtXye1fzX3U'>
 		</iframe>
 		,
 		<img className='MediaPopUpImage' src={GershonChamp}/>
