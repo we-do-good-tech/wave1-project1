@@ -121,7 +121,7 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	ניידות |</strong> לרוב ניידים בכיסא גלגלים חשמלי</p>
 							<p className="ContentText"><strong>סיוע | </strong>רשאים לליווי עוזר במגרש. לצורך שחרור הכדור נעזרים ברמפה מתופעלת ע"י עוזר המונחה על ידי השחקן ואינו רשאי להפנות פניו למגרש </p>
 							<p className = "ContentText">קיים ציוד עזר נוסף בו הם רשאים להשתמש. </p>
-							<img className="ContentPic" style={{width:'calc(13vw + 17vh)', top:'12vh'}}src={BC3}/>						
+							<img className="ContentPic" style={{width:'calc(12vw + 16vh)', top:'13vh',transform:'rotateY(180deg)'}}src={BC3}/>						
 					</div>
 					)
 				}
@@ -171,7 +171,7 @@ class BocciaClasses extends Component {
 					<FrontBack first={true} onClick={this.handlearrow}/>
 				)
 			}
-			
+
 			if(this.state.active!=0){
 				return(
 					<FrontBack onClick={this.handlearrow}/>

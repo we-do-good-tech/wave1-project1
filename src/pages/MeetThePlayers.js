@@ -5,13 +5,23 @@ import ProgressBar from '../Components/ProgressBar.js';
 import FirstPageTabs from '../Components/FirstPageTabs.js';
 import FrontBack from '../Components/FrontBack.js';
 import PopUp from '../Components/PopUp.js';
-import TemporaryContact from '../imgs/TemporaryContact.png';
+import BocciaIsraelBanner from '../imgs/BocciaIsraelBanner.png';
+import WhatIsFourth from '../imgs/WhatIsFourth.png';
+import RightSideBanner from '../imgs/RightSideBanner.png';
+import LeftSideBanner from '../imgs/LeftSideBanner.png';
+import GershonChamp from '../imgs/GershonChamp.png';
+import NewChamp from '../imgs/NewChamp.png';
+import KickToLive from '../imgs/KickToLive.png';
+import NadavFourth from '../imgs/NadavFourth.png';
+import BatelWinning from '../imgs/BatelWinning.jpg';
+import XButton from '../imgs/XButton.png';
+
 
 class MeetThePlayers extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:0,
+			active:2,
 			names:["נדב לוי " , "יוני"],
 			PopUpDisplay:'none'
 	  	}
@@ -27,7 +37,7 @@ class MeetThePlayers extends Component {
 	handlearrow=(evt)=>{
 		if(evt==1){
 			if(this.state.active==0){
-				this.setState({active:this.state.names.length})
+				this.setState({active:6})
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)-1});
@@ -35,7 +45,7 @@ class MeetThePlayers extends Component {
 		}
 
 		else if(evt==2){ 
-			if(this.state.active==this.state.names.length){
+			if(this.state.active==6){
 				this.setState({active:0})
 			}
 			else{
@@ -45,14 +55,14 @@ class MeetThePlayers extends Component {
 	}
 
 	handlebarclick=(val)=>{
-		console.log(val);
 		this.setState({active:parseInt(val)});
 	}
 
-	HandlePopUp=()=>{
+	HandlePopUp=(toactive)=>{
+		this.setState({active:toactive});
 		if(this.state.PopUpDisplay==="none")
-			this.setState({PopUpDisplay:"block"});
-		else if(this.state.PopUpDisplay==="block"){
+			this.setState({PopUpDisplay:"flex"});
+		else if(this.state.PopUpDisplay==="flex"){
 			this.setState({PopUpDisplay:"none"});
 			}
 		else{
@@ -61,115 +71,135 @@ class MeetThePlayers extends Component {
 	}
 
 
+	getPopUp=()=>{
+		let PopUpContent = 
+		[
+		<iframe src='https://www.youtube.com/watch?v=wecMqoFdRrk&ab_channel=isadisrael'>
+		</iframe>
+		,
+		<iframe src='https://www.youtube.com/watch?v=qtXye1fzX3U'>
+		</iframe>
+		,
+		<img className='MediaPopUpImage' src={GershonChamp}/>
+		,
+		<img className='MediaPopUpImage' src={NewChamp}/>
+		,
+		<img className='MediaPopUpImage' src={KickToLive}/>
+		,
+		<img className='MediaPopUpImage' src={NadavFourth}/>
+		,
+		<img className='MediaPopUpImage' src={BatelWinning}/>
+		]
+		return(
+
+			<div id='MediaPopUpWrapper' style={{display:this.state.PopUpDisplay}}>
+				<div id="MediaPopUp">
+					<p id="rightarrow" onClick={()=>this.handlearrow(1)}>V</p>
+					<img id='MediaX'  onClick={()=>this.HandlePopUp()} src={XButton}/>
+					{PopUpContent[this.state.active]}
+					<p id="leftarrow" onClick={()=>this.handlearrow(2)}>V</p>
+				</div>
+			</div>
+		)
+	}
+
 	render(){
-
-
-
-		let GetDivContent= () => {	
-
-			if(this.state.active==0)
-			{
-				return(
-					
-						<div className="ContentDivFirstStatePage">
-							<img src={TemporaryContact} style={{position:'absolute','bottom':'-5%',width:'62vw'}}/>
-						</div>
-					
-				)
-			}
-
-
-			if(this.state.active==1)
-			{
-				return(
-					
-						<div className="ContentDivFirstStatePage">
-							<button className="FirstStatePageButton MeetThePlayersButton" onClick={()=>this.handleclick(1)} value="1"><p className="MeetThePlayersPlayer"> נדב לוי  </p><p className="PlayBtn"><span className="PlayBtnSpan">►</span></p> </button>
-						</div>
-					
-				)
-			}
-
-			if(this.state.active==1)
-			{
-				return(
-					<div className="ContentDiv">
-							<div className="youtube">
-								<iframe
-								src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-								</iframe>		
-							</div>				
-					</div>
-				)
-			}
-			if(this.state.active==2)
-			{
-				return(
-					<div className="ContentDiv">
-								<p className="ContentText">2</p>						
-					</div>
-				)
-			}
-
-			if(this.state.active==3)
-				{
-					return(
-						<div className="ContentDiv">
-									<p className="ContentText">3</p>						
-						</div>
-					)
-				}
-			if(this.state.active==4)
-				{
-					return(
-						<div className="ContentDiv">
-									<p className="ContentText">4</p>						
-						</div>
-					)				
-				}	
-
-			if(this.state.active==5)
-				{
-					return(
-						<div className="ContentDiv">
-									<p className="ContentText">5</p>						
-						</div>
-					)				
-				}	
-			if(this.state.active==6)
-				{
-					return(
-						<div className="ContentDiv">
-									<p className="ContentText">6</p>						
-						</div>
-					)				
-				}	
-		
-	}
-
-		let GetDivFrontBack= () => {
-			if(this.state.active===this.state.names.length){
-				return(
-					<FrontBack last={true} onClick={this.handlearrow}/>
-				);
-			}
-			if(this.state.active!=0){
-				return(
-					<FrontBack onClick={this.handlearrow}/>
-				);
-			}
-	}
-	
 
 		return(
 			<div>				
 				<SideBar active='6'/>
-				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
-				<div id="WhatIsMain">	
-					{GetDivContent()}
-					{GetDivFrontBack()}					
-				</div>				
-				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp} level={0}/>
+				<div id="MeetThePlayersMain">	
+					<img id="MeetBanner" src={BocciaIsraelBanner}/>	
+					<h1> הנבחרת הלאומית של ישראל פעילה החל משנת 2012 </h1>
+					<div id='AchievmentsDiv'>
+						<div className="Achievment" >
+							<p>
+								מקום 8 <br/>
+								באליפות אירופה <br/>
+								2015
+							</p>
+						</div>
+						<div className="Achievment">
+							<p>
+								מקום 4<br/>
+								באליפות אירופה <br/>
+								2017
+							</p>
+						</div>
+						<div className="Achievment">
+							<p>
+								נדב לוי זכה במדליית<br/>
+								כסף באליפויות <br/>
+								עולם פתוחות	<br/>
+								בשנים 2015 ו-2017
+							</p>
+						</div>
+						<div className="Achievment">
+							<p>
+								נדב לוי השתתף<br/>
+								במשחקים<br/>
+							הפאראלימפיים בריו	<br/>
+							2016 וישתתף בטוקיו</p>
+						</div>
+					</div>
+					<div id='InTheMediaBanner'>
+						<img src={RightSideBanner}/>
+						<p> בוצ'ה בתקשורת </p>
+						<img src={LeftSideBanner}/>
+					</div>
+					<div id = 'InTheMedia'>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(0)}>
+							<p>
+								נדב לוי שחקן בוצ'ה פאראלימפי
+							</p>
+						</div>
+
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(1)}>
+							<p>
+								מה זה בוצ'ה?
+							</p>
+						</div>
+
+						<div className="Achievment" onClick={()=>this.HandlePopUp(2)}>
+							<p>
+								גרשון חיימוב אלוף ישראל
+							</p>
+							<img src={GershonChamp}/>
+						</div>
+
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(3)}>
+							<p>
+								האלופה החדשה של ישראל BC1
+							</p>
+							<img src={NewChamp}/>
+						</div>
+
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(4)}>
+							<p>
+								לבעוט זה לחיות
+							</p>
+							<img src={KickToLive}/>
+						</div>
+
+
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(5)}>
+							<p>
+								נדב לוי רביעי באירופה
+							</p>
+							<img src={NadavFourth}/>
+						</div>
+
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(6)}>	
+							<p>
+								בת אל ברגע הניצחון
+							</p>
+							<img src={BatelWinning}/>
+						</div>
+					</div>
+				</div>	
+
+				{this.getPopUp()}
+						
 			</div>
 
 		)
