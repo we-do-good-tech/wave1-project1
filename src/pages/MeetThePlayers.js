@@ -15,6 +15,8 @@ import KickToLive from '../imgs/KickToLive.png';
 import NadavFourth from '../imgs/NadavFourth.png';
 import BatelWinning from '../imgs/BatelWinning.jpg';
 import XButton from '../imgs/XButton.png';
+import BocciaVideo from '../imgs/BocciaVideo.png';
+import NadavVideo from '../imgs/NadavVideo.png';
 
 
 class MeetThePlayers extends Component {
@@ -118,6 +120,7 @@ class MeetThePlayers extends Component {
 								באליפות אירופה <br/>
 								2015
 							</p>
+							<img className='GoldMedal' src={WhatIsFourth}/>
 						</div>
 						<div className="Achievment">
 							<p>
@@ -125,6 +128,7 @@ class MeetThePlayers extends Component {
 								באליפות אירופה <br/>
 								2017
 							</p>
+							<img className='GoldMedal' src={WhatIsFourth}/>
 						</div>
 						<div className="Achievment">
 							<p>
@@ -133,6 +137,7 @@ class MeetThePlayers extends Component {
 								עולם פתוחות	<br/>
 								בשנים 2015 ו-2017
 							</p>
+							<img className='GoldMedal' src={WhatIsFourth}/>
 						</div>
 						<div className="Achievment">
 							<p>
@@ -140,7 +145,9 @@ class MeetThePlayers extends Component {
 								במשחקים<br/>
 							הפאראלימפיים בריו	<br/>
 							2016 וישתתף בטוקיו</p>
+							<img className='GoldMedal' src={WhatIsFourth}/>
 						</div>
+
 					</div>
 					<div id='InTheMediaBanner'>
 						<img src={RightSideBanner}/>
@@ -152,12 +159,14 @@ class MeetThePlayers extends Component {
 							<p>
 								נדב לוי שחקן בוצ'ה פאראלימפי
 							</p>
+							<img src={NadavVideo}/>
 						</div>
 
 						<div className="Achievment"  onClick={()=>this.HandlePopUp(1)}>
 							<p>
 								מה זה בוצ'ה?
 							</p>
+							<img src={BocciaVideo}/>
 						</div>
 
 						<div className="Achievment" onClick={()=>this.HandlePopUp(2)}>
