@@ -6,7 +6,7 @@ import CallTo from '../imgs/CallTo.png';
 import MailTo from '../imgs/MailTo.png';
 import BlueButton from '../imgs/BlueButton.png';
 import HomeImage from '../imgs/HomeImage.png';
-import SportLogo from '../imgs/SportLogo.png';
+import BlueLogo from '../imgs/BlueLogo.png';
 
 
 
@@ -39,7 +39,7 @@ class Home extends Component {
 					</p>
 					<p id="StartButton"><a href="./#/WhatIsBoccia">להתחלת הלומדה  </a></p>
 					<img  id="HomeImage" src={HomeImage}/>
-					<img  id="SportLogo" src={SportLogo}/>
+					<img  id="BlueLogo" src={BlueLogo}/>
 				</div>
 			</div>
 

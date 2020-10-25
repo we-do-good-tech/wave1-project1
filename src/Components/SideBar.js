@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './styles/SideBar.css';
-import WhiteLogo from '../imgs/WhiteLogo.png'
+import IsraelUnionLogo from '../imgs/IsraelUnionLogo.png'
 
 class SideBar extends Component {
 	constructor({active}){
@@ -23,7 +23,7 @@ class SideBar extends Component {
 
 
 		let pages = [
-			<div id="LogoDiv"><a href="./#/Home"><img className="Logo" src={WhiteLogo}/></a></div>,
+			<div id="LogoDiv"><a href="./#/Home"><img className="Logo" src={IsraelUnionLogo}/></a></div>,
 			<p className={getClass(1)}> <a href="./#/Home">דף הבית</a></p>,
 		    <p className={getClass(2)}> <a href="./#/WhatIsBoccia">מה זה  <br/>בוצ'ה?</a></p>,
 		    <p className={getClass(3)}> <a href="./#/HowToPlay">איך  <br/>משחקים?</a></p>,

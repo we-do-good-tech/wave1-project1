@@ -3,13 +3,14 @@
   text-align: center;
 }
 .HomeDiv{
-  width: 60%;
+
+  width: 75%;
   height:90%;
   position: absolute;
   padding: 0;
   direction: rtl;
-  right: 22vw;
-  top:7vh;
+  right: 21vw;
+  top:6vh;
 }
 
 .HomeDiv h1{
@@ -36,7 +37,7 @@ font-weight: 900;
 #HomeImage{
   position: absolute;
   top: 9vh;
-  left: -8vw;
+  left: 8vw;
   width: 35vw;
 
 }
@@ -61,9 +62,9 @@ font-weight: 900;
   font-weight: 900;
   padding: 1vw;
 }
-#SportLogo{
+#BlueLogo{
   position: absolute;
-  bottom: 0.5vw;
-  right:-4.5vw;
-  width: 18vw;
+  top: -3vw;
+  left: 0vw;
+  width: 14vw;
 }
