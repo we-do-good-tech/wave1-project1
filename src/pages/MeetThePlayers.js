@@ -17,6 +17,8 @@ import BatelWinning from '../imgs/BatelWinning.jpg';
 import XButton from '../imgs/XButton.png';
 import BocciaVideo from '../imgs/BocciaVideo.png';
 import NadavVideo from '../imgs/NadavVideo.png';
+import Instagram from '../imgs/Instagram.png';
+import Facebook from '../imgs/Facebook.png';
 
 
 class MeetThePlayers extends Component {
@@ -155,39 +157,36 @@ class MeetThePlayers extends Component {
 						<img src={LeftSideBanner}/>
 					</div>
 					<div id = 'InTheMedia'>
-						<div className="Achievment"  onClick={()=>this.HandlePopUp(0)}>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(0)} style={{'background-image':'url('+NadavVideo+')'}}>
 							<p>
 								נדב לוי שחקן בוצ'ה פאראלימפי
 							</p>
-							<img src={NadavVideo}/>
+							
 						</div>
 
-						<div className="Achievment"  onClick={()=>this.HandlePopUp(1)}>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(1)} style={{'background-image':'url('+BocciaVideo+')'}}>
 							<p>
 								מה זה בוצ'ה?
 							</p>
-							<img src={BocciaVideo}/>
 						</div>
 
-						<div className="Achievment" onClick={()=>this.HandlePopUp(2)}>
+						<div className="Achievment" onClick={()=>this.HandlePopUp(2)}style={{'background-image':'url('+GershonChamp+')'}}>
 							<p>
 								גרשון חיימוב אלוף ישראל
 							</p>
-							<img src={GershonChamp}/>
 						</div>
 
-						<div className="Achievment"  onClick={()=>this.HandlePopUp(3)}>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(3)} style={{'background-image':'url('+NewChamp+')'}}>
 							<p>
 								האלופה החדשה של ישראל BC1
 							</p>
-							<img src={NewChamp}/>
 						</div>
 
-						<div className="Achievment"  onClick={()=>this.HandlePopUp(4)}>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(4)} style={{'background-image':'url('+KickToLive+')'}}>
 							<p>
 								לבעוט זה לחיות
 							</p>
-							<img src={KickToLive}/>
+							
 						</div>
 
 
@@ -208,7 +207,11 @@ class MeetThePlayers extends Component {
 				</div>	
 
 				{this.getPopUp()}
-						
+				<ul id="LookForUs">
+						<li style={{color:'#454343'}}>חפשו אותנו ברשתות החברתיות:</li>
+						<li><img src={Instagram}/>para_israel</li>
+						<li><img src={Facebook}/>עמותת הבוצ'ה לנכים בישראל</li>	
+				</ul>
 			</div>
 
 		)

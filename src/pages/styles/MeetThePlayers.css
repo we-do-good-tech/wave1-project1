@@ -55,7 +55,7 @@
 	direction: rtl;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 2vw;
+	margin-top: 3vw;
 }
 
 #InTheMediaBanner img{
@@ -69,6 +69,7 @@
 	font-weight: 600;
 	font-size: 1.3vw;
 	letter-spacing: 0.2vw;
+
 }
 
 #InTheMedia{
@@ -80,21 +81,24 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-top: 2vw;
+	margin-top: 0;
 	padding-bottom: 4vw;
 }
 
 #InTheMedia .Achievment{
 	margin:2vw 1.5vw 2vw 1.5vw ;
 	cursor: pointer;
-	background-color: rgba(100,100,100,0.2);
+	background-size: cover;
+	background-clip: padding-box;
+/*	background-repeat: no-repeat;
+	background-position: center;*/
 	transition: 0.3s;
-	box-shadow: 0.2vw 0.2vw 0.6vw 0.4vw rgb(180,180,180);
+	box-shadow: 0.1vw 0.1vw 0.7vw 0.1vw rgb(180,180,180);
 }
 #InTheMedia .Achievment:hover{
 	transform: scale(1.1);
 	transition: 0.3s;
-	box-shadow: 0.1vw 0.1vw 1.5vw 0.2vw rgb(180,180,180);
+	box-shadow: 0.1vw 0.1vw 1vw 0.2vw rgb(210,210,210);
 }
 
 #InTheMedia .Achievment p{
@@ -105,9 +109,9 @@
 	width: 20vw;
 }
 #InTheMedia .Achievment img{
-	max-width: 15vw;
+	max-width: 15.2vw;
 	height: 11vw;
-	border-radius: 1vw;
+	border-radius: 0.8vw;
 }
 
 #MediaPopUpWrapper{
@@ -189,4 +193,25 @@
 	cursor: pointer;
 	background-color: gray;
 	transition: 0.1s;
+}
+
+#LookForUs{
+	direction: rtl;
+	position: absolute;
+	bottom: none;
+	list-style-type: none;
+	left: 22.5%; 
+}
+#LookForUs li{
+	display: inline-flex;
+	margin-left: 2vw;
+	align-items: center;
+	vertical-align: middle;
+	font-size: 0.8vw;
+	font-weight: 900;
+	color:#A3A2A2;
+}
+#LookForUs img{
+	margin-left: 1vw;
+	width: 1.7vw;
 }
