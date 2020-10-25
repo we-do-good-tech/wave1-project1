@@ -5,6 +5,7 @@
 #LogoDiv{
 	z-index:99999;
 	padding-top: 1vw;
+	padding-bottom: 1vw;
 }
 .sidenavbar{
 	position: fixed;
@@ -59,7 +60,7 @@ a{
 
 .sidenavtabs{
 	display: block;
-	height: calc(100% / 11.5);
+	height: calc(100% / 11.9);
 	color:black;
 	background-color: transparent;
 	direction: rtl;
