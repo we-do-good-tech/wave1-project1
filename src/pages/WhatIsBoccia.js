@@ -15,7 +15,7 @@ class WhatIsBoccia extends Component {
 		super();
 		this.state = {  
 			active:0,
-			names:["נעים להכיר", "למי זה מיועד?" , "נבחרת ישראל", ],
+			names:["נעים להכיר", "למי זה מיועד?" ,  ],
 			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
