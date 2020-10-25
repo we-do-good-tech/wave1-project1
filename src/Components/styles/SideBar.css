@@ -60,7 +60,7 @@ a{
 
 .sidenavtabs{
 	display: block;
-	height: calc(100% / 11.9);
+	height: calc(100% / 11.8);
 	color:black;
 	background-color: transparent;
 	direction: rtl;
