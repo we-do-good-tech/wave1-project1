@@ -9,6 +9,7 @@ import WhatIsOne from '../imgs/WhatIsOne.png';
 import WhatIsSecond from '../imgs/WhatIsSecond.png';
 import WhatIsThird from '../imgs/WhatIsThird.png';
 import WhatIsFourth from '../imgs/WhatIsFourth.png';
+import BlueLogo from '../imgs/BlueLogo.png';
 
 class WhatIsBoccia extends Component {
 	constructor(){
@@ -82,15 +83,15 @@ class WhatIsBoccia extends Component {
 				return(
 					<div className="ContentDiv">
 								<p className="ContentTopic">נעים להכיר</p>
-								<p className="ContentText">
-								בוצ׳ה (הגייה - BO-CHA) הינו ענף פראלימפי המשלב מיומנויות שונות
-								כאשר המטרה היא לקרב כמה שיותר כדורים אל כדור המטרה.
+								<p className="ContentText" style={{width:'42vw'}}>
+								בוצ׳ה (הגייה - BO-CHA) הינו ענף פראלימפי המשלב מיומנויות שונות.
+								מטרת המשחק היא לקרב כמה שיותר כדורים אל כדור המטרה. <br/>
 								השם ”בוצ'ה“ נגזר מהמילה הלטינית ”כדור“.
-								</p>	<p className="ContentText">
-								בוצ'ה הוא ענף המשלב שליטה, דיוק, חשיבה ואסטרטגיה. המשחקים נמשכים ארבעה או ששה משחקונים (בבוצ'ה מערכה נקראת משחקון).
-								 שחקנים זורקים או מגלגלים כדורים לעבר המטרה - כדור לבן שנקרא גם כדור "ג'ק". 
+								</p>	<p className="ContentText" style={{width:'42vw'}}>
+								בוצ'ה הוא ענף המשלב שליטה, דיוק, חשיבה ואסטרטגיה. המשחקים נמשכים ארבעה או ששה משחקונים (בבוצ'ה מערכה נקראת "משחקון").
+								 השחקנים זורקים או מגלגלים כדורים לעבר המטרה - כדור לבן שנקרא גם כדור "ג'ק". 
 								 לכל צד יש שישה כדורים (אדום או כחול), ובכל משחקון, מנסים לצבור כמה שיותר נקודות על ידי זריקת 6 הכדורים והבאתם קרוב ככל הניתן לכדור המטרה. 
-								 אם המשחק נמצא בשוויון לאחר שנגמרו כל המשחקונים, משחקים שובר שוויון. ניתן לשחק בוצ'יה ראש בראש (1X1), בזוגות או בקבוצות של שלוש.
+								 אם המשחק נמצא בשוויון לאחר שנגמרו כל המשחקונים, משחקים שובר שוויון. ניתן לשחק בוצ'ה אחד על אחד,<br/> זוג מול זוג או  שלוש מול שלוש.
 								</p>
 								<img className="ContentPic" src={WhatIsOne}/>						
 					</div>
@@ -104,16 +105,16 @@ class WhatIsBoccia extends Component {
 								<p className="ContentText">
 									בוצ׳ה הוא ענף ספורט המיועד לנשים וגברים בכל הגילאים בעלי פגיעה בארבע גפיים.
 									המשחק יועד בתחילה לספורטאים עם שיתוק מוחין (Cerebral Palsy),
-									ועם השנים התרחב גם לספורטאים עם ליקויים נוספים שאינם CP,
+									עם השנים התרחב גם לספורטאים עם ליקויים נוספים שאינם CP,
 									כגון ניוון שרירים, פוליו, פגיעות ראש ועוד.
 								</p>
-								<p className="ContentText">
-									השחקנים במשחק משתייכים ל 4 קבוצות <br/>
-									על פי סיווג שלהם (קלאסים):<br/>
-									BC1, BC2, BC3, BC4<br/>
-									כל סיווג מתייחס לרמת מוגבלות שונה.
+								<p className="ContentText" style={{width:'42vw'}}>
+									השחקנים במשחק משתייכים ל 4 קבוצות 
+									על פי הסיווג שלהם (קלאסים):<br/>
+									BC1, BC2, BC3, BC4.
+									כל סיווג מתייחס לרמת תפקוד שונה.
 								</p>
-								<img className="ContentPic" src={WhatIsSecond} style={{top:'10vh'}}/>						
+								<img className="ContentPic" src={WhatIsSecond} style={{width:'32vw',top:'none',bottom:'0vh',left:'3vw'}}/>						
 					</div>
 				)
 			}
@@ -163,13 +164,25 @@ class WhatIsBoccia extends Component {
 			}
 			
 	}
+
+	let getLeftLogo=()=>{
+		if(this.state.active===0){
+			return(
+				<img style={{left:'3vw',top:'-7.5vw',width:'12vw'}}  id="BlueLogo" src={BlueLogo}/>
+				)
+		}
+
+	}
+
 	
 
 		return(
-			<div>				
+			<div>
+								
 				<SideBar active='2'/>
 				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
-				<div id="WhatIsMain">	
+				<div id="WhatIsMain">
+					{getLeftLogo()}		
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>

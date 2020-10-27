@@ -52,7 +52,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
    },
    {
      right:1,
-     Question:"נגמרו הכדורים האדומים. הכדור הכחול קרוב. מה יקרה עכשיו? ",
+     Question:"נגמרו הכדורים האדומים. הכדור הכחול קרוב.מה יקרה עכשיו? ",
      Answers:["המשחקון חייב להסתיים " ,"השחקן הכחול ימשיך לזרוק"] , 
      Kind:2,
      Explanation:'לאדום נגמרו הכדורים, השחקן הכחול יכול להמשיך לזרוק ולצבור עוד נקודות.',
@@ -90,7 +90,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
   },
   {
      right:1,
-     Question:"שאלה שישית",
+     Question:"מה תהיה תוצאת המשחקון?",
      Answers:[LevelOnePictureOne,LevelOnePictureTwo],
      PictureQuestion: LevelOnePictureAnswer,
      Kind:3,
@@ -99,7 +99,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
   },
   {
      right:0,
-     Question:"שאלה שישית",
+     Question:"מה תהיה תוצאת המשחקון?",
      Answers:[LevelTwoPictureOne,LevelTwoPictureTwo],
      PictureQuestion: LevelTwoPictureAnswer,
      Kind:3,

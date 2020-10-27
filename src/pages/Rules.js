@@ -22,6 +22,7 @@ import SignalSix from '../imgs/SignalSix.png';
 import SignalSeven from '../imgs/SignalSeven.png';
 import SignalEight from '../imgs/SignalEight.png';
 import Penalty from '../imgs/Penalty.png';
+import BlueLogo from '../imgs/BlueLogo.png';
 
 
 class Rules extends Component {
@@ -247,6 +248,14 @@ class Rules extends Component {
 			}
 			
 	}
+	let getLeftLogo=()=>{
+		if(this.state.active===0){
+			return(
+				<img style={{left:'3vw',top:'-7.5vw',width:'12vw'}}  id="BlueLogo" src={BlueLogo}/>
+				)
+		}
+
+	}
 	
 
 		return(
@@ -254,6 +263,7 @@ class Rules extends Component {
 				<SideBar active='5'/>
 				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
 				<div id="WhatIsMain">	
+					{getLeftLogo()}
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				

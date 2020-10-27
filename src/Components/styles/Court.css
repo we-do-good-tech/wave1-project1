@@ -78,18 +78,18 @@
 }
 #PlusButtonOne{
 	position: absolute;
-	bottom: -8%;
-	left:47%;
+	bottom: 15.5%;
+	left:46.5%;
 }
 #PlusButtonTwo{
 	position: absolute;
-	bottom: 39%;
+	bottom: 28.8%;
 	left: 77%;
 }
 #PlusButtonThree{
 	position: absolute;
-	bottom: 50%;
-	left: 47%;
+	bottom: 40%;
+	left: 46.4%;
 }
 #PlusButtonFour{
 	position: absolute;
@@ -98,13 +98,13 @@
 }
 #PlusButtonFive{
 	position: absolute;
-	bottom: 76%;
-	left: 47%;
+	bottom: 72.5%;
+	left: 46.5%;
 }
 #PlusButtonSix{
 	position: absolute;
-	bottom: 67.5%;
-	left: 56%;
+	bottom: 65.4%;
+	left: 38.5%;
 }
 
 

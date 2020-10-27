@@ -5,7 +5,7 @@ import blueball from '../imgs/blueball.png';
 const BlueCircle =({x,y})=>{
 
 		return(
-				<img className="ball" src={blueball} style={{position: 'absolute',bottom:`${y}%`,left:`${x}%`,width:'1.2vw'}}/>
+				<img className="ball" src={blueball} style={{position: 'absolute',bottom:`${y}%`,left:`${x}%`,width:'1.15vw'}}/>
 			);
 
 

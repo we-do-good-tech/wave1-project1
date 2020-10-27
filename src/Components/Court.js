@@ -216,7 +216,7 @@ class Court extends Component {
 								<ul>
 									<li>שוויון</li>
 									<li>החזרת הכדור הלבן לאחר שיצא מתחומי המגרש</li>
-									<li>כאשר הכדור הלבן נכנס לאזור הלא חוקי לאחר זריקת הכדור הצבעוני הראשון</li>
+									
 
 								</ul>
 								</p>
@@ -252,7 +252,7 @@ class Court extends Component {
 								<img src={OrangeX} onClick={()=>this.setState({active:0})}/>
 								<p style={topicstyle}> ריבוע מטרה  </p>
 								<p style={contentstyle}>
-								ריבוע בגודל של 25 ס״מ x 25 ס״מ
+								ריבוע בגודל של  25X25 ס"מ
 								במרכז המגרש, לכדורי עונשין.
 
 								</p>

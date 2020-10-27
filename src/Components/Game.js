@@ -254,7 +254,7 @@ class Game extends Component {
 			return(
 				<p className="Situation">
 				<h1 className="ContentText">מהלך המשחק</h1>
-				<h2>לחצו בכל מקום על גבי המגרש על מנת <br/> להתחיל את מהלך המשחק.</h2>
+				<h2>לחצו בכל מקום על גבי המגרש כדי<br/> להתחיל את מהלך המשחק.</h2>
 				</p>
 			)
 		}
@@ -262,7 +262,7 @@ class Game extends Component {
 			return(
 				<p className="Situation">
 				<h1 className="ContentText">מהלך המשחק</h1>
-				<h2>לחצו בכל מקום על גבי המגרש על מנת <br/> להתחיל את מהלך המשחק מההתחלה.</h2>
+				<h2>לחצו בכל מקום על גבי המגרש כדי<br/> להתחיל לשחק.</h2>
 				</p>
 			)
 		}

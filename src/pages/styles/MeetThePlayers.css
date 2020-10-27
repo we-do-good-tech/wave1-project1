@@ -2,7 +2,37 @@
 	width: calc(100% - 15vw);
 	text-align: center;
 	margin-top: 2vw;
+	overflow-y: scroll;
+	height: 94vh;
 }
+
+#MeetThePlayersMain::-webkit-scrollbar {
+  width: 0.5vw;
+
+}
+#MeetThePlayersMain::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10vw;
+}
+ 
+/* Handle */
+#MeetThePlayersMain::-webkit-scrollbar-thumb {
+   background: rgba(100,100,100,0.3);
+   border-radius: 10vw;
+}
+
+/* Handle on hover */
+#MeetThePlayersMain::-webkit-scrollbar-thumb:hover {
+  background: rgba(100,100,100,0.6);
+  cursor: pointer;
+}
+
+/* Handle on active */
+#MeetThePlayersMain::-webkit-scrollbar-thumb:active {
+  background: rgba(100,100,100,0.7);
+  cursor: pointer;
+}
+
 #MeetBanner{
 	width: 20vw;
 	margin: 0 auto;
@@ -197,8 +227,10 @@
 
 #LookForUs{
 	direction: rtl;
-	position: absolute;
-	bottom: none;
+	margin: 0 auto;
+	margin-top: 2vw;
+	bottom: 0;
+	z-index: 999;
 	list-style-type: none;
 	left: 25%; 
 }

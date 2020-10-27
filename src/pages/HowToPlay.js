@@ -9,6 +9,7 @@ import PopUp from '../Components/PopUp.js';
 import Game from '../Components/Game.js';
 import HowToTarget from '../imgs/HowToTarget.png';
 import HowToGainPoints from '../imgs/HowToGainPoints.png';
+import BlueLogo from '../imgs/BlueLogo.png';
 
 class HowToPlay extends Component {
 	constructor(){
@@ -83,11 +84,11 @@ class HowToPlay extends Component {
 					<div className="ContentDiv">
 								<p className="ContentTopic">מטרת המשחק</p>
 								<p className="ContentText">
-								לזרוק את הכדור שלי הכי קרוב לכדור הלבן.
+								לזרוק את הכדור ששייך לי הכי קרוב לכדור הלבן.
 								</p>
 								<p className="ContentTopic">כמות משתתפים</p>
 								<p className="ContentText">
-								1-3 שחקנים (יחידים, זוגות או קבוצתי).
+								3X3 ,2X2 ,1X1 (יחידים, זוגות או קבוצתי)
 								</p>
 								<p className="ContentTopic">ציוד</p>
 								<p className="ContentText">
@@ -114,11 +115,11 @@ class HowToPlay extends Component {
 							<p className="ContentTopic">צבירת נקודות</p>
 							<p className="ContentText" style={{'font-weight':'800'}}>
 							הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה. <br/>
-							כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן <br/>
-							מאשר הכדור של הצד השני, יזכה בנקודה נוספת.
+							כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן, מאשר <br/>
+							הכדור של הצד השני, יזכה בנקודה נוספת.
 							</p>
 							<p className="ContentText"><strong>1. </strong> ניקוד יחושב בסיום כל משחקון, לאחר שכל הכדורים של שני הצדדים נזרקו (כולל כדורי עונשין).</p>
-							<p className="ContentText"><strong>2. </strong>כאמור, הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה.כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן,מאשר הכדור של הצד השני, יזכה בנקודה.</p>
+							<p className="ContentText"><strong>2. </strong>כאמור, הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה. כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן, מאשר הכדור של הצד השני, יזכה בנקודה.</p>
 							<p className="ContentText"><strong>3. </strong>אם שני כדורים (או יותר) בצבעים שונים, נמצאים במרחק שווה מהכדור הלבן, כל צד יקבל נקודה על כל כדור.</p>
 							<p className="ContentText"><strong>4. </strong>בסיום כל המשחקונים, הנקודות שנצברו יחוברו יחדיו, והצד בעל סכום הניקוד הגבוה ביותר, יוכרז כמנצח.</p>
 							<img className="ContentPic" src={HowToGainPoints} style={{top:'calc(1vh + 1vw)'}}/>			
@@ -156,13 +157,23 @@ class HowToPlay extends Component {
 		}
 			
 	}
+
+	let getLeftLogo=()=>{
+		if(this.state.active===0){
+			return(
+				<img style={{left:'3vw',top:'-7.5vw',width:'12vw'}}  id="BlueLogo" src={BlueLogo}/>
+				)
+		}
+
+	}
 	
 
 		return(
 			<div>				
 				<SideBar active='3'/>
 				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
-				<div id="WhatIsMain">	
+				<div id="WhatIsMain">
+					{getLeftLogo()}	
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				

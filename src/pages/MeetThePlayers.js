@@ -203,15 +203,17 @@ class MeetThePlayers extends Component {
 							</p>
 							<img src={BatelWinning}/>
 						</div>
-					</div>
-				</div>	
-
-				{this.getPopUp()}
-				<ul id="LookForUs">
+						<ul id="LookForUs">
 						<li style={{color:'#454343'}}>חפשו אותנו ברשתות החברתיות:</li>
 						<li><img src={Instagram}/>para_israel</li>
 						<li><img src={Facebook}/>עמותת הבוצ'ה לנכים בישראל</li>	
-				</ul>
+					</ul>
+					</div>
+					
+				</div>	
+
+				{this.getPopUp()}
+				
 			</div>
 
 		)
