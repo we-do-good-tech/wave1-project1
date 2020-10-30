@@ -105,7 +105,7 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong>עשויה להתאפשר אחיזה של הכדור,ולכן אין אפשרות לבעוט בכדור.</p>
 							<p className="ContentText"><strong>	ניידות |</strong> לרוב ניידים בכיסא גלגלים ידני (ייתכן גם ממונע),חלקם מסוגלים ללכת.</p>
 							<p className="ContentText"><strong>סיוע | </strong>אינם רשאים לליווי עוזר במגרש להגשת והנגשת הכדורים.</p>
-							<img className="ContentPic" style={{width:'calc(14vw + 20vh)', top:'8vh'}}src={BC2}/>						
+							<img className="ContentPic" style={{width:'calc(12vw + 16vh)', top:'8vh'}}src={BC2}/>						
 					</div>
 				)
 			}
@@ -122,7 +122,7 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	ניידות |</strong> לרוב ניידים בכיסא גלגלים חשמלי.</p>
 							<p className="ContentText"><strong>סיוע | </strong>רשאים לליווי עוזר במגרש. לצורך שחרור הכדור נעזרים ברמפה מתופעלת ע"י עוזר המונחה על ידי השחקן ואינו רשאי להפנות פניו למגרש.</p>
 							<p className = "ContentText">קיים ציוד עזר נוסף בו הם רשאים להשתמש. </p>
-							<img className="ContentPic" style={{width:'calc(12vw + 16vh)', top:'13vh'}}src={BC3}/>						
+							<img className="ContentPic" style={{width:'calc(12vw + 16vh)', top:'11.1vh'}}src={BC3}/>						
 					</div>
 					)
 				}
@@ -153,7 +153,7 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong> ישנה יכולת אחיזה בכדור.</p>
 							<p className="ContentText"><strong>	ניידות |</strong> מתניידים עצמאית , על פי רוב מסוגלים ללכת ללא אמצעי עזר או בתמיכה קלה.</p>
 							<p className="ContentText"><strong>סיוע | </strong> אינם רשאים לליווי עוזר במגרש להגשת והנגשת הכדורים.</p>
-							<img className="ContentPic" style={{width:'calc(15vw + 20vh)', top:'12vh'}}src={BC5}/>						
+							<img className="ContentPic" style={{width:'calc(13vw + 17vh)', top:'14vh'}}src={BC5}/>						
 					</div>
 					)				
 				}	

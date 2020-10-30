@@ -295,6 +295,7 @@ class Game extends Component {
 					{this.getFemalePlayerDiv()}
 					<div id="gamediv">
 						<img id="court" src={court} onClick={this.getMove}/>
+						<div id="GamePress" onClick={this.getMove} / >
 						<RedCircle x={this.state.redballs[0][0]} y={this.state.redballs[0][1]}/>
 						<RedCircle x={this.state.redballs[1][0]} y={this.state.redballs[1][1]}/>
 						<RedCircle x={this.state.redballs[2][0]} y={this.state.redballs[2][1]}/>

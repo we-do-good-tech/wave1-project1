@@ -27,8 +27,9 @@
 
 .BubbleWrapper{
 	position: absolute;
-	top:40%;
-	right: 3vw;
+	top:30%;
+	left: 45vw;
+	align-self: flex-end;
 }
 
 

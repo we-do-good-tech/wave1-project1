@@ -10,7 +10,7 @@ import TimesBC2Single from '../imgs/TimesBC2Single.png';
 import TimesBC3Single from '../imgs/TimesBC3Single.png';
 import TimesBC4Single from '../imgs/TimesBC4Single.png';
 import TimesBC3Double from '../imgs/TimesBC3Double.png';
-import TimesBC4Double from '../imgs/TimesBC3Double.png';
+import TimesBC4Double from '../imgs/TimesBC4Double.png';
 import TimesGroup from '../imgs/TimesGroup.png';
 import TieCourt from '../imgs/TieCourt.png';
 import SignalOne from '../imgs/SignalOne.png';
@@ -101,10 +101,10 @@ class Rules extends Component {
 							<img className="TimesPic" src={TimesBC1Single}/>
 						</div>
 						<div>
-							<img className="TimesPic" src={TimesBC2Single}/>
+							<img className="TimesPic" src={TimesBC2Single} style={{width:'16.3vw','margin-right':'-0.8vw'}}/>
 						</div>
 						<div>
-							<img className="TimesPic" src={TimesBC3Single}/>
+							<img className="TimesPic" src={TimesBC3Single} style={{width:'18.69vw','margin-right':'-0.8vw'}}/>
 						</div>
 						<div>
 							<img className="TimesPic" src={TimesBC4Single}/>	
@@ -116,7 +116,7 @@ class Rules extends Component {
 							<img className="TimesPic" src={TimesBC4Double}/>
 						</div>
 						<div>
-							<img className="TimesPic SpecialTimesPic" src={TimesGroup} />
+							<img className="TimesPic" src={TimesGroup} />
 						</div>				
 					</div>
 				)

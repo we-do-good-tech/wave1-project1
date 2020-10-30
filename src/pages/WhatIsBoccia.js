@@ -93,7 +93,7 @@ class WhatIsBoccia extends Component {
 								 לכל צד יש שישה כדורים (אדום או כחול), ובכל משחקון, מנסים לצבור כמה שיותר נקודות על ידי זריקת 6 הכדורים והבאתם קרוב ככל הניתן לכדור המטרה. 
 								 אם המשחק נמצא בשוויון לאחר שנגמרו כל המשחקונים, משחקים שובר שוויון. ניתן לשחק בוצ'ה אחד על אחד,<br/> זוג מול זוג או  שלוש מול שלוש.
 								</p>
-								<img className="ContentPic" src={WhatIsOne}/>						
+								<img className="ContentPic" src={WhatIsOne}  style={{width:'32vw',top:'none',bottom:'0vh',left:'3vw'}}/>						
 					</div>
 				)
 			}
@@ -114,7 +114,7 @@ class WhatIsBoccia extends Component {
 									BC1, BC2, BC3, BC4.
 									כל סיווג מתייחס לרמת תפקוד שונה.
 								</p>
-								<img className="ContentPic" src={WhatIsSecond} style={{width:'32vw',top:'none',bottom:'0vh',left:'3vw'}}/>						
+								<img className="ContentPic" src={WhatIsSecond} style={{width:'32vw',top:'9.5vw',left:'6vw'}}/>						
 					</div>
 				)
 			}
@@ -136,7 +136,7 @@ class WhatIsBoccia extends Component {
 									<li> נדב השתתף במשחקים הפראלימפיים בריו 2016 וישתתף בטוקיו.</li>
 									</ul>
 									<img className="ContentPic" src={WhatIsThird} style={{top:'3vh'}}/>
-									<img className="ContentPic" src={WhatIsFourth} style={{width:'9vw',top:'8em',left:'18vw'}}/>
+									<img className="ContentPic" src={WhatIsFourth} style={{width:'9vw',top:'8ה',left:'18vw'}}/>
 								</p>						
 						</div>
 					)
