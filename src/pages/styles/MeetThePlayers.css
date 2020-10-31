@@ -124,7 +124,7 @@
 /*	background-repeat: no-repeat;
 	background-position: center;*/
 	transition: 0.3s;
-	border-color: rgb(15,18,89);
+	border-color: #FAA159;
 	box-shadow: 0.1vw 0.1vw 0.7vw 0.1vw rgb(180,180,180);
 }
 #InTheMedia .Achievment:hover{
