@@ -147,6 +147,7 @@
 	cursor: pointer;
 	text-align: center;
 	justify-content: center;
+	transition: 0.3s;
 
 }
 .BtnAnswerWrong{
@@ -165,8 +166,14 @@
 	box-shadow: 4px 4px 10px 4px lightgray;
 	cursor: pointer;
 	text-align: center;
-
+	transition: 0.3s;
 }
+
+
+.BtnAnswerWrong:hover,.BtnAnswerRight:hover{
+	transform: scale(1.1);
+}
+
 .CsnAnswer{
 	background-color: #FAA159;
 	color:white;
@@ -233,6 +240,11 @@
 .PictureAnswer{
 	width:calc(8vw + 10vh);
 	cursor:pointer;
+	transition: 0.3s;
+}
+.PictureAnswer:hover{
+	transform: scale(1.1);
+	transition: 0.4s;
 }
 .PicutreAnswersDivBtns{
 	display: flex;
