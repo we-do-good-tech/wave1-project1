@@ -52,7 +52,7 @@
 	text-align: center;
 	position: relative;
 }
-.MalePlayerBubbleFirstAlt::after{
+.MalePlayerBubbleFirstAlt::after, .MalePlayerBubbleThirdAlt::after{
 	display: block;
     /*content: url('FirstArrow.png');*/
     background-image: url('./FirstArrow.png');
