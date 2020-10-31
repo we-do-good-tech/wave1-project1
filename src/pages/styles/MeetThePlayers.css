@@ -234,7 +234,7 @@
 	list-style-type: none;
 	left: 25%; 
 }
-#LookForUs li{
+#LookForUs li,#LookForUs a{
 	display: inline-flex;
 	margin-left: 2vw;
 	align-items: center;
@@ -254,7 +254,7 @@
 
 }
 
-#IGlist:hover, #FBlist:hover{
+#IGlist a:hover, #FBlist a:hover{
 	cursor: pointer;
 	color: #FAA159;
 }
