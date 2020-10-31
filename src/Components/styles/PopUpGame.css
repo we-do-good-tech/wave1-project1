@@ -2,7 +2,7 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
-	z-index: 999909999999999;
+
 }
 .PopUpGameHeadLine{
 	direction: rtl;
@@ -22,7 +22,7 @@
 	direction: rtl;
 	position: absolute;
 	top:7vw;
-	width: 49vw;
+	width: 46vw;
 	right: 2vw;
 	color:#0F1259;
 	font-weight: 900;
