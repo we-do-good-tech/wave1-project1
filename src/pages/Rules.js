@@ -100,30 +100,38 @@ class Rules extends Component {
 			if(this.state.active==1)
 			{
 				return(
-					<div id="TimesContentDiv">
-						<div>
-							<img className="TimesPic" src={TimesBC1Single}/>
+						<div id="SignalContentDiv">
+							<p id="SignalContentTopic"> זמנים</p>
+							<div>
+								<img className="SignalPic" src={TimesBC1Single}/>
+							</div>
+
+							<div>
+								<img className="SignalPic" src={TimesBC2Single}/>
+							</div>
+
+							<div>
+								<img className="SignalPic" src={TimesBC3Single}/>
+							</div>
+
+							<div>
+								<img className="SignalPic" src={TimesBC4Single}/>
+							</div>
+
+							<div>
+								<img className="SignalPic" src={TimesBC3Double} style={{'margin-right':'2vw'}}/>
+							</div>
+
+							<div>
+								<img className="SignalPic" src={TimesBC4Double}/>
+							</div>
+							
+							<div>
+								<img className="SignalPic" src={TimesGroup}/>
+							</div>			
+							<div  style={{'border-left':'none'}}></div>
 						</div>
-						<div>
-							<img className="TimesPic" src={TimesBC2Single} style={{width:'16.3vw','margin-right':'-0.8vw'}}/>
-						</div>
-						<div>
-							<img className="TimesPic" src={TimesBC3Single} style={{width:'18.69vw','margin-right':'-0.8vw'}}/>
-						</div>
-						<div>
-							<img className="TimesPic" src={TimesBC4Single}/>	
-						</div>
-						<div>					
-							<img className="TimesPic" src={TimesBC3Double}/>
-						</div>
-						<div>
-							<img className="TimesPic" src={TimesBC4Double}/>
-						</div>
-						<div>
-							<img className="TimesPic" src={TimesGroup} />
-						</div>				
-					</div>
-				)
+					)
 			}
 			if(this.state.active==2)
 			{
@@ -188,6 +196,7 @@ class Rules extends Component {
 						</div>
 					)
 				}
+
 			if(this.state.active==4)
 				{
 					return(

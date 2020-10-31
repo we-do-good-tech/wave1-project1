@@ -29,7 +29,8 @@ import MTPseven from '../imgs/MTP/MTPseven.png';
 import MTPeight from '../imgs/MTP/MTPeight.png';
 import MTPnine from '../imgs/MTP/MTPnine.jpg';
 import MTPten from '../imgs/MTP/MTPten.jpg';
-
+import LeftAlbumBanner from '../imgs/LeftAlbumBanner.png'
+import RightAlbumBanner from '../imgs/RightAlbumBanner.png'
 
 class MeetThePlayers extends Component {
 	constructor(){
@@ -51,6 +52,10 @@ class MeetThePlayers extends Component {
 	handlearrow=(evt)=>{
 		if(evt==1){
 			if(this.state.active==0){
+				this.setState({active:5})
+			}
+
+			else if(this.state.active===6){
 				this.setState({active:15})
 			}
 			else{
@@ -60,7 +65,10 @@ class MeetThePlayers extends Component {
 
 		else if(evt==2){ 
 			if(this.state.active==15){
-				this.setState({active:0})
+				this.setState({active:6});
+			}
+			else if(this.state.active==5){
+				this.setState({active:0});
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)+1})
@@ -224,7 +232,15 @@ class MeetThePlayers extends Component {
 							</p>
 							<img src={NadavFourth}/>
 						</div>
+					</div>
 
+					<div id='InTheMediaBanner'>
+						<img src={RightAlbumBanner} style={{'margin-bottom':'1vw',marginLeft:'1vw'}}/>
+							<p>אלבום תמונות   </p>
+						<img src={LeftAlbumBanner}  style={{'margin-bottom':'1vw',marginright:'2vw'}}/>
+					</div>
+
+					<div id="InTheMedia">
 						<div className="Achievment"  onClick={()=>this.HandlePopUp(6)}>	
 							<img src={MTPone}/>
 						</div>
@@ -255,12 +271,11 @@ class MeetThePlayers extends Component {
 						<div className="Achievment"  onClick={()=>this.HandlePopUp(15)}>	
 							<img src={MTPten}/>
 						</div>
-
 						<ul id="LookForUs">
-						<li>חפשו אותנו ברשתות החברתיות:</li>
-						<li id="IGlist"><img src={Instagram}/><a href="https://www.instagram.com/para_israel/">para_israel</a></li>
-						<li id="FBlist"><img src={Facebook}/><a href="https://www.facebook.com/bocciaIl">עמותת הבוצ'ה לנכים בישראל  </a></li>	
-					</ul>
+							<li>חפשו אותנו ברשתות החברתיות:</li>
+							<li id="IGlist"><img src={Instagram}/><a href="https://www.instagram.com/para_israel/">para_israel</a></li>
+							<li id="FBlist"><img src={Facebook}/><a href="https://www.facebook.com/bocciaIl">עמותת הבוצ'ה לנכים בישראל  </a></li>	
+						</ul>
 					</div>
 					
 				</div>	
