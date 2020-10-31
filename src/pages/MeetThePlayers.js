@@ -11,7 +11,7 @@ import RightSideBanner from '../imgs/RightSideBanner.png';
 import LeftSideBanner from '../imgs/LeftSideBanner.png';
 import GershonChamp from '../imgs/GershonChamp.png';
 import NewChamp from '../imgs/NewChamp.png';
-import KickToLive from '../imgs/KickToLive.png';
+import KickToLive from '../imgs/KickToLive.jpg';
 import NadavFourth from '../imgs/NadavFourth.png';
 import BatelWinning from '../imgs/BatelWinning.jpg';
 import XButton from '../imgs/XButton.png';
