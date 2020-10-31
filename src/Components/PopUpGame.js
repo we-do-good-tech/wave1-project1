@@ -4,6 +4,11 @@ import AlmostWin from '../imgs/AlmostWin.png';
 import DidWin from '../imgs/DidWin.png';
 import RightMedal from '../imgs/RightMedal.png';
 import WrongMedal from '../imgs/WrongMedal.png';
+import one from '../imgs/Stars/one.png';
+import two from '../imgs/Stars/two.png';
+import three from '../imgs/Stars/three.png';
+import zero from '../imgs/Stars/zero.png';
+
 
 class PopUpGame extends Component {
 	constructor(props){
@@ -178,7 +183,7 @@ class PopUpGame extends Component {
 
 
 	getScore=()=>{
-		if(this.state.right> this.state.level.length*0.5)
+		if(this.state.right=== this.state.level.length)
 		{
 			return(
 				<div id="score">
@@ -192,12 +197,54 @@ class PopUpGame extends Component {
 				</div>
 			)
 		}
+		else if(this.state.right>= this.state.level.length*0.8)
+		{
+				return(
+					<div id="score">
+						<p> כל הכבוד !</p>
+						<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
+						<img src={three}/>
+						<div id="ScoreBtnsDiv">
+							<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+							<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+						</div>
+					</div>
+				)
+		}
+		else if(this.state.right>= this.state.level.length*0.3)
+		{
+				return(
+					<div id="score">
+						<p> כל הכבוד !</p>
+						<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
+						<img src={two}/>
+						<div id="ScoreBtnsDiv">
+							<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+							<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+						</div>
+					</div>
+				)
+		}
+		else if(this.state.right>= this.state.level.length*0.1)
+		{
+				return(
+					<div id="score">
+						<p> כל הכבוד !</p>
+						<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
+						<img src={one}/>
+						<div id="ScoreBtnsDiv">
+							<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+							<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+						</div>
+					</div>
+				)
+		}
 		else{
 			return(
 				<div id="score">
 					<p>נסיון טוב</p>
 					<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
-					<img src={AlmostWin}/>
+					<img src={zero}/>
 					<div id="ScoreBtnsDiv">
 						<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
 						<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
