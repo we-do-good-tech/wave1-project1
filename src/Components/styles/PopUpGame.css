@@ -21,7 +21,7 @@
 	direction: rtl;
 	position: absolute;
 	top:7vw;
-	width: 42vw;
+	width: 49vw;
 	right: 2vw;
 	color:#0F1259;
 	font-weight: 900;
@@ -137,7 +137,7 @@
 	border-radius: 1vw;
 	width: fit-content;
 	height: fit-content;
-	min-width: 5vw;
+	min-width: 6vw;
 	min-height:4.5vw;
 	padding: 0.5vw 1vw 0.5vw 1vw;
 	display: flex;
@@ -157,6 +157,7 @@
 	align-items: center;
 	width: fit-content;
 	height: fit-content;
+	min-width: 6vw;
 	min-height:4.5vw;
     justify-content: center;
 	padding: 0.5vw 1vw 0.5vw 1vw;
@@ -223,7 +224,7 @@
 .YesNoQuestionImage{
 	width:calc(16vw + 19vh);
 	position:absolute;
-	top: 34%;
+	top: 30%;
 	left: 33.3%;
 
 }

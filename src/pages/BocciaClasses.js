@@ -11,6 +11,11 @@ import BC3 from '../imgs/BC3.png';
 import BC4 from '../imgs/BC4.png';
 import BC5 from '../imgs/BC5.png';
 import BlueLogo from '../imgs/BlueLogo.png';
+import C1 from '../imgs/icons/C1.png';
+import C2 from '../imgs/icons/C2.png';
+import C3 from '../imgs/icons/C3.png';
+import C4 from '../imgs/icons/C4.png';
+import C5 from '../imgs/icons/C5.png';
 
 class BocciaClasses extends Component {
 	constructor(){
@@ -73,7 +78,7 @@ class BocciaClasses extends Component {
 			{
 				return(
 					
-						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+						<FirstPageTabs names={this.state.names} icons ={[C1,C2,C3,C4,C5]} onClick={this.handlebarclick}/>
 					
 				)
 			}

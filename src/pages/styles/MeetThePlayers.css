@@ -239,11 +239,22 @@
 	margin-left: 2vw;
 	align-items: center;
 	vertical-align: middle;
-	font-size: 0.8vw;
+	font-size: 0.9vw;
 	font-weight: 900;
 	color:#A3A2A2;
+	cursor: default;
 }
 #LookForUs img{
 	margin-left: 1vw;
 	width: 1.7vw;
+}
+
+#IGlist, #FBlist{
+	
+
+}
+
+#IGlist:hover, #FBlist:hover{
+	cursor: pointer;
+	color: #FAA159;
 }

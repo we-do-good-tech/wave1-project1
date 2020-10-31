@@ -10,6 +10,8 @@ import WhatIsSecond from '../imgs/WhatIsSecond.png';
 import WhatIsThird from '../imgs/WhatIsThird.png';
 import WhatIsFourth from '../imgs/WhatIsFourth.png';
 import BlueLogo from '../imgs/BlueLogo.png';
+import W1 from '../imgs/icons/W1.png';
+import W2 from '../imgs/icons/W2.png';
 
 class WhatIsBoccia extends Component {
 	constructor(){
@@ -73,7 +75,7 @@ class WhatIsBoccia extends Component {
 			{
 				return(
 					
-						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+						<FirstPageTabs names={this.state.names} icons ={[W1,W2]} onClick={this.handlebarclick}/>
 					
 				)
 			}

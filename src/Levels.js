@@ -103,7 +103,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      Answers:[LevelTwoPictureOne,LevelTwoPictureTwo],
      PictureQuestion: LevelTwoPictureAnswer,
      Kind:3,
-     Explanation:'הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר',
+     Explanation:'משום שיש רק כדור אחד  קרוב יותר ללבן מהכדור הכחול התוצאה היא 1-0 לאדום',
      img:HowToLevelSeven
   }
  ],

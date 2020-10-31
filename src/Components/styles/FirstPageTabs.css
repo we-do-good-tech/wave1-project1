@@ -23,9 +23,26 @@
 	transition: 0.4s;
 	color: #0F1259;
 	margin: 1vw 1vw 2vw 4vw;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .FirstStatePageButton:hover{
 	transform: scale(1.1);
 	transition: 0.2s;
 	cursor: pointer;
+}
+.logo{
+	max-height: 4vw;
+	max-width: 10vw;
+	height:auto; 
+	width:auto;
+	margin-bottom: 1vw;
+}
+.logodesc{
+	position: absolute;
+	bottom: 0;
+	align-self: center;
+	width: fit-content;
 }

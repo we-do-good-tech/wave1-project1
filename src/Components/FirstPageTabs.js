@@ -6,6 +6,7 @@ class FirstPageTabs extends Component {
 		super();
 		this.state = {  
 			names:props.names,
+			icons:props.icons
 	  	}
 	}
 
@@ -18,7 +19,10 @@ class FirstPageTabs extends Component {
 	  		let FinalTabs = [];
 	  		this.state.names.forEach((element,i)=>{
 	  			FinalTabs.push(
-	  			<button className="FirstStatePageButton" onClick={()=>this.handleclick(i+1)} value={i+1}><p style={{'margin-bottom':'2vh','margin-top':0}}> 0{i+1}</p>{this.state.names[i]}</button>
+	  			<button className="FirstStatePageButton" onClick={()=>this.handleclick(i+1)} value={i+1}>
+	  			<img className='logo' src={this.state.icons[i]}/><br/>
+	  			<p className='logodesc'>{this.state.names[i]}</p>
+	  			</button>
 	  			)
 	  		})
 

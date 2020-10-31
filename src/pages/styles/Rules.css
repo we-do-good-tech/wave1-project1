@@ -129,14 +129,15 @@
 	right: 4vw;
 }
 .SignalPic{
-	height: 12vw;
+	height: 11vw;
 	margin: 0 auto;
+	margin-bottom: 1vw;
 }
 
 .TimesPic{
 	width: 14vw;
 	padding: 0;
-	padding-bottom: 2vh;	
+	padding-bottom: 1vh;
 }
 
 #TimesContentDiv div{

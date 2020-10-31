@@ -10,6 +10,10 @@ import Game from '../Components/Game.js';
 import HowToTarget from '../imgs/HowToTarget.png';
 import HowToGainPoints from '../imgs/HowToGainPoints.png';
 import BlueLogo from '../imgs/BlueLogo.png';
+import H1 from '../imgs/icons/H1.png';
+import H2 from '../imgs/icons/H2.png';
+import H3 from '../imgs/icons/H3.png';
+import H4 from '../imgs/icons/H4.png';
 
 class HowToPlay extends Component {
 	constructor(){
@@ -73,7 +77,7 @@ class HowToPlay extends Component {
 			{
 				return(
 					
-						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+						<FirstPageTabs names={this.state.names} icons ={[H1,H2,H3,H4]} onClick={this.handlebarclick}/>
 					
 				)
 			}

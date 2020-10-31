@@ -23,6 +23,10 @@ import SignalSeven from '../imgs/SignalSeven.png';
 import SignalEight from '../imgs/SignalEight.png';
 import Penalty from '../imgs/Penalty.png';
 import BlueLogo from '../imgs/BlueLogo.png';
+import T1 from '../imgs/icons/T1.png';
+import T2 from '../imgs/icons/T2.png';
+import T3 from '../imgs/icons/T3.png';
+import T4 from '../imgs/icons/T4.png';
 
 
 class Rules extends Component {
@@ -88,7 +92,7 @@ class Rules extends Component {
 			{
 				return(
 					
-						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+						<FirstPageTabs names={this.state.names} icons={[T1,T2,T3,T4]} onClick={this.handlebarclick}/>
 					
 				)
 			}
@@ -195,7 +199,7 @@ class Rules extends Component {
 								</p>
 								<p className="ContentTopic"> כדור עונשין   </p>
 								<p className="ContentText">
-								כאשר אחד מהצדדים (או עוזר הספורט) מבצע פעולות בזמן התור של היריב, למשל: הכנה לזריקה, כיוון כיסא הגלגלים, כיוון אביזר עזר או גלגול כדור, מקבל השחקן "שנפגע" מהעבירה, כדור נוסף על כל הפרה שבוצעה. כדורים אלו יזרקו אל ריבוע המטרה, בתום אותה מערכה. כל כדור שיעצור בתוך שטח הריבוע יזכה בנקודה נוספת.
+								כשהשחקן (או עוזר הספורט)  מבצע פעולות מסיחות דעת כשתורו של היריב לזרוק את הכדור, למשל: הכנה לזריקה, כיוון כיסא הגלגלים, כיוון אביזר עזר או גלגול כדור, מתוגמל השחקן "שנפגע" מהעבירה, כדור נוסף על כל הפרה שבוצעה. כדורים אלו יזרקו אל ריבוע המטרה, בתום אותה מערכה. כל כדור שיעצור בתוך שטח הריבוע יזכה בנקודה נוספת.
 								</p>
 								<p className="ContentTopic"> הסרה + כדור עונשין </p>
 								<p className="ContentText">

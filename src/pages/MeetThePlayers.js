@@ -19,6 +19,16 @@ import BocciaVideo from '../imgs/BocciaVideo.png';
 import NadavVideo from '../imgs/NadavVideo.png';
 import Instagram from '../imgs/Instagram.png';
 import Facebook from '../imgs/Facebook.png';
+import MTPone from '../imgs/MTP/MTPone.jpg';
+import MTPtwo from '../imgs/MTP/MTPtwo.png';
+import MTPthree from '../imgs/MTP/MTPthree.png';
+import MTPfour from '../imgs/MTP/MTPfour.png';
+import MTPfive from '../imgs/MTP/MTPfive.png';
+import MTPsix from '../imgs/MTP/MTPsix.png';
+import MTPseven from '../imgs/MTP/MTPseven.png';
+import MTPeight from '../imgs/MTP/MTPeight.png';
+import MTPnine from '../imgs/MTP/MTPnine.jpg';
+import MTPten from '../imgs/MTP/MTPten.jpg';
 
 
 class MeetThePlayers extends Component {
@@ -41,7 +51,7 @@ class MeetThePlayers extends Component {
 	handlearrow=(evt)=>{
 		if(evt==1){
 			if(this.state.active==0){
-				this.setState({active:6})
+				this.setState({active:15})
 			}
 			else{
 				this.setState({active:parseInt(this.state.active)-1});
@@ -49,7 +59,7 @@ class MeetThePlayers extends Component {
 		}
 
 		else if(evt==2){ 
-			if(this.state.active==6){
+			if(this.state.active==15){
 				this.setState({active:0})
 			}
 			else{
@@ -92,7 +102,25 @@ class MeetThePlayers extends Component {
 		,
 		<img className='MediaPopUpImage' src={NadavFourth}/>
 		,
-		<img className='MediaPopUpImage' src={BatelWinning}/>
+		<img className='MediaPopUpImage' src={MTPone}/>
+		,
+		<img className='MediaPopUpImage' src={MTPtwo}/>
+		,
+		<img className='MediaPopUpImage' src={MTPthree}/>
+		,
+		<img className='MediaPopUpImage' src={MTPfour}/>
+		,
+		<img className='MediaPopUpImage' src={MTPfive}/>
+		,
+		<img className='MediaPopUpImage' src={MTPsix}/>
+		,
+		<img className='MediaPopUpImage' src={MTPseven}/>
+		,
+		<img className='MediaPopUpImage' src={MTPeight}/>
+		,
+		<img className='MediaPopUpImage' src={MTPnine}/>
+		,
+		<img className='MediaPopUpImage' src={MTPten}/>
 		]
 		return(
 
@@ -198,15 +226,40 @@ class MeetThePlayers extends Component {
 						</div>
 
 						<div className="Achievment"  onClick={()=>this.HandlePopUp(6)}>	
-							<p>
-								בת אל ברגע הניצחון
-							</p>
-							<img src={BatelWinning}/>
+							<img src={MTPone}/>
 						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(7)}>	
+							<img src={MTPtwo}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(8)}>	
+							<img src={MTPthree}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(9)}>	
+							<img src={MTPfour}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(10)}>	
+							<img src={MTPfive}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(11)}>	
+							<img src={MTPsix}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(12)}>	
+							<img src={MTPseven}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(13)}>	
+							<img src={MTPeight}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(14)}>	
+							<img src={MTPnine}/>
+						</div>
+						<div className="Achievment"  onClick={()=>this.HandlePopUp(15)}>	
+							<img src={MTPten}/>
+						</div>
+
 						<ul id="LookForUs">
-						<li style={{color:'#454343'}}>חפשו אותנו ברשתות החברתיות:</li>
-						<li><img src={Instagram}/>para_israel</li>
-						<li><img src={Facebook}/>עמותת הבוצ'ה לנכים בישראל</li>	
+						<li>חפשו אותנו ברשתות החברתיות:</li>
+						<li id="IGlist"><img src={Instagram}/>para_israel</li>
+						<li id="FBlist"><img src={Facebook}/>עמותת הבוצ'ה לנכים בישראל</li>	
 					</ul>
 					</div>
 					
