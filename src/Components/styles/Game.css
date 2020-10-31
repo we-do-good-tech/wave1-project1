@@ -62,9 +62,7 @@
     position: absolute;
     bottom:-25.2%;
     left: 20%;
-    transform:rotateY(180deg);
-
-    z-index: 9999;
+    transform:rotateY(180deg);;
     height: 25%;
     width: 25%;
 }
@@ -86,7 +84,6 @@
     bottom:-45%;
     transform: rotate(10deg);
     left: 97%;
-    z-index: 9999;
     height: 64%;
     width: 64%;
 }
@@ -135,7 +132,6 @@
     position: absolute;
     bottom:-25.2%;
     left: 10%;
-    z-index: 9999;
     height: 25%;
     width: 25%;
     transform:rotateY(180deg);
@@ -156,7 +152,6 @@
 }
 .FemalePlayerBubbleFirstAlt::after{
 	display: block;
-    /*content: url('FirstArrow.png');*/
     background-image: url('./FirstArrow.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -165,7 +160,6 @@
     bottom:-25.2%;
     left: 20%;
     transform:rotateY(180deg);
-    z-index: 9999;
     height: 25%;
     width: 25%;
 }
