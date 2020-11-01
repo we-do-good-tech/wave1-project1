@@ -33,7 +33,7 @@ class Rules extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:0,
+			active:1,
 			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}
@@ -119,15 +119,15 @@ class Rules extends Component {
 							</div>
 
 							<div>
-								<img className="SignalPic" src={TimesBC3Double} style={{'margin-right':'2vw'}}/>
+								<img className="SignalPic" src={TimesBC3Double} style={{height:'12vw','margin-right':'2vw'}}/>
 							</div>
 
 							<div>
-								<img className="SignalPic" src={TimesBC4Double}/>
+								<img className="SignalPic" src={TimesBC4Double}  style={{height:'12vw'}}/>
 							</div>
 							
 							<div>
-								<img className="SignalPic" src={TimesGroup}/>
+								<img className="SignalPic" src={TimesGroup} style={{height:'12vw'}}/>
 							</div>			
 							<div  style={{'border-left':'none'}}></div>
 						</div>

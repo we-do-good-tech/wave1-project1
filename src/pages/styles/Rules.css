@@ -132,7 +132,13 @@
 	height: 11vw;
 	margin: 0 auto;
 	margin-bottom: 1vw;
-	margin-top: 1vw;
+}
+
+#SignalContentDiv .SignalPic{
+	height: 11vw;
+	margin: 0 auto;
+	margin-bottom: 1.8vw;
+	margin-top: 1.8vw;
 }
 
 .TimesPic{
