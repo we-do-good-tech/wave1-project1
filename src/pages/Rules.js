@@ -114,8 +114,8 @@ class Rules extends Component {
 								<img className="SignalPic" src={TimesBC3Single}/>
 							</div>
 
-							<div>
-								<img className="SignalPic" src={TimesBC4Single}/>
+							<div style={{'border-left':'none'}}>
+								<img className="SignalPic" src={TimesBC4Single} />
 							</div>
 
 							<div>
