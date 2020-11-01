@@ -103,7 +103,7 @@ class Rules extends Component {
 						<div id="SignalContentDiv">
 							<p id="SignalContentTopic"> זמנים</p>
 							<div>
-								<img className="SignalPic" src={TimesBC1Single}/>
+								<img className="SignalPic" src={TimesBC1Single} style={{height:'10vw','margin-right':'2vw'}}/>
 							</div>
 
 							<div>
