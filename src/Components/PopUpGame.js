@@ -272,6 +272,12 @@ class PopUpGame extends Component {
 		else
 			return 0.2;
 	}
+	
+	skip = () =>{
+		const clickable = this.state.clickable;
+		if(clickable)
+			this.setState({active:parseInt(this.state.active)+1})
+	}
 
 	render(){
 		if(this.state.active!=this.state.level.length){
@@ -283,7 +289,7 @@ class PopUpGame extends Component {
 					{this.getAnsweres()}
 					{this.explanationPopUp()}
 					{this.getImage()}
-					<button id="Skip" onClick={()=>{this.setState({active:parseInt(this.state.active)+1})}}>דלג</button>
+					<button id="Skip" onClick={() => this.skip()}>דלג</button>
 				</div>
 
 			)

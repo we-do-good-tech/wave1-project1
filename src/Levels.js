@@ -23,7 +23,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      Question:"זהו המשחקון הראשון - תור מי לזרוק את הכדור הלבן? ",
      Answers:["אדום" , "כחול"],
      Kind:2,
-     Explanation:'המשחק מתחיל כאשר השחקן שמשחק בכדורים האדומים, זורק את הכדור הלבן אל עבר המגרש',
+     Explanation:'המשחק מתחיל כאשר השחקן שמשחק בכדורים האדומים, זורק את הכדור הלבן אל עבר המגרש.',
      img:HowToLevelOne
    },
    {
@@ -31,7 +31,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      Question:"מיקום הכדור הלבן חוקי ",
      Answers:["לא נכון","נכון"],
      Kind:2,
-     Explanation:'הכדור הלבן חייב לעבור את קו ה - V כדי שיחשב כחוקי',
+     Explanation:'הכדור הלבן חייב לעבור את קו ה - V כדי שיחשב כחוקי.',
      img:HowToLevelTwo
    },
    {
@@ -39,7 +39,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      Question:"איזה שחקן יזרוק את הכדור הבא?",
      Answers:["אדום" , "כחול"],
      Kind:2,
-     Explanation:'השחקן שהכדור שלו רחוק יותר מהכדור הלבן יזרוק את הכדור הבא',
+     Explanation:'השחקן שהכדור שלו רחוק יותר מהכדור הלבן יזרוק את הכדור הבא.',
      img:HowToLevelThree
    },
    {
@@ -47,12 +47,12 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      Question:"איזה שחקן יזרוק את הכדור הבא?",
      Answers:["אדום" , "כחול"],
      Kind:2,
-     Explanation:'השחקן שהכדור שלו רחוק יותר מהכדור הלבן יזרוק את הכדור הבא',
+     Explanation:'השחקן שהכדור שלו רחוק יותר מהכדור הלבן יזרוק את הכדור הבא.',
      img:HowToLevelFour
    },
    {
      right:1,
-     Question:"נגמרו הכדורים האדומים. הכדור הכחול קרוב.מה יקרה עכשיו? ",
+     Question:"נגמרו הכדורים האדומים. הכדור הכחול קרוב. מה יקרה עכשיו? ",
      Answers:["המשחקון חייב להסתיים " ,"השחקן הכחול ימשיך לזרוק"] , 
      Kind:2,
      Explanation:'לאדום נגמרו הכדורים, השחקן הכחול יכול להמשיך לזרוק ולצבור עוד נקודות.',
@@ -84,7 +84,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
     Question:"מה מסמנת השופטת?"  ,
     Answers:["השחקן הכחול ניצח"  , "השחקן הכחול רשאי להיכנס למגרש"   ,   "תורו של השחקן הכחול לזרוק"  , "השחקו הכחול קיבל עונש"] ,
     Kind:1,
-    Explanation:"",
+    Explanation:'',
     img:QuestionOneImage
 
   },
@@ -103,7 +103,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      Answers:[LevelTwoPictureOne,LevelTwoPictureTwo],
      PictureQuestion: LevelTwoPictureAnswer,
      Kind:3,
-     Explanation:'משום שיש רק כדור אחד  קרוב יותר ללבן מהכדור הכחול התוצאה היא 1-0 לאדום',
+     Explanation:'משום שיש רק כדור אחד  קרוב יותר ללבן מהכדור הכחול התוצאה היא 1-0 לאדום.',
      img:HowToLevelSeven
   }
  ],

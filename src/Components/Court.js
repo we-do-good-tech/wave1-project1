@@ -138,7 +138,7 @@ class Court extends Component {
 					<div className="CourtMainDiv" onClick={()=>this.setState({active:0})}>
 						<div className="CourtText">
 							<p className="ContentTopic">המגרש</p>
-							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לראות  את חלקי המגרש השונים.</p>
+							<p className="ContentText">לחצו על כפתורי  הפלוס כדי לללמוד על חלקי המגרש השונים.</p>
 						</div>
 						<div className="BubbleWrapper">
 							<div className="CourtBubble">
@@ -179,7 +179,7 @@ class Court extends Component {
 							<div className="CourtBubble">
 								<img src={OrangeX} onClick={()=>this.setState({active:0})}/>
 								<p style={topicstyle}> אזור המשחק  </p>
-								<p style={contentstyle}>המגרש פחות תיבות השחקנים
+								<p style={contentstyle}>המגרש פחות תיבות השחקנים.
 								</p>
 							</div>
 						</div>
@@ -254,7 +254,6 @@ class Court extends Component {
 								<p style={contentstyle}>
 								ריבוע בגודל של  25X25 ס"מ
 								במרכז המגרש, לכדורי עונשין.
-
 								</p>
 							</div>
 						</div>

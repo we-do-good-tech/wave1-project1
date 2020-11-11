@@ -33,7 +33,7 @@ class Rules extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:1,
+			active:0,
 			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}
@@ -126,7 +126,7 @@ class Rules extends Component {
 								<img className="SignalPic" src={TimesBC4Double}  style={{height:'12vw'}}/>
 							</div>
 							
-							<div>
+							<div style={{'border-left':'none'}}>
 								<img className="SignalPic" src={TimesGroup} style={{height:'12vw'}}/>
 							</div>			
 							<div  style={{'border-left':'none'}}></div>
@@ -139,8 +139,8 @@ class Rules extends Component {
 					<div className="ContentDiv">
 								<p className="ContentTopic">שובר שיוויון</p>
 								<p className="ContentText">
-								אם בסיום כל  המשחקונים התוצאה היא תיקו,
-								משחקים משחקון נוסף. מטילים מטבע כדי להחליט מי יזרוק ראשון. מניחים את הכדור הלבן במרכז ריבוע המטרה (במרכז הפלוס) ומשחקים משחקון רגיל. 
+								אם בסיום כל  המשחקונים התוצאה היא שיוויון,
+								משחקים משחקון נוסף (שובר שיוויון) לקביעת זהות המנצח. מטילים מטבע כדי להחליט מי יזרוק ראשון. מניחים את הכדור הלבן במרכז ריבוע המטרה (במרכז הפלוס) ומשחקים משחקון רגיל. 
 								בסיום המשחקון, אם התוצאה היא עדיין שוויון, משחקים משחקון נוסף, והפעם הצד השני יזרוק ראשון את הכדור שלו.
 								</p>
 								<img className="ContentPic" src={TieCourt} />
@@ -152,7 +152,7 @@ class Rules extends Component {
 			if(this.state.active==3)
 				{
 					return(
-						<div id="SignalContentDiv">
+						<div id="SignalContentDiv" className="specialDiv">
 							<p id="SignalContentTopic"> סימני שופטים </p>
 							<div>
 								<img className="SignalPic" src={SignalOne}/>
@@ -169,7 +169,7 @@ class Rules extends Component {
 								<p>הסרת כדור</p>
 							</div>
 
-							<div>
+							<div style={{'border-left':'none'}}>
 								<img className="SignalPic" src={SignalFour} style={{'margin-right':'5vw'}}/>
 								<p>זריקת כדור לבן</p>
 							</div>
@@ -181,7 +181,7 @@ class Rules extends Component {
 
 							<div>
 								<img className="SignalPic" src={SignalSix}/>
-								<p> כדור מת, כדור בחוץ </p>
+								<p> כדור בחוץ </p>
 							</div>
 							
 							<div>
@@ -189,7 +189,7 @@ class Rules extends Component {
 								<p>מדידה </p>
 							</div>	
 
-							<div>
+							<div style={{'border-left':'none'}}>
 								<img className="SignalPic" src={SignalEight} />
 								<p> גמר המשחקון </p>
 							</div>				

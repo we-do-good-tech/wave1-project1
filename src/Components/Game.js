@@ -101,12 +101,13 @@ class Game extends Component {
 				else
 					clearInterval(myinter);
 			}
-			,speed);
-
+		,speed);
 	}
+
 	ActivePlusOne=()=>{
 		this.setState({active:this.state.active+1});
 	}
+
 	getMove = () =>{
 		if(this.state.active==1)
 			{
@@ -162,13 +163,9 @@ class Game extends Component {
 			this.ActivePlusOne();
 		
 		if(this.state.active==6)
-			this.reset();
-
-		
-		  
-				
-
+			this.reset();		
 	}
+
 	getMalePlayerDiv = () =>{
 		if(this.state.active==1){
 			return(
@@ -212,7 +209,7 @@ class Game extends Component {
 					<p className="MalePlayerBubbleThirdAlt">
 						<span style={{'font-size':'calc(1vw + 1vh)',padding:0, color:' #FAA159','font-weight':'900'}}>5</span>
 						<h1 style={{'font-size':'calc(0.7vw + 0.9vh)', 'letter-spacing':'0.07vw'}}>במידה והכדור הכחול עדיין קרוב יותר <br/> לכדור הלבן, האדום יזרוק כדור נוסף.</h1>
-						<h2 style={{'font-size':'calc(0.65vw + 0.8vh)', 'letter-spacing':'0.07vw','font-weight':'300'}}>לחצו בכל מקום על גבי המגרש <br/> על מנת לזרוק כדור אדום נוסף.</h2>
+						<h2 style={{'font-size':'calc(0.65vw + 0.8vh)', 'letter-spacing':'0.07vw','font-weight':'300'}}>לחצו בכל מקום על גבי המגרש <br/> על מנת לזרוק כדור אדום נוסף.<br/>(וכן הלאה...)</h2>
 					</p>
 					<img src={FirstPlayer} style={{height:'calc(10vh + 10vw)'}}/>
 				</div>
@@ -254,7 +251,7 @@ class Game extends Component {
 			return(
 				<p className="Situation">
 				<h1 className="ContentText">מהלך המשחק</h1>
-				<h2>לחצו בכל מקום על גבי המגרש כדי<br/> להתחיל את מהלך המשחק.</h2>
+				<h2>לחצו בכל מקום על גבי המגרש כדי<br/> להתחיל את המשחק.</h2>
 				</p>
 			)
 		}
@@ -295,7 +292,7 @@ class Game extends Component {
 					{this.getFemalePlayerDiv()}
 					<div id="gamediv">
 						<img id="court" src={court} onClick={this.getMove}/>
-						<div id="GamePress" onClick={this.getMove} / >
+						<div id="GamePress" onClick={this.getMove}/>
 						<RedCircle x={this.state.redballs[0][0]} y={this.state.redballs[0][1]}/>
 						<RedCircle x={this.state.redballs[1][0]} y={this.state.redballs[1][1]}/>
 						<RedCircle x={this.state.redballs[2][0]} y={this.state.redballs[2][1]}/>

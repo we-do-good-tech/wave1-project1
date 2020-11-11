@@ -99,28 +99,37 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-top:3vh;
-
+	margin-top:0vh;
 }
 
 #SignalContentDiv div{
 	width: 19vw;
+	height: 30vh;
 	text-align: center;
 	margin:0;
 	display: block;
-	margin-bottom: 5vh;
-	margin-top: -4vh;
+	margin-bottom: 6vh;
+	margin-top: -1vh;
 	border-left: 1px solid black;
-
-
 }
+
 #SignalContentDiv div p{
 	font-size: calc(0.7vw + 1vh);
 	color:#0F1359;
 	font-weight: 900;
 	padding: 0;
 	margin:0;
+	margin-top: -3vh;
 }
+
+/* .specialDiv{
+	margin-top:-1.2vw!important;
+}
+.specialDiv div{
+	margin-bottom:1vh!important;
+	margin-top:0vw!important;
+} */
+
 #SignalContentTopic{
 	position: absolute;
 	font-size: calc(1vw + 1.2vh);

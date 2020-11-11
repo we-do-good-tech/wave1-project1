@@ -117,15 +117,12 @@ class HowToPlay extends Component {
 					return(
 						<div className="ContentDiv HowToGainPointsDiv" >
 							<p className="ContentTopic">צבירת נקודות</p>
-							<p className="ContentText" style={{'font-weight':'800'}}>
-							הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה. <br/>
-							כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן, מאשר <br/>
-							הכדור של הצד השני, יזכה בנקודה נוספת.
-							</p>
-							<p className="ContentText"><strong>1. </strong> ניקוד יחושב בסיום כל משחקון, לאחר שכל הכדורים של שני הצדדים נזרקו (כולל כדורי עונשין).</p>
-							<p className="ContentText"><strong>2. </strong>כאמור, הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה. כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן, מאשר הכדור של הצד השני, יזכה בנקודה.</p>
-							<p className="ContentText"><strong>3. </strong>אם שני כדורים (או יותר) בצבעים שונים, נמצאים במרחק שווה מהכדור הלבן, כל צד יקבל נקודה על כל כדור.</p>
-							<p className="ContentText"><strong>4. </strong>בסיום כל המשחקונים, הנקודות שנצברו יחוברו יחדיו, והצד בעל סכום הניקוד הגבוה ביותר, יוכרז כמנצח.</p>
+							<ul id='gainPointsList'>
+								<li className="ContentText">ניקוד יחושב בסיום כל משחקון, לאחר שכל הכדורים של שני הצדדים נזרקו (כולל כדורי עונשין).</li>
+								<li className="ContentText">הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה. כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן, מאשר היריב, יזכה בנקודה.</li>
+								<li className="ContentText">אם שני כדורים (או יותר) בצבעים שונים, נמצאים במרחק שווה מהכדור הלבן, כל צד יקבל נקודה על כל כדור.</li>
+								<li className="ContentText">בסיום כל המשחקונים, הנקודות שנצברו יחוברו יחדיו, והצד בעל סכום הניקוד הגבוה ביותר, יוכרז כמנצח.</li>
+							</ul>
 							<img className="ContentPic" src={HowToGainPoints} style={{top:'calc(1vh + 1vw)'}}/>			
 						</div>
 					)

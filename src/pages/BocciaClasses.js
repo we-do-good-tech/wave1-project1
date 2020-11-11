@@ -94,7 +94,7 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong>עשויה להתאפשר אחיזה של הכדור,<br/>
 								ניתנת האפשרות לבעיטה בכדור.</p>
 							<p className="ContentText"><strong>	ניידות |</strong> לרוב ניידים בכיסא גלגלים חשמלי.</p>
-							<p className="ContentText"><strong>סיוע |</strong> רשאים לליווי עוזר במגרש להגשת והנגשת הכדורים.</p>
+							<p className="ContentText"><strong>סיוע |</strong> רשאים לליווי עוזר ספורט ספורט במגרש להגשת והנגשת הכדורים.</p>
 							<img className="ContentPic" style={{top:'15vh'}}src={BC1}/>						
 					</div>
 				)
@@ -109,7 +109,7 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	השפעת הלקות על השריר |</strong> שליטה נמוכה – סבירה בשרירי הליבה והגו.</p>
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong>עשויה להתאפשר אחיזה של הכדור,ולכן אין אפשרות לבעוט בכדור.</p>
 							<p className="ContentText"><strong>	ניידות |</strong> לרוב ניידים בכיסא גלגלים ידני (ייתכן גם ממונע),חלקם מסוגלים ללכת.</p>
-							<p className="ContentText"><strong>סיוע | </strong>אינם רשאים לליווי עוזר במגרש להגשת והנגשת הכדורים.</p>
+							<p className="ContentText"><strong>סיוע | </strong>אינם רשאים לליווי עוזר ספורט במגרש להגשת והנגשת הכדורים.</p>
 							<img className="ContentPic" style={{width:'calc(12vw + 16vh)', top:'8vh'}}src={BC2}/>						
 					</div>
 				)
@@ -125,9 +125,10 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	השפעת הלקות על השריר |</strong> מגוון רחב של השפעות כתלות בסוג ומידת הפגיעה.</p>
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong>אין אפשרות של אחיזה או בעיטה של הכדור, לא מתאפשרת זריקה של הכדור באופן עקבי ומכוון לטווח של כ-5 מטרים.</p>
 							<p className="ContentText"><strong>	ניידות |</strong> לרוב ניידים בכיסא גלגלים חשמלי.</p>
-							<p className="ContentText"><strong>סיוע | </strong>רשאים לליווי עוזר במגרש. לצורך שחרור הכדור נעזרים ברמפה מתופעלת ע"י עוזר המונחה על ידי השחקן ואינו רשאי להפנות פניו למגרש.</p>
+							<p className="ContentText"><strong>סיוע | </strong>מלווים על ידי ספורט במגרש. לצורך שחרור הכדור נעזרים ברמפה המתופעלת ע"י עוזר ספורט המונחה על ידי השחקן ואינו רשאי להפנות פניו למגרש.</p>
+							<br/>
 							<p className = "ContentText">קיים ציוד עזר נוסף בו הם רשאים להשתמש. </p>
-							<img className="ContentPic" style={{width:'calc(12vw + 16vh)', top:'11.1vh'}}src={BC3}/>						
+							<img className="ContentPic" style={{width:'calc(15vw + 17vh)', top:'13.1vh'}}src={BC3}/>						
 					</div>
 					)
 				}
@@ -141,8 +142,8 @@ class BocciaClasses extends Component {
 							<p className="ContentText"><strong>	השפעת הלקות על השריר |</strong> שליטה נמוכה ביותר בשרירי הליבה, הגו והידיים.</p>
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong>מתאפשרת אחיזה של הכדור.ניתנת האפשרות לבעיטה בכדור.</p>
 							<p className="ContentText"><strong>	ניידות |</strong>  לרוב ניידים בכיסא גלגלים ידני (ייתכן גם ממונע).</p>
-							<p className="ContentText"><strong>סיוע | </strong> אינם רשאים לליווי עוזר במגרש להגשת והנגשת הכדורים (חוץ מהשחקנים הבועטים).</p>
-							<img className="ContentPic" style={{width:'calc(15vw + 20vh)', top:'18vh'}}src={BC4}/>						
+							<p className="ContentText"><strong>סיוע | </strong> אינם רשאים לליווי עוזר ספורט במגרש להגשת והנגשת הכדורים (חוץ מהשחקנים הבועטים).</p>
+							<img className="ContentPic" style={{width:'calc(13vw + 16vh)', top:'5vw'}}src={BC4}/>						
 					</div>
 					)				
 				}	
@@ -151,13 +152,13 @@ class BocciaClasses extends Component {
 				{
 					return(
 					<div className="ContentDivClasses" style={{width:'44vw',height:'60vh'}}>
-							<p className="ContentTopic">סיווג BC5</p>
-							<p className="ContentText"><strong>השתייכות לקלאס | </strong> ספורטאים בעלי לקות בכל ארבע הגפיים (דומה לסיווג BC2 אבל קל יותר).</p>
+							<p className="ContentTopic">סיווג BC5 (עדיין לא נכלל בתחרויות בינלאומיות)</p>
+							<p className="ContentText"><strong>השתייכות לקלאס | </strong> ספורטאים בעלי לקות בכל ארבע הגפיים (דומה לסיווג BC4 אבל קל יותר).</p>
 							<p className="ContentText"><strong>אופי הלקות | </strong> מתאפשר טווח תנועה פונקציונלי רחב יותר, וספסטיות נמוכה יותר.</p>
 							<p className="ContentText"><strong>	השפעת הלקות על השריר |</strong> שליטה גבוהה בשרירי הליבה והגו.</p>
 							<p className="ContentText"><strong>	השפעת הלקות על התנועה | </strong> ישנה יכולת אחיזה בכדור.</p>
 							<p className="ContentText"><strong>	ניידות |</strong> מתניידים עצמאית , על פי רוב מסוגלים ללכת ללא אמצעי עזר או בתמיכה קלה.</p>
-							<p className="ContentText"><strong>סיוע | </strong> אינם רשאים לליווי עוזר במגרש להגשת והנגשת הכדורים.</p>
+							<p className="ContentText"><strong>סיוע | </strong> אינם רשאים לליווי עוזר ספורט במגרש להגשת והנגשת הכדורים.</p>
 							<img className="ContentPic" style={{width:'calc(13vw + 17vh)', top:'14vh'}}src={BC5}/>						
 					</div>
 					)				

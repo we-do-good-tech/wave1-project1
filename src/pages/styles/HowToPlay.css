@@ -134,3 +134,10 @@
 	transition: 0.2s;
 	cursor: pointer;
 }
+
+#gainPointsList{
+	margin-right: 1vw;
+}
+#gainPointsList li{
+	margin-bottom: 1.2vw;
+}
