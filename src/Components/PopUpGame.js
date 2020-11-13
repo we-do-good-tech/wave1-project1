@@ -23,7 +23,8 @@ class PopUpGame extends Component {
 			content:'',
 			buttontype:1,
 			clickable:true,
-			HeadLine:props.HeadLine
+			HeadLine:props.HeadLine,
+			LastQuestion:false
 	  	}
 	}
 
@@ -140,6 +141,8 @@ class PopUpGame extends Component {
 		let temp = this.state.active;
 		temp+=1;
 		this.setState({active:temp});
+		if(this.state.active === this.state.level.length-2)
+			this.setState({LastQuestion:true});
 	}
 
 	handleNextButton = () =>{
@@ -154,7 +157,14 @@ class PopUpGame extends Component {
 					<p id="V">✔</p>
 					<p id="congrats">כל הכבוד! תשובה נכונה  </p>
 					<p id="explanation">{this.state.level[this.state.active].Explanation}</p>
-					<button className="NextButton" onClick={()=>this.handleNextButton()}>לשאלה הבאה</button>
+					{this.state.LastQuestion?
+					(
+						<button className="NextButton" onClick={()=>this.handleNextButton()}>לסיום המבחן</button>
+					) :
+					(
+						<button className="NextButton" onClick={()=>this.handleNextButton()}>לשאלה הבאה</button>
+					)}
+					
 				</div>
 			)
 		}
@@ -171,7 +181,14 @@ class PopUpGame extends Component {
 		else {
 			return(
 				<div style={{display:this.state.display}} id="explanationPopUp">
-					<button className="NextButton" onClick={()=>this.handleNextButton()}>לשאלה הבאה</button>
+					{this.state.LastQuestion?
+						(
+							<button className="NextButton" onClick={()=>this.handleNextButton()}>לסיום המבחן</button>
+						) :
+						(
+							<button className="NextButton" onClick={()=>this.handleNextButton()}>לשאלה הבאה</button>
+						)
+					}
 					<p id="V" style={{'background-color':'#DC5B59'}}>✖</p>
 					<p id="nocongrats">ענית פעמיים תשובה לא נכונה  </p>
 					<p id="explanation">{this.state.level[this.state.active].Explanation}</p>
@@ -191,7 +208,7 @@ class PopUpGame extends Component {
 					<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
 					<img src={DidWin}/>
 					<div id="ScoreBtnsDiv">
-						<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
+						<button onClick={()=>{this.setState({active:0,right:0,LastQuestion:false})}}>התחל שוב </button>
 						<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
 					</div>
 				</div>

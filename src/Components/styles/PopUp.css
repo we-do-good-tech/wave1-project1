@@ -74,3 +74,52 @@
     z-index: 10000;
     transform: rotate(90deg);
 }
+
+#explanationDiv{
+	margin: 0;
+	padding:0vw 1vw;
+	width: 17vw;
+	text-align: right;
+	direction: rtl;
+	position:absolute;
+	bottom: 2.5vw;
+	left:12.5vw;
+	background-color: white;
+	transition: 0.05s;
+	border: solid 0.5vw #0F1259;
+	border-radius: 1vw;
+}
+#explanationDiv::after{
+	content: "";
+	position: absolute;
+	left: -2.2vw;
+	bottom: 3vh;
+	margin-left: -0.46vw;
+	width: 0;
+    height: 0;
+    border-left: 1.5vw solid transparent;
+    border-right: 1.5vw solid transparent;
+    border-top: 2vw solid #0F1259;
+    transform: rotate(90deg);
+}
+#explanationDiv::before{
+	content: "";
+	position: absolute;
+	left: -1.5vw;
+	bottom: 3vh;
+	margin-left: -0.46vw;
+    border-left: 1.5vw solid transparent;
+    border-right: 1.5vw solid transparent;
+    border-top: 2vw solid white;
+    z-index: 10000;
+	transform: rotate(90deg);
+
+}
+#explanationDiv h1{
+	color: #0f1259;
+	font-size: 1.5vw;
+}
+#explanationDiv p{
+	color: #0f1259;
+	font-size: 1vw;
+}

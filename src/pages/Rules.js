@@ -245,7 +245,7 @@ class Rules extends Component {
 		let GetDivFrontBack= () => {
 			if(this.state.active===this.state.names.length){
 				return(
-					<FrontBack last={true} onClick={this.handlearrow}/>
+					<FrontBack moveTo={4} last={true} onClick={this.handlearrow}/>
 				);
 			}
 			if(this.state.active===1){

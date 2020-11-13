@@ -11,21 +11,25 @@ class PopUp extends Component {
 		this.state = {  
 			display:props.display,
 			level:props.level,
-			HeadLine:props.HeadLine
+			HeadLine:props.HeadLine,
+			visibility:true,
+			explanation:props.explanation
 	  	}
-
 	}
 
-componentWillUpdate(newProps, newState) {
+	setExplanationOff = () =>{
+		const visibility = this.state;
+		this.setState({visibility: !visibility});
+		console.log(visibility,this.state);
+		
+	}
+
+	componentWillUpdate(newProps, newState) {
       if(newProps.display!==this.state.display)
        this.setState({display:newProps.display});
     }
 	render(){
-
-		
-		
-
-		
+		const {explanation, visibility} = this.state;
 		return(
 			<div>
 				<div className="PopUpBackground" style={{display:this.state.display}} >
@@ -33,9 +37,14 @@ componentWillUpdate(newProps, newState) {
 					 <img className="XButton" src={XButton} onClick={this.props.onClick}/>
 					 <PopUpGame onClick={this.props.onClick} HeadLine={this.state.HeadLine} level={Levels[this.state.level]}/>  
 					</div>
-						
 				</div>
-				
+				{explanation ? (
+				<div id="explanationDiv" style={{display: visibility? 'block' : 'none'}}>
+					<h1>בחן את עצמך</h1>
+					<p>לאורך כל הלומדה תוכל לבחון את עצמך. <br/>באפשרותך לבחור האם בתחילת הפרק,<br/> באמצע או בסוף.</p>
+					<img className="XButton" src={XButton} onClick={()=>this.setExplanationOff()}/>
+				</div>
+				) : (<></>)}
 				<img className="TestYourSelfImg" src={TestYourSelf} onClick={()=>this.props.onClick()}/>
 			</div>
 
