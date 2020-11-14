@@ -25,7 +25,8 @@ class PopUpGame extends Component {
 			clickable:true,
 			HeadLine:props.HeadLine,
 			LastQuestion:false
-	  	}
+		  }
+		  
 	}
 
 
@@ -141,8 +142,6 @@ class PopUpGame extends Component {
 		let temp = this.state.active;
 		temp+=1;
 		this.setState({active:temp});
-		if(this.state.active === this.state.level.length-2)
-			this.setState({LastQuestion:true});
 	}
 
 	handleNextButton = () =>{
@@ -157,7 +156,7 @@ class PopUpGame extends Component {
 					<p id="V">✔</p>
 					<p id="congrats">כל הכבוד! תשובה נכונה  </p>
 					<p id="explanation">{this.state.level[this.state.active].Explanation}</p>
-					{this.state.LastQuestion?
+					{this.isLast()?
 					(
 						<button className="NextButton" onClick={()=>this.handleNextButton()}>לסיום המבחן</button>
 					) :
@@ -181,7 +180,7 @@ class PopUpGame extends Component {
 		else {
 			return(
 				<div style={{display:this.state.display}} id="explanationPopUp">
-					{this.state.LastQuestion?
+					{this.isLast()?
 						(
 							<button className="NextButton" onClick={()=>this.handleNextButton()}>לסיום המבחן</button>
 						) :
@@ -214,6 +213,7 @@ class PopUpGame extends Component {
 				</div>
 			)
 		}
+
 		else if(this.state.right>= this.state.level.length*0.8)
 		{
 				return(
@@ -228,6 +228,7 @@ class PopUpGame extends Component {
 					</div>
 				)
 		}
+
 		else if(this.state.right>= this.state.level.length*0.3)
 		{
 				return(
@@ -256,7 +257,8 @@ class PopUpGame extends Component {
 					</div>
 				)
 		}
-		else{
+		else
+		{
 			return(
 				<div id="score">
 					<p>נסיון טוב</p>
@@ -296,7 +298,15 @@ class PopUpGame extends Component {
 			this.setState({active:parseInt(this.state.active)+1})
 	}
 
+	isLast = () =>{
+		if(this.state.active === this.state.level.length-1) 
+			return true
+		return false;
+	}
+
 	render(){
+			
+
 		if(this.state.active!=this.state.level.length){
 			return(
 				<div className="PopUpGameDiv" >
