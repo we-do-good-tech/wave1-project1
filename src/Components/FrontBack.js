@@ -62,8 +62,8 @@ class FrontBack extends Component {
 						<span className="rightarrowfont">➜</span> הקודם
 					</button>
 
-					<button id="FrontButton" value="2"  className="FrontBackButtons" >
-							לפרק הבא  <span className="leftarrowfont" style={styles} onClick={()=> this.moveTo()}>➜</span>
+					<button id="FrontButton" value="2"  className="FrontBackButtons" onClick={()=> this.moveTo()}>
+							לפרק הבא  <span className="leftarrowfont" style={styles} >➜</span>
 					</button>	
 					
 			</div>
