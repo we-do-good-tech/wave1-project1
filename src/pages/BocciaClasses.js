@@ -175,13 +175,13 @@ class BocciaClasses extends Component {
 			}
 			if(this.state.active===1){
 				return(
-					<FrontBack first={true} onClick={this.handlearrow}/>
+					<FrontBack moveTo={3} first={true} onClick={this.handlearrow}/>
 				)
 			}
 
 			if(this.state.active!=0){
 				return(
-					<FrontBack onClick={this.handlearrow}/>
+					<FrontBack moveTo={3} onClick={this.handlearrow}/>
 				);
 			}
 			

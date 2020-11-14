@@ -44,7 +44,6 @@ class Gear extends Component {
 	}
 
 	handlebarclick=(val)=>{
-		console.log(val);
 		this.setState({active:parseInt(val)});
 	}
 

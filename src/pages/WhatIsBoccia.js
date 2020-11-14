@@ -19,7 +19,8 @@ class WhatIsBoccia extends Component {
 		this.state = {  
 			active:0,
 			names:["נעים להכיר", "למי זה מיועד?" ,  ],
-			PopUpDisplay:'none'
+			PopUpDisplay:'none',
+			explanation: true
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
 	  	this.handleclick= this.handleclick.bind(this);
@@ -51,7 +52,6 @@ class WhatIsBoccia extends Component {
 	}
 
 	handlebarclick=(val)=>{
-		console.log(val);
 		this.setState({active:parseInt(val)});
 	}
 
@@ -67,16 +67,11 @@ class WhatIsBoccia extends Component {
 	}
 
 	render(){
-
-
-
 		let GetDivContent= () => {			
 			if(this.state.active==0)
 			{
-				return(
-					
-						<FirstPageTabs names={this.state.names} icons ={[W1,W2]} onClick={this.handlebarclick}/>
-					
+				return(			
+						<FirstPageTabs names={this.state.names} icons ={[W1,W2]} onClick={this.handlebarclick}/>					
 				)
 			}
 
@@ -131,13 +126,13 @@ class WhatIsBoccia extends Component {
 			}
 			if(this.state.active===1){
 				return(
-					<FrontBack first={true} onClick={this.handlearrow}/>
+					<FrontBack moveTo={1} first={true} onClick={this.handlearrow}/>
 				)
 			}
 			
 			if(this.state.active!=0){
 				return(
-					<FrontBack onClick={this.handlearrow}/>
+					<FrontBack moveTo={1} onClick={this.handlearrow}/>
 				);
 			}
 			
@@ -152,7 +147,7 @@ class WhatIsBoccia extends Component {
 
 	}
 
-	
+	let isExplanation = () => this.state.active === 0 ? true : false;
 
 		return(
 			<div>
@@ -164,7 +159,7 @@ class WhatIsBoccia extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>
-				<PopUp HeadLine="מה זה בוצ'ה?" display={this.state.PopUpDisplay} onClick={this.HandlePopUp} level={2} explanation={true}/>
+				<PopUp HeadLine="מה זה בוצ'ה?" display={this.state.PopUpDisplay} onClick={this.HandlePopUp} level={2} explanation={isExplanation()}/>
 				
 			</div>
 

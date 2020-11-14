@@ -16,7 +16,6 @@ class FrontBack extends Component {
 	}
 
 	moveTo =() =>{
-		console.log(this.state.moveTo);
 		switch (this.state.moveTo){
 			case 1:
 				window.location.href = './#/HowToPlay';
@@ -69,19 +68,20 @@ class FrontBack extends Component {
 			</div>
 		)
 		}
-
-		return(
-			<div>				
-					<button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
-						<span className="rightarrowfont">➜</span> הקודם
-					</button>
-				
-				 
-					<button id="FrontButton" value="2" onClick={()=>this.handleclick(2)} className="FrontBackButtons">
-							הבא  <span className="leftarrowfont">➜</span>
-					</button>	
-			</div>
-		)
+		else {
+			return(
+				<div>				
+						<button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
+							<span className="rightarrowfont">➜</span> הקודם
+						</button>
+					
+					
+						<button id="FrontButton" value="2" onClick={()=>this.handleclick(2)} className="FrontBackButtons">
+								הבא  <span className="leftarrowfont">➜</span>
+						</button>	
+				</div>
+			)
+		}
 	}
 }
 

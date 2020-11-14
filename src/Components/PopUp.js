@@ -18,16 +18,16 @@ class PopUp extends Component {
 	}
 
 	setExplanationOff = () =>{
-		const visibility = this.state;
-		this.setState({visibility: !visibility});
-		console.log(visibility,this.state);
-		
+		this.setState({explanation: false});
 	}
 
 	componentWillUpdate(newProps, newState) {
-      if(newProps.display!==this.state.display)
-       this.setState({display:newProps.display});
-    }
+    	if(newProps.display!==this.state.display)
+			this.setState({display:newProps.display});
+		if(newProps.explanation!=this.state.explanation)
+			this.setState({explanation:newProps.explanation});
+	}
+	
 	render(){
 		const {explanation, visibility} = this.state;
 		return(

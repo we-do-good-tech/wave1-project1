@@ -33,7 +33,7 @@ class Rules extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:3,
+			active: 0,
 			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}
@@ -67,7 +67,6 @@ class Rules extends Component {
 	}
 
 	handlebarclick=(val)=>{
-		console.log(val);
 		this.setState({active:parseInt(val)});
 	}
 
@@ -250,13 +249,13 @@ class Rules extends Component {
 			}
 			if(this.state.active===1){
 				return(
-					<FrontBack first={true} onClick={this.handlearrow}/>
+					<FrontBack moveTo={4} first={true} onClick={this.handlearrow}/>
 				)
 			}
 			
 			if(this.state.active!=0){
 				return(
-					<FrontBack onClick={this.handlearrow}/>
+					<FrontBack moveTo={4} onClick={this.handlearrow}/>
 				);
 			}
 			
