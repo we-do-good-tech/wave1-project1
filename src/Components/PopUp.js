@@ -12,7 +12,7 @@ class PopUp extends Component {
 			display:props.display,
 			level:props.level,
 			HeadLine:props.HeadLine,
-			visibility:true,
+			visibility:!this.explanation,
 			explanation:props.explanation
 	  	}
 	}
@@ -21,11 +21,13 @@ class PopUp extends Component {
 		this.setState({explanation: false});
 	}
 
-	componentWillUpdate(newProps, newState) {
+	componentWillUpdate(newProps, newState){
     	if(newProps.display!==this.state.display)
 			this.setState({display:newProps.display});
 		if(newProps.explanation!=this.state.explanation)
 			this.setState({explanation:newProps.explanation});
+		if(newState.display!== newProps.display)
+			this.setState({visibility:!this.state.visibility});
 	}
 	
 	render(){
