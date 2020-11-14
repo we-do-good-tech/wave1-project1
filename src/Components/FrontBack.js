@@ -34,10 +34,6 @@ class FrontBack extends Component {
 		}
 	}
 	render(){
-		const styles={
-			marginLeft:'0.85vw',
-			marginRight:'0'
-		}
 
 		if(this.props.first){
 			return(
@@ -62,7 +58,7 @@ class FrontBack extends Component {
 					</button>
 
 					<button id="FrontButton" value="2"  className="FrontBackButtons" onClick={()=> this.moveTo()}>
-							לפרק הבא  <span className="leftarrowfont" style={styles} >➜</span>
+							 הבא  <span className="leftarrowfont">➜</span>
 					</button>	
 					
 			</div>
