@@ -33,7 +33,7 @@ class Rules extends Component {
 	constructor(){
 		super();
 		this.state = {  
-			active:0,
+			active:3,
 			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}
@@ -165,23 +165,23 @@ class Rules extends Component {
 							</div>
 
 							<div>
-								<img className="SignalPic" src={SignalThree}/>
-								<p>הסרת כדור</p>
+								<img style={{height:'12vw'}} className="SignalPic" src={SignalThree}/>
+								<p style={{marginTop:'-2.55vw'}}>הסרת כדור</p>
 							</div>
 
 							<div style={{'border-left':'none'}}>
-								<img className="SignalPic" src={SignalFour} style={{'margin-right':'5vw'}}/>
-								<p>זריקת כדור לבן</p>
+								<img className="SignalPic" src={SignalFour} style={{height:'11.3vw', 'margin-right':'5vw'}}/>
+								<p style={{marginTop:'-1.8vw'}}>זריקת כדור לבן</p>
 							</div>
 
 							<div>
-								<img className="SignalPic" src={SignalFive} style={{'margin-right':'2vw'}}/>
-								<p>כדור עונשין</p>
+								<img style={{height:'12vw',marginTop:'1.5vw', marginRight:'2vw'}} className="SignalPic" src={SignalFive} />
+								<p style={{marginTop:'-2.2vw'}}>כדור עונשין</p>
 							</div>
 
 							<div>
-								<img className="SignalPic" src={SignalSix}/>
-								<p> כדור בחוץ </p>
+								<img style={{height:'13.5vw',marginTop:'-0.1vw'}} className="SignalPic" src={SignalSix}/>
+								<p style={{marginTop:'-2vw'}}> כדור בחוץ </p>
 							</div>
 							
 							<div>
