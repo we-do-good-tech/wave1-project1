@@ -1,291 +1,288 @@
-.PopUpGameDiv{
-	width: 100%;
-	height: 100%;
-	position: relative;
-
+.PopUpGameDiv {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.PopUpGameHeadLine{
-	direction: rtl;
-	color:#0F1259;
-	font-size: 2vw;
-	font-weight: 900;
-	margin-right: 2vw;
-}
-
-.AnswersDiv{
-	direction: rtl;
-	position: absolute;
-	top:12vw;
-	right: 2vw;
-}
-#Question{
-	direction: rtl;
-	position: absolute;
-	top:7vw;
-	width: 46vw;
-	right: 2vw;
-	color:#0F1259;
-	font-weight: 900;
-	font-size: 1.8vw;
-}
-.Answer{
-	color:#0F1259;
-	border:0.3vw solid #0F1259;
-	border-radius: 2vw;
-	padding: 0vw 1vw 0vw 1vw;
-	width: 35vw;
-	height: 4vw;
-	font-weight: 900;
-	font-size: 1.6vw;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	text-align: right;
-	transition: 0.2s;
-}
-.Answer:hover{
-	background-color: rgba(250, 161, 89 ,0.4);
-	transition: 0.2s;
-}
-#explanationPopUp{
-	position: absolute;
-	background:white;
-	border-radius: 2vw;
-	top:30%;
-	right: 30%;
-	width: 25vw;
-	padding-top: 3.5vw;
-	height: fit-content;
-	min-height: 12vw;
-	border:0.3vw solid #0F1259;
-	z-index: 9999;
+.PopUpGameHeadLine {
+  direction: rtl;
+  color: #0f1259;
+  font-size: 2vw;
+  font-weight: 900;
+  margin-right: 2vw;
 }
 
-.NextButton{
-	background-color:#0F1259;
-	color:white;
-	border-radius: 2vw;
-	border:none;
-	width: 10vw;
-	height: 3vw;
-	align-self: center;
-	position: absolute;
-	bottom:3%;
-	left:32%;
-	font-size: 1.4vw;
-	cursor: pointer;
+.AnswersDiv {
+  direction: rtl;
+  position: absolute;
+  top: 12vw;
+  right: 2vw;
+}
+#Question {
+  direction: rtl;
+  position: absolute;
+  top: 7vw;
+  width: 46vw;
+  right: 2vw;
+  color: #0f1259;
+  font-weight: 900;
+  font-size: 1.8vw;
+}
+.Answer {
+  color: #0f1259;
+  border: 0.3vw solid #0f1259;
+  border-radius: 2vw;
+  padding: 0vw 1vw 0vw 1vw;
+  width: 35vw;
+  height: 4vw;
+  font-weight: 900;
+  font-size: 1.6vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  transition: 0.2s;
+}
+.Answer:hover {
+  background-color: rgba(250, 161, 89, 0.4);
+  transition: 0.2s;
+}
+#explanationPopUp {
+  position: absolute;
+  background: white;
+  border-radius: 2vw;
+  top: 30%;
+  right: 30%;
+  width: 25vw;
+  padding-top: 3.5vw;
+  height: fit-content;
+  min-height: 12vw;
+  border: 0.3vw solid #0f1259;
+  z-index: 9999;
 }
 
- #V{
-    position: absolute;
-    left: 48%;
-    top:4%;
-    margin: 0;
-    font-size: 1.6vw;
-    border-radius: 50%;
-    padding: .04em .3em;
-    color:white;
-    background-color: #1e8dc7;
-}
-#congrats{
-    position: absolute;
-    left: 20%;
-    top:22%;
-    width: fit-content;
-    margin: 0;
-    font-size: 1.6vw;
-    font-weight: 900;
-    color: #1e8dc7;
+.NextButton {
+  background-color: #0f1259;
+  color: white;
+  border-radius: 2vw;
+  border: none;
+  width: 10vw;
+  height: 3vw;
+  align-self: center;
+  position: absolute;
+  bottom: 3%;
+  left: 32%;
+  font-size: 1.4vw;
+  cursor: pointer;
 }
 
-#nocongrats{
-    position: absolute;
-    left: 6.4%;
-    top:22%;
-    width: 22vw;
-    text-align: center;
-    margin: 0;
-    font-size: 1.6vw;
-    font-weight: 900;
-    color: #DC5B59;
+#V {
+  position: absolute;
+  left: 48%;
+  top: 4%;
+  margin: 0;
+  font-size: 1.6vw;
+  border-radius: 50%;
+  padding: 0.04em 0.3em;
+  color: white;
+  background-color: #1e8dc7;
+}
+#congrats {
+  position: absolute;
+  left: 20%;
+  top: 22%;
+  width: fit-content;
+  margin: 0;
+  font-size: 1.6vw;
+  font-weight: 900;
+  color: #1e8dc7;
 }
 
-#explanation{
-    position: absolute;
-    left: 10%;
-    top:36%;
-    width: 20vw;
-    margin: 0;
-    font-size: 1.2vw;
-    font-weight: 900;
-    color: black;
-    direction: rtl;
-    text-align: center;
+#nocongrats {
+  position: absolute;
+  left: 6.4%;
+  top: 22%;
+  width: 22vw;
+  text-align: center;
+  margin: 0;
+  font-size: 1.6vw;
+  font-weight: 900;
+  color: #dc5b59;
 }
 
-.BtnAnswersDiv{
-	position: absolute;
-	right:13.7%;
-	bottom: 8%;
-	width: 49vw;
-	display: flex;
-	justify-content: space-evenly;
-}
-.BtnAnswerRight{
-	color:white;
-	font-size: 2vw;
-	background-color:#1E8DC7;
-	border-radius: 1vw;
-	width: fit-content;
-	height: fit-content;
-	min-width: 6vw;
-	min-height:4.5vw;
-	padding: 0.5vw 1vw 0.5vw 1vw;
-	display: flex;
-	align-items: center;
-	box-shadow: 4px 4px 10px 4px lightgray;
-	cursor: pointer;
-	text-align: center;
-	justify-content: center;
-	transition: 0.3s;
-
-}
-.BtnAnswerWrong{
-	color:white;
-	background-color:#DC5B59;
-	border-radius: 1vw;
-	font-size: 2vw;
-	display: flex;
-	align-items: center;
-	width: fit-content;
-	height: fit-content;
-	min-width: 6vw;
-	min-height:4.5vw;
-    justify-content: center;
-	padding: 0.5vw 1vw 0.5vw 1vw;
-	box-shadow: 4px 4px 10px 4px lightgray;
-	cursor: pointer;
-	text-align: center;
-	transition: 0.3s;
+#explanation {
+  position: absolute;
+  left: 10%;
+  top: 36%;
+  width: 20vw;
+  margin: 0;
+  font-size: 1.2vw;
+  font-weight: 900;
+  color: black;
+  direction: rtl;
+  text-align: center;
 }
 
-
-.BtnAnswerWrong:hover,.BtnAnswerRight:hover{
-	transform: scale(1.1);
+.BtnAnswersDiv {
+  position: absolute;
+  right: 13.7%;
+  bottom: 8%;
+  width: 49vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.BtnAnswerRight {
+  color: white;
+  font-size: 2vw;
+  background-color: #1e8dc7;
+  border-radius: 1vw;
+  width: fit-content;
+  height: fit-content;
+  min-width: 6vw;
+  min-height: 4.5vw;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  display: flex;
+  align-items: center;
+  box-shadow: 4px 4px 10px 4px lightgray;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.BtnAnswerWrong {
+  color: white;
+  background-color: #dc5b59;
+  border-radius: 1vw;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  min-width: 6vw;
+  min-height: 4.5vw;
+  justify-content: center;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  box-shadow: 4px 4px 10px 4px lightgray;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
 }
 
-.CsnAnswer{
-	background-color: #FAA159;
-	color:white;
-	border-color: transparent;
+.BtnAnswerWrong:hover,
+.BtnAnswerRight:hover {
+  transform: scale(1.1);
 }
 
-#score{
-	width:fit-content;
-	margin:0 auto;
-	margin-top: 0%;
-	text-align: center;
-	direction: rtl;
-}
-#ScoreBtnsDiv{
-	display: flex;
-	position: absolute;
-	bottom: 10%;
-	left:32%;
-	width: 25vw;
-	justify-content: space-between;
-}
-#score p{
-	font-size: 2vw;
-	color:#0f1259;
-	font-weight: 900;
-}
-#score img{
-	margin-top: 4vw;
-	width:calc(14vw + 15vh);
-	margin-right: 0.5vw;
-}
-#score button{
-	background-color:#0F1259;
-	color:white;
-	border-radius: 2vw;
-	border:none;
-	width: 8vw;
-	height: 3vw;
-	align-self: center;
-	font-size: 1.4vw;
-	cursor: pointer;
-}
-.PicutreAnswersDiv{
-	position: absolute;
-	bottom: 3%;
-	left: 27.5%;
-	width: 33vw;
-	height: 30vw;
+.CsnAnswer {
+  background-color: #faa159;
+  color: white;
+  border-color: transparent;
 }
 
-.PictureQuestion{
-	width:calc(10vw + 10vh);
-	position:absolute;
-	bottom:70%;
-	left: 27%
+#score {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 0%;
+  text-align: center;
+  direction: rtl;
 }
-.YesNoQuestionImage{
-	width:calc(16vw + 19vh);
-	position:absolute;
-	top: 30%;
-	left: 33.3%;
-
+#ScoreBtnsDiv {
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  left: 32%;
+  width: 25vw;
+  justify-content: space-between;
 }
-
-.PictureAnswer{
-	width:calc(8vw + 10vh);
-	cursor:pointer;
-	transition: 0.3s;
+#score p {
+  font-size: 2vw;
+  color: #0f1259;
+  font-weight: 900;
 }
-.PictureAnswer:hover{
-	transform: scale(1.1);
-	transition: 0.4s;
+#score img {
+  margin-top: 4vw;
+  width: calc(14vw + 15vh);
+  margin-right: 0.5vw;
 }
-.PicutreAnswersDivBtns{
-	display: flex;
-	width: 100%;
-	justify-content: space-around;
-	position: absolute;
-	bottom: 5%;
+#score button {
+  background-color: #0f1259;
+  color: white;
+  border-radius: 2vw;
+  border: none;
+  width: 8vw;
+  height: 3vw;
+  align-self: center;
+  font-size: 1.4vw;
+  cursor: pointer;
 }
-.QuestionImage{
-		height: 28vw;
-		position: absolute;
-		left:6%;
-		top:15.5%;
-}
-#Skip{
-	position: absolute;
-    bottom: 8%;
-    left: 3%;
-    background-color: #0F1259;
-    color: white;
-    border-radius: 2vw;
-    border: none;
-    width: 6vw;
-    height: 2vw;
-    align-self: center;
-    position: absolute;
-    font-size: 1.4vw;
-    cursor: pointer;
-    transition: 0.1s;
+.PicutreAnswersDiv {
+  position: absolute;
+  bottom: 3%;
+  left: 27.5%;
+  width: 33vw;
+  height: 30vw;
 }
 
-.SkipDisabled{
-    opacity: 0.2;
+.PictureQuestion {
+  width: calc(10vw + 10vh);
+  position: absolute;
+  bottom: 70%;
+  left: 27%;
 }
-.SkipDisabled:hover{
-	transform: none!important;
-	cursor: default!important;
+.YesNoQuestionImage {
+  width: calc(16vw + 19vh);
+  position: absolute;
+  top: 30%;
+  left: 33.3%;
 }
 
-#Skip:hover{
-	transform: scale(1.1);
-	transition: 0.1s;
+.PictureAnswer {
+  width: calc(8vw + 10vh);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.PictureAnswer:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.PicutreAnswersDivBtns {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 5%;
+}
+.QuestionImage {
+  height: 28vw;
+  position: absolute;
+  left: 6%;
+  top: 15.5%;
+}
+#Skip {
+  position: absolute;
+  bottom: 8%;
+  left: 3%;
+  background-color: #0f1259;
+  color: white;
+  border-radius: 2vw;
+  border: none;
+  width: 6vw;
+  height: 2vw;
+  align-self: center;
+  position: absolute;
+  font-size: 1.4vw;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.SkipDisabled {
+  opacity: 0.2;
+}
+.SkipDisabled:hover {
+  transform: none !important;
+  cursor: default !important;
+}
+
+#Skip:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
 }

@@ -1,66 +1,55 @@
-
 @import url(//fonts.googleapis.com/css?family=Arimo);
-*{
-	font-family: Arimo;
+* {
+  font-family: Arimo;
 }
 
-
-
-#WhatIsMain{
-	width: calc(100% - 15vw);
-	position: absolute;
-	top:8vw;
-	right:15vw;
-	display: flex;
-	direction: rtl;
-	flex-direction: column;
+#WhatIsMain {
+  width: calc(100% - 15vw);
+  position: absolute;
+  top: 8vw;
+  right: 15vw;
+  display: flex;
+  direction: rtl;
+  flex-direction: column;
 }
 
-
-.ContentDiv{
-	width: 40vw;
-	height: fit-content;
-	margin-right: 5vw;
-	text-align: right;
-	margin-top: -4vh;
-	direction: rtl;
+.ContentDiv {
+  width: 40vw;
+  height: fit-content;
+  margin-right: 5vw;
+  text-align: right;
+  margin-top: -4vh;
+  direction: rtl;
 }
 
-
-
-.ContentDivClasses{
-	width: 40vw;
-	height: 58vh;
-	overflow-y: scroll;
-	margin-right: 5vw;
-	text-align: right;
-	margin-top: 0vw;
-	direction: ltr;
-	padding-right: 1vw;
+.ContentDivClasses {
+  width: 40vw;
+  height: 58vh;
+  overflow-y: scroll;
+  margin-right: 5vw;
+  text-align: right;
+  margin-top: 0vw;
+  direction: ltr;
+  padding-right: 1vw;
 }
 
-
-
-.ContentPic{
-	width: 26vw;
-	position: absolute;
-	left: 8.5vw;
-	top: -2vw;
-	
+.ContentPic {
+  width: 26vw;
+  position: absolute;
+  left: 8.5vw;
+  top: -2vw;
 }
-.ContentText{
-	font-weight: 400;
-	font-size: 1.4vw;
-	line-height: 1.5em;
-	direction: rtl;
-	margin-bottom:0;
+.ContentText {
+  font-weight: 400;
+  font-size: 1.4vw;
+  line-height: 1.5em;
+  direction: rtl;
+  margin-bottom: 0;
 }
-.ContentTopic{
-	font-weight: 1000;
-	font-size: 1.6vw;
-	letter-spacing: 0.1vw;
-	direction: rtl;
-	margin-bottom:0;
+.ContentTopic {
+  font-weight: 1000;
+  font-size: 1.6vw;
+  letter-spacing: 0.1vw;
+  direction: rtl;
+  margin-bottom: 0;
 }
-
-

@@ -1,98 +1,96 @@
-#MainGameDiv{
-	display: flex;
-	width: 72vw;
-	height: 60vh;
-	justify-content: space-between;
-	align-items: flex-end;
-
+#MainGameDiv {
+  display: flex;
+  width: 72vw;
+  height: 60vh;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-#gamediv{
-	display: block;
-	position: relative;
-	width: fit-content;
-
+#gamediv {
+  display: block;
+  position: relative;
+  width: fit-content;
 }
 
-
-#court{
-	width: calc(17vw + 10vh);
-	cursor: pointer;
+#court {
+  width: calc(17vw + 10vh);
+  cursor: pointer;
 }
 
-.MalePlayerBubble{
-	border:calc(0.1vw + 0.2vh) solid #FAA159;
-	border-radius: calc(0.6vw + 0.2vh);
-	padding: 1vh 1vw 1vh 1vw;
-	text-align: center;
-	position: relative;
+.MalePlayerBubble {
+  border: calc(0.1vw + 0.2vh) solid #faa159;
+  border-radius: calc(0.6vw + 0.2vh);
+  padding: 1vh 1vw 1vh 1vw;
+  text-align: center;
+  position: relative;
 }
-.MalePlayerBubble::after{
-	display: block;
-    /*content: url('FirstArrow.png');*/
-    background-image: url('./FirstArrow.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    content:'';
-    position: absolute;
-    bottom:-25.2%;
-    left: 70%;
-    height: 25%;
-    width: 25%;
+.MalePlayerBubble::after {
+  display: block;
+  /*content: url('FirstArrow.png');*/
+  background-image: url('./FirstArrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  bottom: -25.2%;
+  left: 70%;
+  height: 25%;
+  width: 25%;
 }
-.MalePlayerDiv{
-	position: relative;
-	width: 33%;
-	margin-right: 4%;
-    background-color: white;
+.MalePlayerDiv {
+  position: relative;
+  width: 33%;
+  margin-right: 4%;
+  background-color: white;
 }
-.MalePlayerBubbleFirstAlt{
-	border:calc(0.1vw + 0.2vh) solid #FAA159;
-	border-radius: calc(0.6vw + 0.2vh);
-	padding: 1vh 1vw 1vh 1vw;
-	text-align: center;
-	position: relative;
+.MalePlayerBubbleFirstAlt {
+  border: calc(0.1vw + 0.2vh) solid #faa159;
+  border-radius: calc(0.6vw + 0.2vh);
+  padding: 1vh 1vw 1vh 1vw;
+  text-align: center;
+  position: relative;
 }
-.MalePlayerBubbleFirstAlt::after, .MalePlayerBubbleThirdAlt::after{
-	display: block;
-    /*content: url('FirstArrow.png');*/
-    background-image: url('./FirstArrow.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    content:'';
-    position: absolute;
-    bottom:-25.2%;
-    left: 20%;
-    transform:rotateY(180deg);;
-    height: 25%;
-    width: 25%;
+.MalePlayerBubbleFirstAlt::after,
+.MalePlayerBubbleThirdAlt::after {
+  display: block;
+  /*content: url('FirstArrow.png');*/
+  background-image: url('./FirstArrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  bottom: -25.2%;
+  left: 20%;
+  transform: rotateY(180deg);
+  height: 25%;
+  width: 25%;
 }
-.MalePlayerBubbleSecondAlt{
-	border:calc(0.1vw + 0.2vh) solid #FAA159;
-	border-radius: calc(0.6vw + 0.2vh);
-	padding: 1vh 1vw 1vh 1vw;
-	text-align: center;
-	position: relative;
+.MalePlayerBubbleSecondAlt {
+  border: calc(0.1vw + 0.2vh) solid #faa159;
+  border-radius: calc(0.6vw + 0.2vh);
+  padding: 1vh 1vw 1vh 1vw;
+  text-align: center;
+  position: relative;
 }
-.MalePlayerBubbleSecondAlt::after{
-	display: block;
-    /*content: url('FirstArrow.png');*/
-    background-image: url('./SecondArrow.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    content:'';
-    position: absolute;
-    bottom:-45%;
-    transform: rotate(10deg);
-    left: 97%;
-    height: 64%;
-    width: 64%;
+.MalePlayerBubbleSecondAlt::after {
+  display: block;
+  /*content: url('FirstArrow.png');*/
+  background-image: url('./SecondArrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  bottom: -45%;
+  transform: rotate(10deg);
+  left: 97%;
+  height: 64%;
+  width: 64%;
 }
-.MalePlayerBubbleThirdAlt{
-	border:calc(0.1vw + 0.2vh) solid #FAA159;
-	border-radius: calc(0.6vw + 0.2vh);
-	padding: 1vh 1vw 1vh 1vw;
-	text-align: center;
-	position: relative;
+.MalePlayerBubbleThirdAlt {
+  border: calc(0.1vw + 0.2vh) solid #faa159;
+  border-radius: calc(0.6vw + 0.2vh);
+  padding: 1vh 1vw 1vh 1vw;
+  text-align: center;
+  position: relative;
 }
 /*.MalePlayerBubbleThirdAlt::after{
 	display: block;
@@ -110,81 +108,77 @@
 }
 */
 
-
-
-
-
-.FemalePlayerBubble{
-	border:calc(0.1vw + 0.2vh) solid #FAA159;
-	border-radius: calc(0.6vw + 0.2vh);
-    padding: 1vh 1vw 1vh 1vw;
-    margin-bottom: 0.1vw;
-	text-align: center;
-	position: relative;
-    background-color: white;
+.FemalePlayerBubble {
+  border: calc(0.1vw + 0.2vh) solid #faa159;
+  border-radius: calc(0.6vw + 0.2vh);
+  padding: 1vh 1vw 1vh 1vw;
+  margin-bottom: 0.1vw;
+  text-align: center;
+  position: relative;
+  background-color: white;
 }
-.FemalePlayerBubble::after{
-	display: block;
-    /*content: url('FirstArrow.png');*/
-    background-image: url('./FirstArrow.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    content:'';
-    position: absolute;
-    bottom:-25.2%;
-    left: 10%;
-    height: 25%;
-    width: 25%;
-    transform:rotateY(180deg);
+.FemalePlayerBubble::after {
+  display: block;
+  /*content: url('FirstArrow.png');*/
+  background-image: url('./FirstArrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  bottom: -25.2%;
+  left: 10%;
+  height: 25%;
+  width: 25%;
+  transform: rotateY(180deg);
 }
-.FemalePlayerDiv{
-	position: relative;
-	width: 33%;
+.FemalePlayerDiv {
+  position: relative;
+  width: 33%;
 }
-.FemalePlayerDiv img{
-	margin-right: 32%;
+.FemalePlayerDiv img {
+  margin-right: 32%;
 }
-.FemalePlayerBubbleFirstAlt{
-	border:calc(0.1vw + 0.2vh) solid #FAA159;
-	border-radius: calc(0.6vw + 0.2vh);
-	padding: 1vh 1vw 1vh 1vw;
-	text-align: center;
-	position: relative;
+.FemalePlayerBubbleFirstAlt {
+  border: calc(0.1vw + 0.2vh) solid #faa159;
+  border-radius: calc(0.6vw + 0.2vh);
+  padding: 1vh 1vw 1vh 1vw;
+  text-align: center;
+  position: relative;
 }
-.FemalePlayerBubbleFirstAlt::after{
-	display: block;
-    background-image: url('./FirstArrow.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    content:'';
-    position: absolute;
-    bottom:-25.2%;
-    left: 20%;
-    transform:rotateY(180deg);
-    height: 25%;
-    width: 25%;
+.FemalePlayerBubbleFirstAlt::after {
+  display: block;
+  background-image: url('./FirstArrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  bottom: -25.2%;
+  left: 20%;
+  transform: rotateY(180deg);
+  height: 25%;
+  width: 25%;
 }
 
-.Situation{
-	position: absolute;
-	top:-5%;
+.Situation {
+  position: absolute;
+  top: -5%;
 }
-.Situation h1{
-	font-size: 1.6vw;
-	font-weight: 900;
-	margin: 0;
-	margin-bottom: 1vh;
+.Situation h1 {
+  font-size: 1.6vw;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 1vh;
 }
-.Situation h2{
-	font-size: calc(1vw + 1vh);
-	font-weight: 500;
-	margin: 0;
+.Situation h2 {
+  font-size: calc(1vw + 1vh);
+  font-weight: 500;
+  margin: 0;
 }
-#GamePress{
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    cursor: pointer;
+#GamePress {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
 }

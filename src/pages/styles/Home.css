@@ -1,31 +1,31 @@
-.HomeDiv{
-    width: calc(100% - 15vw);
-    position: absolute;
-    top: 8vw;
-    right: 15vw;
-    display: flex;
-    direction: rtl;
-    flex-direction: column;
-    margin-right: 2vw;
+.HomeDiv {
+  width: calc(100% - 15vw);
+  position: absolute;
+  top: 8vw;
+  right: 15vw;
+  display: flex;
+  direction: rtl;
+  flex-direction: column;
+  margin-right: 2vw;
 }
 
-.HomeDiv h1{
+.HomeDiv h1 {
   font-size: 2.4vw;
-  color: #FAA159;
+  color: #faa159;
   font-weight: 900;
-  margin:0;
+  margin: 0;
   margin-right: 3vw;
 }
-.HomeDiv p{
+.HomeDiv p {
   font-size: 1.8vw;
-  color:#0F1259;
+  color: #0f1259;
   font-weight: 400;
   margin-right: 3vw;
 }
-.HomeDiv div{
+.HomeDiv div {
   font-size: 1.4vw;
   list-style-type: none;
-  color:#0F1259;
+  color: #0f1259;
   font-weight: 900;
   display: flex;
   width: fit-content;
@@ -34,18 +34,17 @@
   margin-right: 3vw;
 }
 
-#HomeImage{
+#HomeImage {
   position: absolute;
   top: 3vh;
   left: 10vw;
   width: 40vw;
-
 }
-.HomeDiv span{
+.HomeDiv span {
   margin-right: 1vw;
 }
-#StartButton{
-  background-color:#FAA159;
+#StartButton {
+  background-color: #faa159;
   border-radius: 30vw;
   font-size: 1.7vw;
   width: 17vw;
@@ -56,16 +55,15 @@
   margin-top: 3vw;
   cursor: pointer;
 }
-#StartButton a{
+#StartButton a {
   text-decoration: none;
-  color:#0F1259;
+  color: #0f1259;
   font-weight: 900;
   padding: 1vw;
 }
-#BlueLogo{
+#BlueLogo {
   position: absolute;
   left: 5vw;
   top: -7.5vw;
   width: 12vw;
-
 }

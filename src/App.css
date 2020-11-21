@@ -1,5 +1,5 @@
-*:focus{
-outline: none;
+*:focus {
+  outline: none;
 }
 .App {
   text-align: center;
@@ -39,4 +39,3 @@ outline: none;
     transform: rotate(360deg);
   }
 }
-

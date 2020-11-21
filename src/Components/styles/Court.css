@@ -1,114 +1,108 @@
-.CourtMainDiv{
-	display: flex; 
-	flex-direction: row;
-	flex-wrap: wrap;
-	height:70vh;
-	width:80vw;
-	right: 0vw;
-	top:3vh;
-	position: relative;
-	direction: rtl;
-	justify-content: space-around;
+.CourtMainDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 70vh;
+  width: 80vw;
+  right: 0vw;
+  top: 3vh;
+  position: relative;
+  direction: rtl;
+  justify-content: space-around;
 }
-.CourtText{
-	position: absolute;
-	right: 0vw;
-	top:-2vh;
-	font-size: calc(1.5vh+1.5vw);
-	align-content: center;
+.CourtText {
+  position: absolute;
+  right: 0vw;
+  top: -2vh;
+  font-size: calc(1.5vh+1.5vw);
+  align-content: center;
 }
-.CourtBaseDiv{
-	width:fit-content;
-	position: relative;
-	height: 28vw;
-	left:5vw;
-
-}
-
-.BubbleWrapper{
-	position: absolute;
-	top:30%;
-	left: 45vw;
-	align-self: flex-end;
+.CourtBaseDiv {
+  width: fit-content;
+  position: relative;
+  height: 28vw;
+  left: 5vw;
 }
 
-
-
-.CourtBubble{
-	position: relative;
-	border: 0.3vw solid #FAA159;
-	border-radius: 1vw;
-	padding: 1vw 1vw 1vw 1vw;
-	box-shadow: 4px 5px 10px 1px rgb(180,180,180);
-	text-align: right;
-	max-width: 30vw;
-}
-.CourtBubble img{
-	position: absolute;
-	top:-1.2vw;
-	left: -1.2vw;
-	width: 2vw;
-	cursor: pointer;
-}
-.CourtBubble img:hover{
-	transform: scale(1.1);
-}
-.CourtBaseImg{
-	height: 28vw;
-	width: 28vw;
-	position: relative;
-	padding: 0;
-	margin:0;
-
-}
-.CourtWrapper{
-	position: absolute;
-	left: 0;
-	top: 2vh;
-}
-.PlusButton{
-	opacity: 0.4;
-	width: 2vw;
-	position: absolute;
-
-}
-.PlusButtonActive{
-	width: 2vw;
-	position: absolute;
-	cursor: pointer;
-}
-#PlusButtonOne{
-	position: absolute;
-	bottom: 15.5%;
-	left:46.5%;
-}
-#PlusButtonTwo{
-	position: absolute;
-	bottom: 28.8%;
-	left: 77%;
-}
-#PlusButtonThree{
-	position: absolute;
-	bottom: 40%;
-	left: 46.4%;
-}
-#PlusButtonFour{
-	position: absolute;
-	bottom: 88%;
-	left:68%;
-}
-#PlusButtonFive{
-	position: absolute;
-	bottom: 72.5%;
-	left: 46.5%;
-}
-#PlusButtonSix{
-	position: absolute;
-	bottom: 65.4%;
-	left: 38.5%;
+.BubbleWrapper {
+  position: absolute;
+  top: 30%;
+  left: 45vw;
+  align-self: flex-end;
 }
 
+.CourtBubble {
+  position: relative;
+  border: 0.3vw solid #faa159;
+  border-radius: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+  box-shadow: 4px 5px 10px 1px rgb(180, 180, 180);
+  text-align: right;
+  max-width: 30vw;
+}
+.CourtBubble img {
+  position: absolute;
+  top: -1.2vw;
+  left: -1.2vw;
+  width: 2vw;
+  cursor: pointer;
+}
+.CourtBubble img:hover {
+  transform: scale(1.1);
+}
+.CourtBaseImg {
+  height: 28vw;
+  width: 28vw;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.CourtWrapper {
+  position: absolute;
+  left: 0;
+  top: 2vh;
+}
+.PlusButton {
+  opacity: 0.4;
+  width: 2vw;
+  position: absolute;
+}
+.PlusButtonActive {
+  width: 2vw;
+  position: absolute;
+  cursor: pointer;
+}
+#PlusButtonOne {
+  position: absolute;
+  bottom: 15.5%;
+  left: 46.5%;
+}
+#PlusButtonTwo {
+  position: absolute;
+  bottom: 28.8%;
+  left: 77%;
+}
+#PlusButtonThree {
+  position: absolute;
+  bottom: 40%;
+  left: 46.4%;
+}
+#PlusButtonFour {
+  position: absolute;
+  bottom: 88%;
+  left: 68%;
+}
+#PlusButtonFive {
+  position: absolute;
+  bottom: 72.5%;
+  left: 46.5%;
+}
+#PlusButtonSix {
+  position: absolute;
+  bottom: 65.4%;
+  left: 38.5%;
+}
 
-.BolderText{
-	font-weight: 900;
+.BolderText {
+  font-weight: 900;
 }
