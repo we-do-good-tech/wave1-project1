@@ -253,9 +253,7 @@ class PopUpGame extends Component {
           <p> כל הכבוד !</p>
           <p>
             {' '}
-            ענית על
-            {this.state.right} מתוך
-            {this.state.level.length}
+            ענית על {this.state.right} מתוך {this.state.level.length}
           </p>
           <img src={DidWin} style={{ marginLeft: '1vw', marginRight: '0' }} />
           <div id="ScoreBtnsDiv">
@@ -286,9 +284,7 @@ class PopUpGame extends Component {
           <p> כל הכבוד !</p>
           <p>
             {' '}
-            ענית על
-            {this.state.right} מתוך
-            {this.state.level.length}
+            ענית על {this.state.right} מתוך {this.state.level.length}
           </p>
           <img src={three} />
           <div id="ScoreBtnsDiv">
@@ -319,9 +315,7 @@ class PopUpGame extends Component {
           <p> כל הכבוד !</p>
           <p>
             {' '}
-            ענית על
-            {this.state.right} מתוך
-            {this.state.level.length}
+            ענית על {this.state.right} מתוך {this.state.level.length}
           </p>
           <img src={two} />
           <div id="ScoreBtnsDiv">
@@ -351,9 +345,7 @@ class PopUpGame extends Component {
           <p> כל הכבוד !</p>
           <p>
             {' '}
-            ענית על
-            {this.state.right} מתוך
-            {this.state.level.length}
+            ענית על {this.state.right} מתוך {this.state.level.length}
           </p>
           <img src={one} />
           <div id="ScoreBtnsDiv">
@@ -383,9 +375,7 @@ class PopUpGame extends Component {
         <p>נסיון טוב</p>
         <p>
           {' '}
-          ענית על
-          {this.state.right} מתוך
-          {this.state.level.length}
+          ענית על {this.state.right} מתוך {this.state.level.length}
         </p>
         <img src={zero} />
         <div id="ScoreBtnsDiv">
@@ -460,9 +450,7 @@ class PopUpGame extends Component {
             style={{ 'margin-top': '-1.2vw', 'font-size': '1.6vw', opacity: this.getOpacity() }}
           >
             {' '}
-            שאלה
-            {this.state.active + 1} מתוך
-            {this.state.level.length}
+            שאלה {this.state.active + 1} מתוך {this.state.level.length}
           </p>
           {this.getQuestion()}
           {this.getAnsweres()}
