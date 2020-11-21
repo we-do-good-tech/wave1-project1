@@ -178,7 +178,7 @@ class HowToPlay extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				
-				<PopUp HeadLine=" איך משחקים?"display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={0}/>
+				<PopUp HeadLine=" איך משחקים?" display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={0}/>
 			</div>
 
 		)

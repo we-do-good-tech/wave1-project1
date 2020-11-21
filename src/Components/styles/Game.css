@@ -117,7 +117,8 @@
 .FemalePlayerBubble{
 	border:calc(0.1vw + 0.2vh) solid #FAA159;
 	border-radius: calc(0.6vw + 0.2vh);
-	padding: 1vh 1vw 1vh 1vw;
+    padding: 1vh 1vw 1vh 1vw;
+    margin-bottom: 0.1vw;
 	text-align: center;
 	position: relative;
     background-color: white;

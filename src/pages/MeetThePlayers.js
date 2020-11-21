@@ -273,8 +273,8 @@ class MeetThePlayers extends Component {
 						</div>
 						<ul id="LookForUs">
 							<li>חפשו אותנו ברשתות החברתיות:</li>
-							<li id="IGlist"><img src={Instagram}/><a href="https://www.instagram.com/para_israel/">para_israel</a></li>
-							<li id="FBlist"><img src={Facebook}/><a href="https://www.facebook.com/bocciaIl">עמותת הבוצ'ה לנכים בישראל  </a></li>	
+							<li id="IGlist"><img src={Instagram}/><a href="https://www.instagram.com/para_israel/"  target="_blank">para_israel</a></li>
+							<li id="FBlist"><img src={Facebook}/><a href="https://www.facebook.com/bocciaIl" target="_blank">עמותת הבוצ'ה לנכים בישראל  </a></li>	
 						</ul>
 					</div>
 					

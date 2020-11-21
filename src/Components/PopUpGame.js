@@ -24,7 +24,8 @@ class PopUpGame extends Component {
 			buttontype:1,
 			clickable:true,
 			HeadLine:props.HeadLine,
-			LastQuestion:false
+			LastQuestion:false,
+			moveTo: props.moveTo
 		  }
 		  
 	}
@@ -196,6 +197,23 @@ class PopUpGame extends Component {
 		}
 	}
 
+	moveTo = () =>{
+		console.log(this.state.moveTo);
+		switch (this.state.moveTo){
+			case 2:
+				window.location.href = './#/HowToPlay';
+				break;
+			case 0:
+				window.location.href ='./#/BocciaClasses';
+				break;
+			case 1:
+				window.location.href ='./#/MeetThePlayers';
+				break;
+			default:
+				window.location.href ='./#/Home';
+		}
+	}
+
 
 
 	getScore=()=>{
@@ -205,10 +223,11 @@ class PopUpGame extends Component {
 				<div id="score">
 					<p> כל הכבוד !</p>
 					<p> ענית על {this.state.right} מתוך {this.state.level.length}</p>
-					<img src={DidWin}/>
+					<img src={DidWin} style={{marginLeft: '1vw', marginRight:'0'}}/>
 					<div id="ScoreBtnsDiv">
 						<button onClick={()=>{this.setState({active:0,right:0,LastQuestion:false})}}>התחל שוב </button>
 						<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+						<button onClick={()=> this.moveTo()}> לפרק הבא </button>
 					</div>
 				</div>
 			)
@@ -224,12 +243,13 @@ class PopUpGame extends Component {
 						<div id="ScoreBtnsDiv">
 							<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
 							<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+							<button onClick={()=> this.moveTo()}> לפרק הבא </button>
 						</div>
 					</div>
 				)
 		}
 
-		else if(this.state.right>= this.state.level.length*0.3)
+		else if(this.state.right>= this.state.level.length*0.4)
 		{
 				return(
 					<div id="score">
@@ -239,6 +259,7 @@ class PopUpGame extends Component {
 						<div id="ScoreBtnsDiv">
 							<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
 							<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+							<button onClick={()=> this.moveTo()}> לפרק הבא </button>
 						</div>
 					</div>
 				)
@@ -253,6 +274,7 @@ class PopUpGame extends Component {
 						<div id="ScoreBtnsDiv">
 							<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
 							<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+							<button onClick={()=> this.moveTo()}>  לפרק הבא </button>
 						</div>
 					</div>
 				)
@@ -267,6 +289,7 @@ class PopUpGame extends Component {
 					<div id="ScoreBtnsDiv">
 						<button onClick={()=>{this.setState({active:0,right:0})}}>התחל שוב </button>
 						<button onClick={()=>{this.props.onClick()}}> סגור מבחן </button>
+						<button onClick={()=> this.moveTo()}>  לפרק הבא </button>
 					</div>
 				</div>
 			)
@@ -316,7 +339,7 @@ class PopUpGame extends Component {
 					{this.getAnsweres()}
 					{this.explanationPopUp()}
 					{this.getImage()}
-					<button id="Skip" onClick={() => this.skip()}>דלג</button>
+					<button id="Skip" className={!this.state.clickable && "SkipDisabled"} onClick={() => this.skip()}>דלג</button>
 				</div>
 
 			)

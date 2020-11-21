@@ -196,7 +196,7 @@ class Game extends Component {
 				<div className="MalePlayerDiv">
 					<p className="MalePlayerBubbleSecondAlt">
 						<span style={{'font-size':'calc(1vw + 1vh)',padding:0, color:' #FAA159','font-weight':'900'}}>4</span>
-						<h1 style={{'font-size':'calc(0.7vw + 0.9vh)', 'letter-spacing':'0.07vw'}}>הצד שהכדור שלו רחוק יותר  מהכדור<br/> הלבן הוא זה שימשיך לזרוק.<br/> לדוגמא: אם הכדור הכחול קרוב יותר<br/>לכדור הלבן, הצד האדום יזרוק כדור נוסף. </h1>
+						<h1 style={{'font-size':'calc(0.7vw + 0.9vh)', 'letter-spacing':'0.07vw'}}>הצד שהכדור שלו רחוק יותר  מהכדור הלבן הוא זה שימשיך לזרוק. לדוגמא: היות והכדור הכחול קרוב יותר לכדור הלבן, הצד האדום יזרוק כדור נוסף. </h1>
 						<h2 style={{'font-size':'calc(0.65vw + 0.8vh)', 'letter-spacing':'0.07vw','font-weight':'300'}}>לחצו בכל מקום על גבי המגרש<br/> על מנת לזרוק כדור אדום נוסף.</h2>
 					</p>
 					<img src={FirstPlayer} style={{height:'calc(10vh + 10vw)'}}/>
@@ -208,8 +208,7 @@ class Game extends Component {
 				<div className="MalePlayerDiv">
 					<p className="MalePlayerBubbleThirdAlt">
 						<span style={{'font-size':'calc(1vw + 1vh)',padding:0, color:' #FAA159','font-weight':'900'}}>5</span>
-						<h1 style={{'font-size':'calc(0.7vw + 0.9vh)', 'letter-spacing':'0.07vw'}}>במידה והכדור הכחול עדיין קרוב יותר <br/> לכדור הלבן, האדום יזרוק כדור נוסף.</h1>
-						<h2 style={{'font-size':'calc(0.65vw + 0.8vh)', 'letter-spacing':'0.07vw','font-weight':'300'}}>לחצו בכל מקום על גבי המגרש <br/> על מנת לזרוק כדור אדום נוסף.<br/>(וכן הלאה...)</h2>
+						<h1 style={{'font-size':'calc(0.7vw + 0.9vh)', 'letter-spacing':'0.07vw'}}>במידה והכדור הכחול עדיין קרוב יותר לכדור הלבן, האדום יזרוק כדור נוסף וכן הלאה...</h1>
 					</p>
 					<img src={FirstPlayer} style={{height:'calc(10vh + 10vw)'}}/>
 				</div>

@@ -34,7 +34,7 @@ class Rules extends Component {
 		super();
 		this.state = {  
 			active: 0,
-			names:["זמנים " , "שובר שוויון " , "סימני שופטים" , "עונשין" ],
+			names:["זמנים " , "שובר שוויון " , "סימוני שופטים" , "עונשין" ],
 			PopUpDisplay:'none'
 	  	}
 	  	this.handlearrow= this.handlearrow.bind(this);
@@ -102,7 +102,7 @@ class Rules extends Component {
 						<div id="SignalContentDiv">
 							<p id="SignalContentTopic"> זמנים</p>
 							<div>
-								<img className="SignalPic" src={TimesBC1Single} style={{height:'10vw','margin-right':'2vw'}}/>
+								<img className="SignalPic" src={TimesBC1Single} style={{height:'10.6vw','margin-right':'2vw'}}/>
 							</div>
 
 							<div>
@@ -126,7 +126,7 @@ class Rules extends Component {
 							</div>
 							
 							<div style={{'border-left':'none'}}>
-								<img className="SignalPic" src={TimesGroup} style={{height:'12vw'}}/>
+								<img className="SignalPic" src={TimesGroup} style={{height:'10.2vw',marginTop:'2vw'}}/>
 							</div>			
 							<div  style={{'border-left':'none'}}></div>
 						</div>
@@ -152,7 +152,7 @@ class Rules extends Component {
 				{
 					return(
 						<div id="SignalContentDiv" className="specialDiv">
-							<p id="SignalContentTopic"> סימני שופטים </p>
+							<p id="SignalContentTopic"> סימוני שופטים </p>
 							<div>
 								<img className="SignalPic" src={SignalOne}/>
 								<p>סימון התוצאה</p>
@@ -268,7 +268,7 @@ class Rules extends Component {
 		}
 
 	}
-	
+	let isExplanation = () => this.state.active === 4 ? true : false;
 
 		return(
 			<div>				
@@ -279,7 +279,7 @@ class Rules extends Component {
 					{GetDivContent()}
 					{GetDivFrontBack()}					
 				</div>				
-				<PopUp HeadLine="חוקי המשחק" display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={1}/>
+				<PopUp HeadLine="חוקי המשחק" display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={1}  explanation={isExplanation()}/>
 				
 			</div>
 

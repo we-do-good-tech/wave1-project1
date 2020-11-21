@@ -191,8 +191,8 @@
 	display: flex;
 	position: absolute;
 	bottom: 10%;
-	left:35%;
-	width: 20vw;
+	left:32%;
+	width: 25vw;
 	justify-content: space-between;
 }
 #score p{
@@ -203,6 +203,7 @@
 #score img{
 	margin-top: 4vw;
 	width:calc(14vw + 15vh);
+	margin-right: 0.5vw;
 }
 #score button{
 	background-color:#0F1259;
@@ -275,6 +276,15 @@
     cursor: pointer;
     transition: 0.1s;
 }
+
+.SkipDisabled{
+    opacity: 0.2;
+}
+.SkipDisabled:hover{
+	transform: none!important;
+	cursor: default!important;
+}
+
 #Skip:hover{
 	transform: scale(1.1);
 	transition: 0.1s;
