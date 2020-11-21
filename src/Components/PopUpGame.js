@@ -345,7 +345,7 @@ class PopUpGame extends Component {
 			)
 		}
 		else{
-			return(
+					return(
 				<div className="PopUpGameDiv">
 					{this.getScore()}
 				</div>
