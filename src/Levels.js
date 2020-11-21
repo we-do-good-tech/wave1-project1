@@ -77,7 +77,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      img:HowToLevelSeven
    }
  ],
- //---------------------------------------Level Two - - Rules-------------------------------------------------------
+ // ---------------------------------------Level Two - - Rules-------------------------------------------------------
  [
   {
     right:2,
@@ -107,7 +107,7 @@ import HowToLevelSeven from './imgs/HowToLevelSeven.png'
      img:HowToLevelSeven
   }
  ],
- //<--------------------------Level Three What Is Boccia --------------------------->
+ // <--------------------------Level Three What Is Boccia --------------------------->
  [
   {
     right:0,

@@ -18,16 +18,16 @@ class App extends Component {
   render() {
 
       return( 
-       <HashRouter basename='/'>
-        <Route exact path="/" component ={Home}/> 
-        <Route path ="/BocciaClasses" component={BocciaClasses}/>
-        <Route path="/WhatIsBoccia" component ={WhatIsBoccia}/> 
-        <Route path="/MeetThePlayers" component ={MeetThePlayers}/>        
-        <Route path="/HowToPlay" component ={HowToPlay}/> 
-        <Route path="/Rules" component ={Rules}/>
-        <Route path="/Contact" component ={Contact}/>
-        <Route exact path="/Home" component ={Home}/> 
-       </HashRouter>
+        <HashRouter basename='/'>
+          <Route exact path="/" component={Home} /> 
+          <Route path="/BocciaClasses" component={BocciaClasses} />
+          <Route path="/WhatIsBoccia" component={WhatIsBoccia} /> 
+          <Route path="/MeetThePlayers" component={MeetThePlayers} />        
+          <Route path="/HowToPlay" component={HowToPlay} /> 
+          <Route path="/Rules" component={Rules} />
+          <Route path="/Contact" component={Contact} />
+          <Route exact path="/Home" component={Home} /> 
+        </HashRouter>
 
       );
   }

@@ -72,12 +72,12 @@ class HowToPlay extends Component {
 
 
 
-		let GetDivContent= () => {			
+		const GetDivContent= () => {			
 			if(this.state.active==0)
 			{
 				return(
 					
-						<FirstPageTabs names={this.state.names} icons ={[H1,H2,H3,H4]} onClick={this.handlebarclick}/>
+  <FirstPageTabs names={this.state.names} icons={[H1,H2,H3,H4]} onClick={this.handlebarclick} />
 					
 				)
 			}
@@ -85,84 +85,84 @@ class HowToPlay extends Component {
 			if(this.state.active==1)
 			{
 				return(
-					<div className="ContentDiv">
-								<p className="ContentTopic">מטרת המשחק</p>
-								<p className="ContentText">
-								לזרוק את הכדור ששייך לי הכי קרוב לכדור הלבן.
-								</p>
-								<p className="ContentTopic">כמות משתתפים</p>
-								<p className="ContentText">
-								3X3 ,2X2 ,1X1 (יחידים, זוגות או קבוצתי)
-								</p>
-								<p className="ContentTopic">ציוד</p>
-								<p className="ContentText">
-								6 כדורים אדומים, 6 כדורים כחולים, 1 כדור לבן.
-								</p>
-								<img className="ContentPic" src={HowToTarget} style={{top:'10vh'}}/>
+  <div className="ContentDiv">
+    <p className="ContentTopic">מטרת המשחק</p>
+    <p className="ContentText">
+      לזרוק את הכדור ששייך לי הכי קרוב לכדור הלבן.
+    </p>
+    <p className="ContentTopic">כמות משתתפים</p>
+    <p className="ContentText">
+      3X3 ,2X2 ,1X1 (יחידים, זוגות או קבוצתי)
+    </p>
+    <p className="ContentTopic">ציוד</p>
+    <p className="ContentText">
+      6 כדורים אדומים, 6 כדורים כחולים, 1 כדור לבן.
+    </p>
+    <img className="ContentPic" src={HowToTarget} style={{top:'10vh'}} />
 														
-					</div>
+  </div>
 				)
 			}
 			if(this.state.active==2)
 			{
 				return(
-					<div className="ContentDiv">
-						<Game/>						
-					</div>
+  <div className="ContentDiv">
+    <Game />						
+  </div>
 				)
 			}
 
 			if(this.state.active==3)
 				{
 					return(
-						<div className="ContentDiv HowToGainPointsDiv" >
-							<p className="ContentTopic">צבירת נקודות</p>
-							<ul id='gainPointsList'>
-								<li className="ContentText">ניקוד יחושב בסיום כל משחקון, לאחר שכל הכדורים של שני הצדדים נזרקו (כולל כדורי עונשין).</li>
-								<li className="ContentText">הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה. כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן, מאשר היריב, יזכה בנקודה.</li>
-								<li className="ContentText">אם שני כדורים (או יותר) בצבעים שונים, נמצאים במרחק שווה מהכדור הלבן, כל צד יקבל נקודה על כל כדור.</li>
-								<li className="ContentText">בסיום כל המשחקונים, הנקודות שנצברו יחוברו יחדיו, והצד בעל סכום הניקוד הגבוה ביותר, יוכרז כמנצח.</li>
-							</ul>
-							<img className="ContentPic" src={HowToGainPoints} style={{top:'calc(1vh + 1vw)'}}/>			
-						</div>
+  <div className="ContentDiv HowToGainPointsDiv">
+    <p className="ContentTopic">צבירת נקודות</p>
+    <ul id='gainPointsList'>
+      <li className="ContentText">ניקוד יחושב בסיום כל משחקון, לאחר שכל הכדורים של שני הצדדים נזרקו (כולל כדורי עונשין).</li>
+      <li className="ContentText">הצד שהכדור שלו הוא הקרוב ביותר לכדור הלבן זוכה בנקודה. כל כדור נוסף של אותו צד שקרוב יותר לכדור הלבן, מאשר היריב, יזכה בנקודה.</li>
+      <li className="ContentText">אם שני כדורים (או יותר) בצבעים שונים, נמצאים במרחק שווה מהכדור הלבן, כל צד יקבל נקודה על כל כדור.</li>
+      <li className="ContentText">בסיום כל המשחקונים, הנקודות שנצברו יחוברו יחדיו, והצד בעל סכום הניקוד הגבוה ביותר, יוכרז כמנצח.</li>
+    </ul>
+    <img className="ContentPic" src={HowToGainPoints} style={{top:'calc(1vh + 1vw)'}} />			
+  </div>
 					)
 				}
 			if(this.state.active==4)
 				{
 					return(
-						<div className="ContentDiv" >
-							<Court/>
-						</div>
+  <div className="ContentDiv">
+    <Court />
+  </div>
 					)
 				}
 	
 		
 	}
 
-	let GetDivFrontBack= () => {
+	const GetDivFrontBack= () => {
 		if(this.state.active===this.state.names.length){
 			return(
-				<FrontBack moveTo={2} last={true} onClick={this.handlearrow}/>
+  <FrontBack moveTo={2} last onClick={this.handlearrow} />
 			);
 		}
 		if(this.state.active===1){
 			return(
-				<FrontBack moveTo={2} first={true} onClick={this.handlearrow}/>
+  <FrontBack moveTo={2} first onClick={this.handlearrow} />
 			)
 		}
 
 		if(this.state.active!=0){
 			return(
-				<FrontBack moveTo={2} onClick={this.handlearrow}/>
+  <FrontBack moveTo={2} onClick={this.handlearrow} />
 			);
 		}
 			
 	}
 
-	let getLeftLogo=()=>{
+	const getLeftLogo=()=>{
 		if(this.state.active===0){
 			return(
-				<img style={{left:'3vw',top:'-7.5vw',width:'12vw'}}  id="BlueLogo" src={BlueLogo}/>
+  <img style={{left:'3vw',top:'-7.5vw',width:'12vw'}} id="BlueLogo" src={BlueLogo} />
 				)
 		}
 
@@ -170,16 +170,16 @@ class HowToPlay extends Component {
 	
 
 		return(
-			<div>				
-				<SideBar active='3'/>
-				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
-				<div id="WhatIsMain">
-					{getLeftLogo()}	
-					{GetDivContent()}
-					{GetDivFrontBack()}					
-				</div>				
-				<PopUp HeadLine=" איך משחקים?" display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={0}/>
-			</div>
+  <div>				
+    <SideBar active='3' />
+    <ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick} />
+    <div id="WhatIsMain">
+      {getLeftLogo()}	
+      {GetDivContent()}
+      {GetDivFrontBack()}					
+    </div>				
+    <PopUp HeadLine=" איך משחקים?" display={this.state.PopUpDisplay} onClick={this.HandlePopUp} level={0} />
+  </div>
 
 		)
 

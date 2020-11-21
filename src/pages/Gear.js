@@ -63,12 +63,12 @@ class Gear extends Component {
 
 
 
-		let GetDivContent= () => {			
+		const GetDivContent= () => {			
 			if(this.state.active==0)
 			{
 				return(
 					
-						<FirstPageTabs names={this.state.names} onClick={this.handlebarclick}/>
+  <FirstPageTabs names={this.state.names} onClick={this.handlebarclick} />
 					
 				)
 			}
@@ -76,72 +76,72 @@ class Gear extends Component {
 			if(this.state.active==1)
 			{
 				return(
-					<div className="ContentDiv">
-								<p className="ContentText">1</p>						
-					</div>
+  <div className="ContentDiv">
+    <p className="ContentText">1</p>						
+  </div>
 				)
 			}
 			if(this.state.active==2)
 			{
 				return(
-					<div className="ContentDiv">
-								<p className="ContentText">2</p>						
-					</div>
+  <div className="ContentDiv">
+    <p className="ContentText">2</p>						
+  </div>
 				)
 			}
 
 			if(this.state.active==3)
 				{
 					return(
-						<div className="ContentDiv">
-									<p className="ContentText">3</p>						
-						</div>
+  <div className="ContentDiv">
+    <p className="ContentText">3</p>						
+  </div>
 					)
 				}
 			if(this.state.active==4)
 				{
 					return(
-						<div className="ContentDiv">
-									<p className="ContentText">4</p>						
-						</div>
+  <div className="ContentDiv">
+    <p className="ContentText">4</p>						
+  </div>
 					)				
 				}	
 
 			if(this.state.active==5)
 				{
 					return(
-						<div className="ContentDiv">
-									<p className="ContentText">5</p>						
-						</div>
+  <div className="ContentDiv">
+    <p className="ContentText">5</p>						
+  </div>
 					)				
 				}	
 		
 	}
 
-		let GetDivFrontBack= () => {
+		const GetDivFrontBack= () => {
 			if(this.state.active===this.state.names.length){
 				return(
-					<FrontBack last={true} onClick={this.handlearrow}/>
+  <FrontBack last onClick={this.handlearrow} />
 				);
 			}
 			if(this.state.active!=0){
 				return(
-					<FrontBack onClick={this.handlearrow}/>
+  <FrontBack onClick={this.handlearrow} />
 				);
 			}
 	}
 	
 
 		return(
-			<div>				
-				<SideBar active='4'/>
-				<ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick}/>
-				<div id="WhatIsMain">	
-					{GetDivContent()}
-					{GetDivFrontBack()}					
-				</div>				
-				<PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp}  level={0}/>
-			</div>
+  <div>				
+    <SideBar active='4' />
+    <ProgressBar names={this.state.names} active={this.state.active} onClick={this.handlebarclick} />
+    <div id="WhatIsMain">	
+      {GetDivContent()}
+      {GetDivFrontBack()}					
+    </div>				
+    <PopUp display={this.state.PopUpDisplay} onClick={this.HandlePopUp} level={0} />
+  </div>
 
 		)
 

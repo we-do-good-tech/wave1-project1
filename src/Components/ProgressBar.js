@@ -28,12 +28,11 @@ class ProgressBar extends Component {
 		const getClass=(number)=>{
 			if(number===parseInt(this.state.active))
 				return("activesidenavtabs sidenavtabs");
-			else
-				return("sidenavtabs");
+			return("sidenavtabs");
 		}
 
 
-		let ProgressBarNames = [];
+		const ProgressBarNames = [];
 		if(this.state.active===1){
 			ProgressBarNames.push(<button onClick={()=>this.handleclick(1)} value={1} className="MainButton MainButtonActive rightcurved"><p>{this.state.names[0]}</p></button>);
 		}
@@ -44,13 +43,13 @@ class ProgressBar extends Component {
 		for(let i = 1;i<this.state.names.length-1;i++){
 			if(i+1===this.state.active){
 				ProgressBarNames.push(
-				<button onClick={()=>this.handleclick(i+1)} value={i} className="MainButton MainButtonActive"><p>{this.state.names[i]}</p></button>
+  <button onClick={()=>this.handleclick(i+1)} value={i} className="MainButton MainButtonActive"><p>{this.state.names[i]}</p></button>
 				)
 			}
 
 			else{
 			ProgressBarNames.push(
-				<button onClick={()=>this.handleclick(i+1)} value={i} className="MainButton"><p>{this.state.names[i]}</p></button>
+  <button onClick={()=>this.handleclick(i+1)} value={i} className="MainButton"><p>{this.state.names[i]}</p></button>
 				)
 			}
 		}
@@ -65,15 +64,14 @@ class ProgressBar extends Component {
 
 		if(this.state.active!=0){
 			return(
-				<div className="MainButtonDiv">
-					{ProgressBarNames}
-				</div>
+  <div className="MainButtonDiv">
+    {ProgressBarNames}
+  </div>
 
 			)	
 		}
 
-		else
-			return(<div></div>);
+		return(<div />);
 
 	}
 }

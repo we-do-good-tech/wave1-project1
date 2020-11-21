@@ -24,24 +24,34 @@ class Home extends Component {
 
 
 		return(
-			<div>				
-				<SideBar active='1'/>
-				<div className="HomeDiv">
-					<h1>ברוכים הבאים ללומדה  <br/>של משחק הבוצ'ה</h1>
-					<p>
-					כאן תלמדו איך לשחק את      <br/>
-					המשחק  הכי מגניב ואסטרטגי שיש. <br/>
-					תוכלו ללמוד על הענף,   <br/>
-					החוקים ואפילו לבחון את עצמכם! 
-					</p>
-					<p>
-					אז קדימה, למה אתם מחכים?
-					</p>
-					<p id="StartButton"><a href="./#/WhatIsBoccia">להתחלת הלומדה  </a></p>
-					<img  id="HomeImage" src={HomeImage}/>
-					<img  id="BlueLogo" src={BlueLogo}/>
-				</div>
-			</div>
+  <div>				
+    <SideBar active='1' />
+    <div className="HomeDiv">
+      <h1>
+        ברוכים הבאים ללומדה
+        <br />
+        של משחק הבוצ'ה
+      </h1>
+      <p>
+        כאן תלמדו איך לשחק את      
+        {' '}
+        <br />
+        המשחק  הכי מגניב ואסטרטגי שיש. 
+        {' '}
+        <br />
+        תוכלו ללמוד על הענף,   
+        {' '}
+        <br />
+        החוקים ואפילו לבחון את עצמכם! 
+      </p>
+      <p>
+        אז קדימה, למה אתם מחכים?
+      </p>
+      <p id="StartButton"><a href="./#/WhatIsBoccia">להתחלת הלומדה  </a></p>
+      <img id="HomeImage" src={HomeImage} />
+      <img id="BlueLogo" src={BlueLogo} />
+    </div>
+  </div>
 
 		)
 

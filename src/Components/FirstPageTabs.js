@@ -16,20 +16,21 @@ class FirstPageTabs extends Component {
 
 	  	render(){
 
-	  		let FinalTabs = [];
+	  		const FinalTabs = [];
 	  		this.state.names.forEach((element,i)=>{
 	  			FinalTabs.push(
-	  			<button className="FirstStatePageButton" onClick={()=>this.handleclick(i+1)} value={i+1}>
-	  			<img className='logo' src={this.state.icons[i]}/><br/>
-	  			<p className='logodesc'>{this.state.names[i]}</p>
-	  			</button>
+  <button className="FirstStatePageButton" onClick={()=>this.handleclick(i+1)} value={i+1}>
+    <img className='logo' src={this.state.icons[i]} />
+    <br />
+    <p className='logodesc'>{this.state.names[i]}</p>
+  </button>
 	  			)
 	  		})
 
 	  		return(
-	  			<div className="ContentDivFirstStatePage">
-						{FinalTabs}
-				</div>
+  <div className="ContentDivFirstStatePage">
+    {FinalTabs}
+  </div>
 	  		);
 
 	  	

@@ -33,51 +33,64 @@ class FrontBack extends Component {
 				window.location.href ='./#/Home';
 		}
 	}
+
 	render(){
 
 		if(this.props.first){
 			return(
-			<div>				
-					<button id="BackButton" value="1"  className="FrontBackButtons FrontBackButtonsDisabled ">
-						<span className="rightarrowfont">➜</span> הקודם
-					</button>
+  <div>				
+    <button id="BackButton" value="1" className="FrontBackButtons FrontBackButtonsDisabled ">
+      <span className="rightarrowfont">➜</span>
+      {' '}
+      הקודם
+    </button>
 
-					<button id="FrontButton" value="2" onClick={()=>this.handleclick(2)}  className="FrontBackButtons " >
-							הבא  <span className="leftarrowfont">➜</span>
-					</button>	
+    <button id="FrontButton" value="2" onClick={()=>this.handleclick(2)} className="FrontBackButtons ">
+      הבא  
+      {' '}
+      <span className="leftarrowfont">➜</span>
+    </button>	
 					
-			</div>
+  </div>
 		)
 		}
 
 		if(this.props.last){
 			return(
-			<div>				
-					<button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
-						<span className="rightarrowfont">➜</span> הקודם
-					</button>
+  <div>				
+    <button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
+      <span className="rightarrowfont">➜</span>
+      {' '}
+      הקודם
+    </button>
 
-					<button id="FrontButton" value="2"  className="FrontBackButtons" onClick={()=> this.moveTo()}>
-							 הבא  <span className="leftarrowfont">➜</span>
-					</button>	
+    <button id="FrontButton" value="2" className="FrontBackButtons" onClick={()=> this.moveTo()}>
+      הבא  
+      {' '}
+      <span className="leftarrowfont">➜</span>
+    </button>	
 					
-			</div>
+  </div>
 		)
 		}
-		else {
+		
 			return(
-				<div>				
-						<button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
-							<span className="rightarrowfont">➜</span> הקודם
-						</button>
+  <div>				
+    <button id="BackButton" value="1" onClick={()=>this.handleclick(1)} className="FrontBackButtons">
+      <span className="rightarrowfont">➜</span>
+      {' '}
+      הקודם
+    </button>
 					
 					
-						<button id="FrontButton" value="2" onClick={()=>this.handleclick(2)} className="FrontBackButtons">
-								הבא  <span className="leftarrowfont">➜</span>
-						</button>	
-				</div>
+    <button id="FrontButton" value="2" onClick={()=>this.handleclick(2)} className="FrontBackButtons">
+      הבא  
+      {' '}
+      <span className="leftarrowfont">➜</span>
+    </button>	
+  </div>
 			)
-		}
+		
 	}
 }
 
