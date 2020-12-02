@@ -2,6 +2,8 @@
 Boccia Israel - Learning Platform
 
 <img alt='Logo' src='https://github.com/we-do-good-tech/wave1-project1/blob/main/src/imgs/BlueLogo.png' width='200'/>
+Prerequisite: install npm (https://www.npmjs.com/get-npm)
+
 To run this project on localhost:3000 - run these scripts in your favorite terminal
 
 $ git clone https://github.com/we-do-good-tech/wave1-project1.git
